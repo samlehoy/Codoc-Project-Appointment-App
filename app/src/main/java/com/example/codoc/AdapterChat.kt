@@ -21,11 +21,13 @@ class AdapterChat  (private val listDokter:List<DokterModel>): RecyclerView.Adap
         val butt: Button = itemView.findViewById(R.id.button)
     }
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterChat.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(
             R.layout.card_layout,parent, false)
         return ViewHolder(view)
     }
+
 
     override fun onBindViewHolder(holder: AdapterChat.ViewHolder, position: Int) {
         val modelDokter = listDokter[position]
