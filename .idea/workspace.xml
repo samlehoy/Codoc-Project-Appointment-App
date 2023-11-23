@@ -10,9 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f5d20a9-1d78-42af-a651-02e6dcfea6bb" name="Changes" comment="Test">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/HomeActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bottom_nav.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/bottom_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +25,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[D:\Things\Android\.android\avd\Pixel_6_API_29.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\damar\.android\avd\Pixel_6_API_27.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -94,10 +99,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
-    "android.gradle.sync.needed": "true",
     "cidr.known.project.marker": "true",
     "last_directory_selection": "E:/Dekstop/School & Life/AMIKOM/SEMESTER 3/BP II/Final Project BP/app/src/main/res/drawable",
-    "last_opened_file_path": "E:/Dekstop/School & Life/AMIKOM/SEMESTER 3/BP II/Final Project BP",
+    "last_opened_file_path": "D:/AndroidStudioProjects/CodocProject/app/src/main/res/menu",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
@@ -109,13 +113,17 @@
       <recent name="com.example.codoc" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\AndroidStudioProjects\CodocProject\app\src\main\res\menu" />
+      <recent name="D:\AndroidStudioProjects\CodocProject\app\src\main\res\drawable" />
       <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\Final Project BP\app\src\main\res\drawable" />
       <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\Final Project BP\app\src\main\res\layout" />
       <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\Final Project BP\app\src\main\java\com\example\codoc" />
-      <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\Final Project BP\app\src\main\res\font" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\Final Project BP\app\src\main\res\drawable" />
+    </key>
+    <key name="android.template.2056537189">
+      <recent name="com.example.codoc" />
     </key>
     <key name="android.template.629168972">
       <recent name="com.example.codoc" />
