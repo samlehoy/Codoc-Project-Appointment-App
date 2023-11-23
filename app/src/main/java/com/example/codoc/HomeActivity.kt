@@ -11,7 +11,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         //reycle
-        val rvDokter: RecyclerView = findViewById(R.id.recyclerViewBuku)
+        val rvDokter: RecyclerView = findViewById(R.id.recyclerViewDoctor)
         //set layout
         rvDokter.layoutManager = LinearLayoutManager(this)
         //list data buku

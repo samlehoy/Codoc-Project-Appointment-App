@@ -16,16 +16,7 @@
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".UmumActivity"
-            android:exported="false" />
-        <activity
-            android:name=".GigiActivity"
-            android:exported="false" />
-        <activity
             android:name=".ChatDokterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".RegisterActivity"

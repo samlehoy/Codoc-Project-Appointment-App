@@ -18,7 +18,7 @@ class AdapterChat  (private val listDokter:List<DokterModel>): RecyclerView.Adap
         val kerja: TextView = itemView.findViewById(R.id.textkerja)
         val like: TextView = itemView.findViewById(R.id.textsuka)
         val harga: TextView = itemView.findViewById(R.id.textharga)
-        val butt: Button = itemView.findViewById(R.id.button)
+        val butt: Button = itemView.findViewById(R.id.book_button)
     }
 
 
