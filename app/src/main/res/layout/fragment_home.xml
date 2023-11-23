@@ -51,7 +51,6 @@
             android:drawableStart="@drawable/search"
             android:drawablePadding="5dp"
             android:ems="10"
-            android:fontFamily="@font/dm_sans"
             android:hint="@string/doctor_s_name_email_or_phone"
             android:imeOptions="actionDone"
             android:inputType="text"
