@@ -25,7 +25,7 @@
             android:name=".ChatDokterActivity"
             android:exported="false" />
         <activity
-            android:name=".ChatActivity"
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".RegisterActivity"

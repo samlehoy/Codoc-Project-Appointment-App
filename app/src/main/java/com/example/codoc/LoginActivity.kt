@@ -40,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
             val result: Boolean =
                 dbHelper.checkLogin(txtEmail.text.toString(), txtPassword.text.toString())
             if (result) {
-                val intentLogin = Intent(this@LoginActivity, ChatActivity::class.java)
+                val intentLogin = Intent(this@LoginActivity, HomeActivity::class.java)
                 startActivity(intentLogin)
             } else {
                 Toast.makeText(this, "Login Failed. Try Again", Toast.LENGTH_SHORT).show()
