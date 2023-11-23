@@ -21,33 +21,31 @@ class LoginActivity : AppCompatActivity() {
         val btnDaftar:TextView = findViewById(R.id.textViewDaftar)
         val txtEmail:EditText = findViewById(R.id.inputEmail)
         val txtPassword:EditText = findViewById(R.id.inputPassword)
-        val logModel = LoginModel()
-
 
         //event button Masuk/login
         btnMasuk.setOnClickListener {
-            //input
             val dbHelper = DatabaseHelper(this)
-            var result:Boolean = dbHelper.checkLogin(txtEmail.text.toString(),txtPassword.text.toString())
-            if (result){
-                val intentLogin = Intent( this@LoginActivity,
-                    ChatActivity::class.java)
-                startActivity(intentLogin)
-            }else{
-                Toast.makeText(this@LoginActivity,"Login failed. Try Again",
-                    Toast.LENGTH_SHORT).show()
-                txtEmail.hint = "email"
-                txtPassword.hint = "password"
-            }
 
             //check data
-            //FIXED REGISTER (GANTI String ke String?)
-            val data: String? = dbHelper.checkData(txtEmail.text.toString())
-            Toast.makeText(this@LoginActivity, "Result : " + data,
-                Toast.LENGTH_SHORT).show()
-            if(data==null){
+            val data: String = dbHelper.checkData("stevi.ema@amikom.ac.id")
+            Toast.makeText(this@LoginActivity, "Result : " + data, Toast.LENGTH_SHORT).show()
+            if (data == "") {
                 //insert data
-                dbHelper.addAccount(txtEmail.text.toString(), "Native Muttaqien", "Cashier", txtPassword.text.toString())
+                dbHelper.addAccount("stevi.ema@amikom.ac.id", "Stevi Ema W", "Cashier", "12345")
+            }
+            val email = txtEmail.text.toString().trim()
+            val password = txtPassword.text.toString().trim()
+
+            //check login
+            val result: Boolean =
+                dbHelper.checkLogin(txtEmail.text.toString(), txtPassword.text.toString())
+            if (result) {
+                val intentLogin = Intent(this@LoginActivity, ChatActivity::class.java)
+                startActivity(intentLogin)
+            } else {
+                Toast.makeText(this, "Login Failed. Try Again", Toast.LENGTH_SHORT).show()
+                txtEmail.hint = "email"
+                txtPassword.hint = "password"
             }
         }
         //event "Daftar"

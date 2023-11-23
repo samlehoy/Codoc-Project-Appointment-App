@@ -92,45 +92,21 @@ class DatabaseHelper(var context: Context): SQLiteOpenHelper(
 
     //FIXED REGISTER!!!
     @SuppressLint("Range")
-    fun checkData(email: String): String? {
+    fun checkData(email:String):String{
+        val colums = arrayOf(COLUMN_NAME)
         val db = this.readableDatabase
-        val query = "SELECT * FROM $TABLE_ACCOUNT WHERE $COLUMN_EMAIL = ?"
-        val cursor = db.rawQuery(query, arrayOf(email))
+        val selection = "$COLUMN_EMAIL = ?"
+        val selectionArgs = arrayOf(email)
+        var name:String = ""
 
-        var result: String? = null
+        val cursor = db.query(TABLE_ACCOUNT,
+            colums, selection, selectionArgs,null,null,null)
 
-        if (cursor.moveToFirst()) {
-            result = cursor.getString(cursor.getColumnIndex(COLUMN_EMAIL))
+        if(cursor.moveToFirst()){
+            name = cursor.getString(cursor.getColumnIndex(COLUMN_NAME))
         }
-
         cursor.close()
         db.close()
-
-        return result
+        return name
     }
-///////////////////////////////////////////////////////////////////////////////////////
-//    fun checkData(email:String): String{
-//        val colums = arrayOf(COLUMN_NAME)
-//        val db = this.readableDatabase
-//        val selection = "$COLUMN_EMAIL = ?"
-//        val selectionArgs = arrayOf(email)
-//        var name:String = " "
-//
-//        val cursor = db.query(TABLE_ACCOUNT, //table to query
-//            colums, //columns to return
-//            selection, //columns for WHERE clause
-//            selectionArgs, //the values for the WHERE clause
-//            null, //group the rows
-//            null, //filter by row groups
-//            null) //the sort order
-//
-//        //check data available or not
-//        if(cursor.moveToFirst()){
-//            name = cursor.getString(cursor.getColumnIndex(COLUMN_NAME))
-//        }
-//        cursor.close()
-//        db.close()
-//        return name
-//    }
-///////////////////////////////////////////////////////////////////////////////////////
 }

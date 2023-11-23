@@ -14,46 +14,40 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        //instance button daftar
-        val btnRegister:Button = findViewById(R.id.buttonDaftar)
+
         
         //input form
         val txtFullname:EditText = findViewById(R.id.fullnameInput)
         val txtEmail:EditText = findViewById(R.id.emailInput)
         val txtNoHp:EditText = findViewById(R.id.nomorInput)
         val txtPassword:EditText = findViewById(R.id.passwordInput)
-        val txtRePassword:EditText = findViewById(R.id.RepasswordInput)
-        val logModel = LoginModel()
 
-
+        //instance button daftar
+        val btnRegister:Button = findViewById(R.id.buttonDaftar)
 
         btnRegister.setOnClickListener {
-            //object class databaseHelper
+            //object class databasehelper
             val databaseHelper = DatabaseHelper(this)
             //declare data
-            val fullname: String = txtFullname.text.toString().trim()
-            val email: String = txtEmail.text.toString().trim()
-            val noHp: String = txtNoHp.text.toString().trim()
-            val password: String = txtPassword.text.toString().trim()
-            val rePassword: String = txtRePassword.text.toString().trim()
+            val email:String = txtEmail.text.toString().trim()
+            val name:String = txtFullname.text.toString().trim()
+            val noHp:String = txtNoHp.text.toString().trim()
+            val password:String = txtPassword.text.toString().trim()
 
             //check data -> email sudah terdaftar atau belum
-            //FIXED REGISTER (GANTI String ke String?)
-            val data:String? = databaseHelper.checkData(email)
+            val data:String = databaseHelper.checkData(email)
             //jika belum terdaftar
-            if(data == null){
+            if(data == ""){ //data ==null
                 //insert data
                 databaseHelper.addAccount(
-                    fullname,email,noHp,password)
+                    email,name,noHp,password)
 
                 //show LoginActivity
-                val intentLogin = Intent(this@RegisterActivity,
-                    LoginActivity::class.java)
-                startActivity(intentLogin)
+                val intentlogin = Intent(this@RegisterActivity, LoginActivity::class.java)
+                startActivity(intentlogin)
             }else{
                 //jika email telah terdaftar
-                Toast.makeText(this@RegisterActivity, "Register failed." +
-                        "your email already registered", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@RegisterActivity,"Register failed." + "Your email already registered", Toast.LENGTH_SHORT).show()
             }
         }
     }
