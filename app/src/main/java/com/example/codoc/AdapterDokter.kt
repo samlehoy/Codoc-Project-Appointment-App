@@ -7,29 +7,25 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
-class AdapterChat  (private val listDokter:List<DokterModel>): RecyclerView.Adapter<AdapterChat.ViewHolder>() {
+class AdapterDokter  (private val listDokter:List<DokterModel>): RecyclerView.Adapter<AdapterDokter.ViewHolder>() {
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView){
         val image: ImageView = itemView.findViewById(R.id.imageDokter)
         val nama: TextView = itemView.findViewById(R.id.textNama)
         val spesialis: TextView = itemView.findViewById(R.id.Spesialis)
         val kerja: TextView = itemView.findViewById(R.id.textkerja)
         val like: TextView = itemView.findViewById(R.id.textsuka)
-        val harga: TextView = itemView.findViewById(R.id.textharga)
         val butt: Button = itemView.findViewById(R.id.book_button)
     }
 
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterChat.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterDokter.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(
             R.layout.card_layout,parent, false)
         return ViewHolder(view)
     }
 
-
-    override fun onBindViewHolder(holder: AdapterChat.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: AdapterDokter.ViewHolder, position: Int) {
         val modelDokter = listDokter[position]
 
         holder.image.setImageResource(modelDokter.image)
@@ -37,11 +33,10 @@ class AdapterChat  (private val listDokter:List<DokterModel>): RecyclerView.Adap
         holder.spesialis.text = modelDokter.spesialis
         holder.kerja.text = modelDokter.kerja
         holder.like.text = modelDokter.like
-        holder.harga.text = modelDokter.harga
-        holder.butt.text = "Chat"
+        holder.butt.text = "Book"
         holder.butt.setOnClickListener {
             // Membuat Intent untuk membuka activity baru
-            val intent = Intent(holder.itemView.context, ChatDokterActivity::class.java)
+            val intent = Intent(holder.itemView.context, DetailDokterActivity::class.java)
             // Menambahkan data DokterModel ke Intent
             intent.putExtra("DokterModel", modelDokter)
             // Memulai activity baru

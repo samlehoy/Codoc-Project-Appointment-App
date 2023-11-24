@@ -21,7 +21,7 @@
 
         <ImageView
             android:id="@+id/imageDokter"
-            android:layout_width="85dp"
+            android:layout_width="75dp"
             android:layout_height="85dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -33,9 +33,9 @@
             android:id="@+id/textNama"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:text="Dr. Ahmad Aldi"
-            android:textSize="15dp"
+            android:textSize="22dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/imageDokter"
@@ -45,17 +45,18 @@
             android:id="@+id/Spesialis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
             android:text="Dokter Umum"
-            android:textSize="9sp"
+            android:textSize="13sp"
             app:layout_constraintStart_toEndOf="@+id/imageDokter"
             app:layout_constraintTop_toBottomOf="@+id/textNama" />
 
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="0dp"
-            android:layout_height="15dp"
-            android:layout_marginStart="16dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -76,7 +77,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="6dp"
                 android:text="10 Tahun"
-                android:textSize="10sp" />
+                android:textSize="11sp" />
 
             <ImageView
                 android:id="@+id/like"
@@ -92,18 +93,8 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="6dp"
                 android:text="98%"
-                android:textSize="10sp" />
+                android:textSize="11sp" />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/textharga"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:text="Rp 45.000"
-            app:layout_constraintStart_toEndOf="@+id/imageDokter"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/book_button"

@@ -17,5 +17,7 @@ class ChatDokterActivity : AppCompatActivity() {
         //semua
         val nams = findViewById<TextView>(R.id.namadokter)
         nams.text = user?.nama
+
+
     }
 }
