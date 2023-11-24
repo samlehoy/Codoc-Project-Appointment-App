@@ -8,18 +8,25 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.widget.AppCompatButton
 
 class DetailDokterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_dokter)
 
-
         val backButton: ImageView = findViewById(R.id.back)
         backButton.setOnClickListener {
             val intent = Intent (this, HomeActivity::class.java)
             startActivity(intent)
         }
+
+        val book_appointment: AppCompatButton = findViewById(R.id.book_appointment)
+        book_appointment.setOnClickListener {
+            val intent = Intent (this, BookingActivity::class.java)
+            startActivity(intent)
+        }
+
 
         // Mengambil data yang dikirim dari activity sebelumnya
         val dokterId = intent.getIntExtra("dokterId", 0)
