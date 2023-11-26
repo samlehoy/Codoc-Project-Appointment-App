@@ -62,9 +62,10 @@
             android:paddingStart="12dp"
             android:textColor="@color/black"
             android:textColorHint="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/silakan"
-            tools:ignore="RtlSymmetry"
-            tools:layout_editor_absoluteX="16dp" />
+            tools:ignore="RtlSymmetry" />
 
         <EditText
             android:id="@+id/inputPassword"
@@ -79,7 +80,7 @@
             android:ems="10"
             android:hint="Password"
             android:imeOptions="actionDone"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:paddingVertical="16dp"
             android:paddingStart="12dp"
             android:textColor="@color/black"
