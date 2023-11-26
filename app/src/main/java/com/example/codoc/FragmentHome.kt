@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -37,7 +38,17 @@ class FragmentHome : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
+        val rvmenu: RecyclerView = view.findViewById(R.id.recyclerViewDoctor)
+        val dokterList = listOf(
+            DokterModel(R.drawable.doctor_female, "Dr. Erna", "Cardiologist", "10 Years", "500"),
+            DokterModel(R.drawable.doctor_female, "Dr. Rachel", "Dermatologist", "7 Years", "800"),
+            // Tambah dokter lagi klo mau
+        )
+        rvmenu.layoutManager = LinearLayoutManager(activity)
+        rvmenu.adapter = AdapterDokter(dokterList)
+
+        return view
     }
 
     companion object {
@@ -58,18 +69,6 @@ class FragmentHome : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val listDokter=ListDokter.getDataDokter()
-
-        val recyclerView:RecyclerView=view.findViewById(R.id.recyclerViewDoctor)
-        recyclerView.layoutManager = LinearLayoutManager(context)
-
-        val adapter=AdapterDokter(listDokter)
-        recyclerView.adapter = adapter
     }
 
 }
