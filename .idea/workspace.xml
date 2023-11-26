@@ -10,23 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f5d20a9-1d78-42af-a651-02e6dcfea6bb" name="Changes" comment="UPDATE:&#10;1. Fix load fragment crash&#10;2. Fix warna hijau disekitar bottom nav&#10;&#10;BUG:&#10;1. RecyclerView data dokter tidak muncul">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/dna.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/DetailDokterActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/DetailDokterActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentHome.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentHome.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/home1.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/doctor_female.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/stethoscope.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/stethoscope.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/bottom_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/bottom_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[D:\Things\Android\.android\avd\Pixel_6_API_29.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\damar\.android\avd\Pixel_6_API_27.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -103,7 +98,7 @@
     "cidr.known.project.marker": "true",
     "com.android.tools.idea.devicemanager.tab": "Physical",
     "last_directory_selection": "D:/CodocProject/app/src/main/java/com/example",
-    "last_opened_file_path": "E:/Dekstop/School & Life/AMIKOM/SEMESTER 3/BP II/Pizza/PizzaApp",
+    "last_opened_file_path": "D:/AndroidStudioProjects/Medify",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
