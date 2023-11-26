@@ -9,19 +9,19 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f5d20a9-1d78-42af-a651-02e6dcfea6bb" name="Changes" comment="UPDATE:&#10;1. Fix load fragment crash&#10;2. Fix warna hijau disekitar bottom nav&#10;&#10;BUG:&#10;1. RecyclerView data dokter tidak muncul">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8f5d20a9-1d78-42af-a651-02e6dcfea6bb" name="Changes" comment="UPDATE:&#10;1.update login dan register &#10;&#10;BUG:&#10;&#10;&#10;KEKURANGAN:&#10;1.belum bisa bikin tombol untuk dokter dan pasien">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/doctor.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/kotak_radius.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/kotak_radius.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_first.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_first.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\damar\.android\avd\Pixel_6_API_27.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[RR8RB0361MN]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -97,8 +97,8 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cidr.known.project.marker": "true",
     "com.android.tools.idea.devicemanager.tab": "Physical",
-    "last_directory_selection": "D:/CodocProject/app/src/main/java/com/example",
-    "last_opened_file_path": "D:/AndroidStudioProjects/Medify",
+    "last_directory_selection": "D:/Codoc/app/src/main/res/drawable",
+    "last_opened_file_path": "D:/Codoc/app/src/main/res/drawable",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
@@ -110,11 +110,11 @@
       <recent name="com.example.codoc" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Codoc\app\src\main\res\drawable" />
       <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\CodocProject Damar 2611\app\src\main\res" />
       <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\CodocProject Damar 2611\app\src\main\res\menu" />
       <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\CodocProject\app\src\main\res\values" />
       <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\CodocProject\app\src\main\res\color" />
-      <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\CodocProject\app\src\main\res\font" />
     </key>
     <key name="android.template.168696400">
       <recent name="com.example.codoc" />
@@ -340,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700992806472</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="UPDATE:&#10;1.update login dan register &#10;&#10;BUG:&#10;&#10;&#10;KEKURANGAN:&#10;1.belum bisa bikin tombol untuk dokter dan pasien">
+      <created>1701010532393</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1701010532393</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -366,6 +373,7 @@
     <MESSAGE value="nambah aset ilang cok" />
     <MESSAGE value="UPDATE DAMAR 8:40" />
     <MESSAGE value="UPDATE:&#10;1. Fix load fragment crash&#10;2. Fix warna hijau disekitar bottom nav&#10;&#10;BUG:&#10;1. RecyclerView data dokter tidak muncul" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE:&#10;1. Fix load fragment crash&#10;2. Fix warna hijau disekitar bottom nav&#10;&#10;BUG:&#10;1. RecyclerView data dokter tidak muncul" />
+    <MESSAGE value="UPDATE:&#10;1.update login dan register &#10;&#10;BUG:&#10;&#10;&#10;KEKURANGAN:&#10;1.belum bisa bikin tombol untuk dokter dan pasien" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE:&#10;1.update login dan register &#10;&#10;BUG:&#10;&#10;&#10;KEKURANGAN:&#10;1.belum bisa bikin tombol untuk dokter dan pasien" />
   </component>
 </project>
