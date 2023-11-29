@@ -87,7 +87,7 @@
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginVertical="5dp"
                 android:scrollbars="none"
@@ -129,7 +129,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:listitem="@layout/card_layout" />
+                    tools:listitem="@layout/doctor_card_layout" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

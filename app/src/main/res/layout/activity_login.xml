@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_gradient_end_color"
+    android:background="@color/background_gradient_start_color"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
@@ -149,12 +149,6 @@
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tidak" />
-
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:layout_editor_absoluteX="114dp"
-                tools:layout_editor_absoluteY="322dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

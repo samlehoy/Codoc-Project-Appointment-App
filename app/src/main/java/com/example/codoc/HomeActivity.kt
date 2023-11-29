@@ -24,6 +24,7 @@ class HomeActivity : AppCompatActivity() {
 
         //set fragment
         val homeFragment=FragmentHome()
+        val settingsFragment=FragmentSettings()
 
         //default fragment
         supportFragmentManager.beginTransaction().apply {
@@ -34,10 +35,17 @@ class HomeActivity : AppCompatActivity() {
         currentFragment(homeFragment)
 
         bottomNav.setOnNavigationItemSelectedListener {
-            when(it.itemId){
-                R.id.home->currentFragment(homeFragment)
+            when (it.itemId) {
+                R.id.home -> {
+                    currentFragment(homeFragment)
+                    true
+                }
+                R.id.settings -> {
+                    currentFragment(settingsFragment)
+                    true
+                }
+                else -> false
             }
-            true
         }
     }
 

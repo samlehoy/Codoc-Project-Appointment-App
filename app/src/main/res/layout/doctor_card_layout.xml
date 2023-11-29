@@ -1,53 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginVertical="5dp"
-    android:elevation="0dp"
-    android:padding="10dp"
-    app:cardBackgroundColor="@android:color/transparent"
-    app:cardUseCompatPadding="true"
-    app:cardElevation="0dp"
-    app:cardCornerRadius="10dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_home"
+    android:layout_margin="5dp"
+
+    app:contentPadding="9dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/card_bg"
-        android:padding="25dp">
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewrekom">
 
-        <TextView
-            android:id="@+id/nameDisplay"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/montserratbold"
-            android:textColor="@color/green_shade_dark_1"
-            android:textSize="20sp"
-            android:ellipsize="end"
-            android:paddingEnd="4dp"
-            app:layout_constraintEnd_toStartOf="@+id/book_button"
+        <ImageView
+            android:id="@+id/imageDokter"
+            android:layout_width="75dp"
+            android:layout_height="85dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Doctor Name"
-            tools:ignore="RtlSymmetry" />
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/cewek" />
 
         <TextView
-            android:id="@+id/categoryDisplay"
+            android:id="@+id/textNama"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/montserratbold"
-            android:textColor="@color/green_shade_dark_2"
-            android:textSize="12sp"
-            android:ellipsize="end"
-            android:paddingEnd="4dp"
-            app:layout_constraintEnd_toStartOf="@+id/book_button"
-            app:layout_constraintStart_toStartOf="@+id/nameDisplay"
-            app:layout_constraintTop_toBottomOf="@+id/nameDisplay"
-            tools:text="Dentist"
-            tools:ignore="RtlSymmetry" />
+            android:layout_marginStart="8dp"
+            android:text="Dr. Ahmad Aldi"
+            android:textSize="22dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageDokter"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Spesialis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="Dokter Umum"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@+id/imageDokter"
+            app:layout_constraintTop_toBottomOf="@+id/textNama" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageDokter"
+            app:layout_constraintTop_toBottomOf="@+id/Spesialis">
+
+
+            <ImageView
+                android:id="@+id/work"
+                android:layout_width="17dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/baseline_work_24" />
+
+            <TextView
+                android:id="@+id/textkerja"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6dp"
+                android:text="10 Tahun"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/like"
+                android:layout_width="17dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:srcCompat="@drawable/baseline_thumb_up_24" />
+
+            <TextView
+                android:id="@+id/textsuka"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6dp"
+                android:text="98%"
+                android:textSize="11sp" />
+        </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/book_button"
@@ -59,9 +106,9 @@
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="11sp"
-            app:layout_constraintBottom_toBottomOf="@+id/categoryDisplay"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/nameDisplay" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

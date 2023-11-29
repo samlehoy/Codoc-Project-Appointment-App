@@ -21,7 +21,7 @@ class AdapterDokter  (private val listDokter:List<DokterModel>): RecyclerView.Ad
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterDokter.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(
-            R.layout.card_layout,parent, false)
+            R.layout.doctor_card_layout,parent, false)
         return ViewHolder(view)
     }
 
