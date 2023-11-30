@@ -42,22 +42,37 @@ class FragmentHome : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
-        val rvmenu: RecyclerView = view.findViewById(R.id.recyclerViewDoctor)
-        val chipContainer: LinearLayout = view.findViewById(R.id.chipContainer)
-        val horizontalScrollView: HorizontalScrollView = view.findViewById(R.id.horizontalScrollView)
-        val listOfSpecialties = listOf("Cardiology", "Dermatology", "Orthopedics", "Neurology")
+
+        // Sample list of specialties
+        val listOfSpecialties = listOf("Umum", "Cardiology", "Dermatology", "Orthopedics", "Neurology", "Dentist")
+
+        // Original list of doctors
         val dokterList = listOf(
-            DokterModel(R.drawable.cewek, "Dr. Erna", "Cardiologist", "10 Years", "500"),
-            DokterModel(R.drawable.cewek, "Dr. Rachel", "Dermatologist", "7 Years", "800"),
-            // Tambah dokter lagi klo mau
+            DokterModel(R.drawable.cowok, "Dr. Ahmad", "Umum", "5 Years", "1200"),
+            DokterModel(R.drawable.cewek, "Dr. Erna", "Cardiology", "10 Years", "500"),
+            DokterModel(R.drawable.cewek, "Dr. Rachel", "Dermatology", "7 Years", "800"),
+            // Add more doctors as needed
         )
+
+        // Set up RecyclerView with the original list of doctors
+        val rvmenu: RecyclerView = view.findViewById(R.id.recyclerViewDoctor)
         rvmenu.layoutManager = LinearLayoutManager(activity)
-        rvmenu.adapter = AdapterDokter(dokterList)
+        var adapterDokter = AdapterDokter(dokterList)
+        rvmenu.adapter = adapterDokter
+
+        // Sort the list of doctors by specialties
+        val chipContainer: LinearLayout = view.findViewById(R.id.chipContainer)
 
         // Dynamically add chips to the chipContainer
         for (specialty in listOfSpecialties) {
             val chip = Chip(context)
             chip.text = specialty
+            chip.setOnClickListener {
+                // Filter the list based on the selected specialty
+                val filteredDokterList = dokterList.filter { it.spesialis == specialty }
+                // Update the RecyclerView adapter with the filtered list
+                adapterDokter.updateData(filteredDokterList)
+            }
             // Set other chip properties if needed
             chipContainer.addView(chip)
         }

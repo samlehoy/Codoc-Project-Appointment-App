@@ -9,7 +9,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class AdapterDokter  (private val listDokter:List<DokterModel>): RecyclerView.Adapter<AdapterDokter.ViewHolder>() {
+class AdapterDokter(var listDokter: List<DokterModel>) : RecyclerView.Adapter<AdapterDokter.ViewHolder>() {
+    // Existing code...
+
+    // Add this method to update the data in the adapter
+    fun updateData(newList: List<DokterModel>) {
+        listDokter = newList
+        notifyDataSetChanged()
+    }
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView){
         val image: ImageView = itemView.findViewById(R.id.imageDokter)
         val nama: TextView = itemView.findViewById(R.id.textNama)
