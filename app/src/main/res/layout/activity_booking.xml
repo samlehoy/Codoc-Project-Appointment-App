@@ -15,6 +15,7 @@
         android:layout_marginTop="16dp"
         android:textColor="@color/white"
         android:textSize="30sp"
+        android:fontFamily="@font/dmsans_medium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:text="Buat Janji" />
@@ -25,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/montserratregular"
+        android:fontFamily="@font/dmsans_regular"
         android:text="Sialakan Mengisi Data Dibawah"
         android:textColor="@color/white"
         android:textSize="16sp"

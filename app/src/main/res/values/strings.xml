@@ -14,7 +14,7 @@
 
 
     <string name="app_name">Codoc</string>
-    <string name="doctor_s_name_email_or_phone">Doctor\'s name, email or phone</string>
+    <string name="doctor_s_name_email_or_phone">Nama dokter, Email atau No.Hp</string>
     <string name="condition_severe_pain">Severe Pain</string>
     <string name="condition_mild_pain">Mild Pain</string>
     <string name="condition_no_pain">No Pain</string>

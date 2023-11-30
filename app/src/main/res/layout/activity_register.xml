@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/montserratbold"
+        android:fontFamily="@font/dmsans_medium"
         android:text="Daftar"
         android:textColor="@color/white"
         android:textSize="25sp"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/montserratregular"
+        android:fontFamily="@font/dmsans_regular"
         android:text="Buat akun baru"
         android:textColor="@color/white"
         android:textSize="15sp"
@@ -54,7 +54,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
 
             <EditText
@@ -160,7 +161,7 @@
                 android:layout_marginBottom="32dp"
                 android:background="@drawable/kotak_radius"
                 android:backgroundTint="@color/green_shade_dark_2"
-                android:fontFamily="@font/montserratbold"
+                android:fontFamily="@font/dmsans_bold"
                 android:text="Daftar"
                 android:textAllCaps="false"
                 android:textColor="@color/white"

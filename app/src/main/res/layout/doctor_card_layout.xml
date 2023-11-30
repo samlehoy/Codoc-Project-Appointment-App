@@ -35,6 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="Dr. Ahmad Aldi"
+            android:fontFamily="@font/dmsans_regular"
             android:textSize="22dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -47,6 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
+            android:fontFamily="@font/dmsans_regular"
             android:text="Dokter Umum"
             android:textSize="13sp"
             app:layout_constraintStart_toEndOf="@+id/imageDokter"
@@ -76,6 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="6dp"
+                android:fontFamily="@font/dmsans_regular"
                 android:text="10 Tahun"
                 android:textSize="11sp" />
 
@@ -92,6 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="6dp"
+                android:fontFamily="@font/dmsans_regular"
                 android:text="98%"
                 android:textSize="11sp" />
         </LinearLayout>
@@ -103,6 +107,7 @@
             android:background="@drawable/primary_button"
             android:paddingHorizontal="5dp"
             android:text="@string/book"
+            android:fontFamily="@font/dmsans_regular"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="11sp"
