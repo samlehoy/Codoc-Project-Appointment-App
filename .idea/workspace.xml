@@ -9,50 +9,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f5d20a9-1d78-42af-a651-02e6dcfea6bb" name="Changes" comment="UPDATE:&#10;1.update login dan register &#10;&#10;BUG:&#10;&#10;&#10;KEKURANGAN:&#10;1.belum bisa bikin tombol untuk dokter dan pasien">
-      <change afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentMyJanji.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentSettings.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/about_us.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/cewek.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/cowok.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/edit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/feedback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/logout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/need_help.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_myjanji.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8f5d20a9-1d78-42af-a651-02e6dcfea6bb" name="Changes" comment="UPDATE:&#10;1. Activity Settings&#10;2. pindah activity settings done&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/AdapterDokter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/AdapterDokter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentHome.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentHome.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/HomeActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/ObjectHomeActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/doctor_female.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/first.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/first.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/icon1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/icon2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/icon3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/icon4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/kadungan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/langganan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/mata.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/organ_dalam.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/signin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/signup.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/umum.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_dokter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_dokter.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_first.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_first.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/card_layout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/doctor_card_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/doctor_card_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/bottom_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/bottom_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -389,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701010532393</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="UPDATE:&#10;1. Activity Settings&#10;2. pindah activity settings done&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)">
+      <created>1701223994235</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1701223994235</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -416,6 +383,7 @@
     <MESSAGE value="UPDATE DAMAR 8:40" />
     <MESSAGE value="UPDATE:&#10;1. Fix load fragment crash&#10;2. Fix warna hijau disekitar bottom nav&#10;&#10;BUG:&#10;1. RecyclerView data dokter tidak muncul" />
     <MESSAGE value="UPDATE:&#10;1.update login dan register &#10;&#10;BUG:&#10;&#10;&#10;KEKURANGAN:&#10;1.belum bisa bikin tombol untuk dokter dan pasien" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE:&#10;1.update login dan register &#10;&#10;BUG:&#10;&#10;&#10;KEKURANGAN:&#10;1.belum bisa bikin tombol untuk dokter dan pasien" />
+    <MESSAGE value="UPDATE:&#10;1. Activity Settings&#10;2. pindah activity settings done&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE:&#10;1. Activity Settings&#10;2. pindah activity settings done&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)" />
   </component>
 </project>
