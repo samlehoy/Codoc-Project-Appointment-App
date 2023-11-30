@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".HomeActivity"
-        android:background="@color/background_gradient_end_color">
+        android:background="@drawable/gradient_background">
 
         <TextView
             android:id="@+id/nameDisplay"
@@ -22,13 +22,13 @@
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Hi" />
+            android:text="Hi" />
 
         <TextView
             android:id="@+id/namadokter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="4dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/dmsans_medium"
             android:text="Joko"

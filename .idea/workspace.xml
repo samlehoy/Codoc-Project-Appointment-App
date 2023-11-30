@@ -9,54 +9,29 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f5d20a9-1d78-42af-a651-02e6dcfea6bb" name="Changes" comment="UPDATE: 30 November 2023&#10;1. Fix Fragment home terbawa ketika pindah activity&#10;2. Adjustment margin untuk fragment setting&#10;3. Recycler horizontal pada fragment home&#10;4. Add Function sort by horizontalscrollview&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/dmsans_bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/dmsans_italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/dmsans_light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/dmsans_medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/dmsans_regular.ttf" afterDir="false" />
+    <list default="true" id="8f5d20a9-1d78-42af-a651-02e6dcfea6bb" name="Changes" comment="UPDATE: 30 November 2023&#10;1. Fix Fragment home terbawa ketika pindah activity&#10;2. Adjustment margin untuk fragment setting&#10;3. Recycler horizontal pada fragment home&#10;4. Add Function sort by horizontalscrollview&#10;5. Change font and icon color&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_email.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_email.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_lock.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_lock.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_person.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_person.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_phone.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_phone.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserratblack.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserratblackitalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserratbold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserratbolditalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserratextrabold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserratextrabolditalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserratextralight.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserratextralightitalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserratitalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserratlight.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserratlightitalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserratmedium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserratmediumitalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserratregular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserratsemibold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserratsemibolditalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserratthin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserratthinitalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/bottom_nav.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bottom_nav.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/kotak_radius.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/kotak_radius.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_booking.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_booking.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_dokter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_dokter.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_first.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_first.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_gigi.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_umum.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/doctor_card_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/doctor_card_layout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_myjanji.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_myjanji.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/signup.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\mutta\.android\avd\Pixel_5_API_29.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[D:\Things\Android\.android\avd\Pixel_6_API_29.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -133,7 +108,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;E:/Dekstop/School &amp; Life/AMIKOM/SEMESTER 3/BP II/CodocProject Damar 27/11/app/src/main/res/drawable&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Dekstop/School &amp; Life/AMIKOM/SEMESTER 3/BP II/CodocProject Damar 27/11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Dekstop/School &amp; Life/AMIKOM/SEMESTER 3/BP II/Medify&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -413,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701317868875</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="UPDATE: 30 November 2023&#10;1. Fix Fragment home terbawa ketika pindah activity&#10;2. Adjustment margin untuk fragment setting&#10;3. Recycler horizontal pada fragment home&#10;4. Add Function sort by horizontalscrollview&#10;5. Change font and icon color&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)">
+      <created>1701321565991</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1701321565991</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -444,6 +426,7 @@
     <MESSAGE value="UPDATE:&#10;1. Fix Fragment home terbawa ketika pindah activity&#10;2. Adjustment margin untuk fragment setting&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)" />
     <MESSAGE value="UPDATE: 30 November 2023&#10;1. Fix Fragment home terbawa ketika pindah activity&#10;2. Adjustment margin untuk fragment setting&#10;3. Recycler horizontal pada fragment home&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)" />
     <MESSAGE value="UPDATE: 30 November 2023&#10;1. Fix Fragment home terbawa ketika pindah activity&#10;2. Adjustment margin untuk fragment setting&#10;3. Recycler horizontal pada fragment home&#10;4. Add Function sort by horizontalscrollview&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: 30 November 2023&#10;1. Fix Fragment home terbawa ketika pindah activity&#10;2. Adjustment margin untuk fragment setting&#10;3. Recycler horizontal pada fragment home&#10;4. Add Function sort by horizontalscrollview&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)" />
+    <MESSAGE value="UPDATE: 30 November 2023&#10;1. Fix Fragment home terbawa ketika pindah activity&#10;2. Adjustment margin untuk fragment setting&#10;3. Recycler horizontal pada fragment home&#10;4. Add Function sort by horizontalscrollview&#10;5. Change font and icon color&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: 30 November 2023&#10;1. Fix Fragment home terbawa ketika pindah activity&#10;2. Adjustment margin untuk fragment setting&#10;3. Recycler horizontal pada fragment home&#10;4. Add Function sort by horizontalscrollview&#10;5. Change font and icon color&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)" />
   </component>
 </project>
