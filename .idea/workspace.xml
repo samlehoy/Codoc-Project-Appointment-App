@@ -9,9 +9,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f5d20a9-1d78-42af-a651-02e6dcfea6bb" name="Changes" comment="UPDATE:&#10;1. Activity Settings&#10;2. pindah activity settings done&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)">
+    <list default="true" id="8f5d20a9-1d78-42af-a651-02e6dcfea6bb" name="Changes" comment="UPDATE:&#10;1. Fix Fragment home terbawa ketika pindah activity&#10;2. Adjustment margin untuk fragment setting&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/calendar_month.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/BookingActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/BookingActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentHome.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentHome.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/HomeActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_myjanji.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_myjanji.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +102,7 @@
     "cidr.known.project.marker": "true",
     "com.android.tools.idea.devicemanager.tab": "Physical",
     "last_directory_selection": "E:/Dekstop/School & Life/AMIKOM/SEMESTER 3/BP II/CodocProject Damar 27/11/app/src/main/res/drawable",
-    "last_opened_file_path": "E:/Dekstop/School & Life/AMIKOM/SEMESTER 3/BP II/Pizza/PizzaApp",
+    "last_opened_file_path": "E:/Dekstop/School & Life/AMIKOM/SEMESTER 3/BP II/CodocProject Damar 27/11/app/src/main/res/drawable",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
@@ -356,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701223994235</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="UPDATE:&#10;1. Fix Fragment home terbawa ketika pindah activity&#10;2. Adjustment margin untuk fragment setting&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)">
+      <created>1701311956348</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1701311956348</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -384,6 +396,7 @@
     <MESSAGE value="UPDATE:&#10;1. Fix load fragment crash&#10;2. Fix warna hijau disekitar bottom nav&#10;&#10;BUG:&#10;1. RecyclerView data dokter tidak muncul" />
     <MESSAGE value="UPDATE:&#10;1.update login dan register &#10;&#10;BUG:&#10;&#10;&#10;KEKURANGAN:&#10;1.belum bisa bikin tombol untuk dokter dan pasien" />
     <MESSAGE value="UPDATE:&#10;1. Activity Settings&#10;2. pindah activity settings done&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE:&#10;1. Activity Settings&#10;2. pindah activity settings done&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)" />
+    <MESSAGE value="UPDATE:&#10;1. Fix Fragment home terbawa ketika pindah activity&#10;2. Adjustment margin untuk fragment setting&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE:&#10;1. Fix Fragment home terbawa ketika pindah activity&#10;2. Adjustment margin untuk fragment setting&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)" />
   </component>
 </project>

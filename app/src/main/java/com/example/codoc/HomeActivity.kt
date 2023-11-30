@@ -25,19 +25,24 @@ class HomeActivity : AppCompatActivity() {
         //set fragment
         val homeFragment=FragmentHome()
         val settingsFragment=FragmentSettings()
+        val myJanjiFragment=FragmentMyJanji()
 
         //default fragment
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.fragment_container,homeFragment)
             commit()
         }
-
         currentFragment(homeFragment)
 
+        //fungsi pindah fragment melalu button nav
         bottomNav.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.home -> {
                     currentFragment(homeFragment)
+                    true
+                }
+                R.id.appointment -> {
+                    currentFragment(myJanjiFragment)
                     true
                 }
                 R.id.settings -> {
@@ -47,6 +52,8 @@ class HomeActivity : AppCompatActivity() {
                 else -> false
             }
         }
+
+
     }
 
     private fun currentFragment(fragment: Fragment) =
@@ -54,6 +61,7 @@ class HomeActivity : AppCompatActivity() {
             replace(R.id.fragment_container,fragment)
             commit()
         }
+
 
 }
 

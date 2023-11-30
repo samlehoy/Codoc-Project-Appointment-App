@@ -5,9 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.HorizontalScrollView
+import android.widget.LinearLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.chip.Chip
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -40,6 +43,9 @@ class FragmentHome : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         val rvmenu: RecyclerView = view.findViewById(R.id.recyclerViewDoctor)
+        val chipContainer: LinearLayout = view.findViewById(R.id.chipContainer)
+        val horizontalScrollView: HorizontalScrollView = view.findViewById(R.id.horizontalScrollView)
+        val listOfSpecialties = listOf("Cardiology", "Dermatology", "Orthopedics", "Neurology")
         val dokterList = listOf(
             DokterModel(R.drawable.cewek, "Dr. Erna", "Cardiologist", "10 Years", "500"),
             DokterModel(R.drawable.cewek, "Dr. Rachel", "Dermatologist", "7 Years", "800"),
@@ -47,6 +53,14 @@ class FragmentHome : Fragment() {
         )
         rvmenu.layoutManager = LinearLayoutManager(activity)
         rvmenu.adapter = AdapterDokter(dokterList)
+
+        // Dynamically add chips to the chipContainer
+        for (specialty in listOfSpecialties) {
+            val chip = Chip(context)
+            chip.text = specialty
+            // Set other chip properties if needed
+            chipContainer.addView(chip)
+        }
 
         return view
     }
