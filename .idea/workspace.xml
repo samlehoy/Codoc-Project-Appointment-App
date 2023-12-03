@@ -10,11 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f5d20a9-1d78-42af-a651-02e6dcfea6bb" name="Changes" comment="UPDATE: 30 November 2023&#10;1. Fix Fragment home terbawa ketika pindah activity&#10;2. Adjustment margin untuk fragment setting&#10;3. Recycler horizontal pada fragment home&#10;4. Add Function sort by horizontalscrollview&#10;5. Change font and icon color&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/janji_card_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_booking.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_booking.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/janji_card_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/janji_card_layout.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,21 +87,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "cidr.known.project.marker": "true",
-    "last_directory_selection": "E:/Dekstop/School & Life/AMIKOM/SEMESTER 3/BP II/CodocProject Damar 27/11/app/src/main/res/drawable",
-    "last_opened_file_path": "D:/CodocProject/app/src/main/res/layout",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;E:/Dekstop/School &amp; Life/AMIKOM/SEMESTER 3/BP II/CodocProject Damar 27/11/app/src/main/res/drawable&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/CodocProject/app/src/main/res/layout&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="android.template.-720546985">
       <recent name="com.example.codoc" />
@@ -385,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701321565991</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="UPDATE: 30 November 2023&#10;1. Fix Fragment home terbawa ketika pindah activity&#10;2. Adjustment margin untuk fragment setting&#10;3. Recycler horizontal pada fragment home&#10;4. Add Function sort by horizontalscrollview&#10;5. Change font and icon color&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)">
+      <created>1701613676769</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1701613676769</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
