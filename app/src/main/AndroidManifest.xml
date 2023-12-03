@@ -18,10 +18,12 @@
         <activity
             android:name=".DetailDokterActivity"
             android:exported="false" />
+
         <activity
             android:name=".HomeActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan"/>
+
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
