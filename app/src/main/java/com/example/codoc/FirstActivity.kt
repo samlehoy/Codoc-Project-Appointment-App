@@ -3,7 +3,7 @@ package com.example.codoc
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import android.widget.ImageView
 
 class FirstActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,18 +11,17 @@ class FirstActivity : AppCompatActivity() {
         setContentView(R.layout.activity_first)
 
         //instance
-        val btnMasuk: Button = findViewById(R.id.buttonMasuk)
-        val btnReg: Button = findViewById(R.id.buttonReg)
-
+        val btnMasukpasien: ImageView = findViewById(R.id.pasienimage)
+        val btnMasukdokter: ImageView = findViewById(R.id.dokterimage)
 
         //action button
-        btnMasuk.setOnClickListener {
-            val intent = Intent (this, LoginActivity::class.java)
-            startActivity(intent)
+        btnMasukpasien.setOnClickListener {
+            val intentpasien = Intent (this, LoginPasienActivity::class.java)
+            startActivity(intentpasien)
         }
-        btnReg.setOnClickListener {
-            val intent = Intent (this, RegisterActivity::class.java)
-            startActivity(intent)
+        btnMasukdokter.setOnClickListener {
+            val intentdokter = Intent (this, LoginDokterActivity::class.java)
+            startActivity(intentdokter)
         }
     }
 }

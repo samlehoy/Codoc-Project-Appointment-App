@@ -40,63 +40,50 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/Konsultasi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/dmsans_light"
-                android:text="Buat janji bersama dokter terpercaya dimanapun, kapanpun."
-                android:textSize="12sp"
-                android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
+            <ImageView
+                android:id="@+id/dokterimage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toStartOf="@+id/pasienimage"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/selamat" />
+                app:layout_constraintTop_toBottomOf="@+id/selamat"
+                app:srcCompat="@drawable/dokter" />
 
-            <Button
-                android:id="@+id/buttonMasuk"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/kotak_radius"
-                android:backgroundTint="#55B9A1"
-                android:fontFamily="@font/dmsans_bold"
-                android:text="Masuk"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="16sp"
+            <ImageView
+                android:id="@+id/pasienimage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Konsultasi" />
-
-            <Button
-                android:id="@+id/buttonReg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/kotak_radius"
-                android:backgroundTint="#2C6764"
-                android:fontFamily="@font/dmsans_bold"
-                android:text="Belum punya akun? Daftarin aja"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="13sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonMasuk" />
+                app:layout_constraintTop_toBottomOf="@+id/selamat"
+                app:srcCompat="@drawable/pasien" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textdoter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/dmsans_light"
-                android:text="Dengan masuk dan mendaftar, anda menyetujui Ketentuan Layanan dan Kebijakan Privasi "
-                android:textSize="12sp"
+                android:fontFamily="@font/dmsans_regular"
+                android:text="Dokter"
                 android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonReg" />
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/dokterimage"
+                app:layout_constraintStart_toStartOf="@+id/dokterimage"
+                app:layout_constraintTop_toBottomOf="@+id/dokterimage" />
+
+            <TextView
+                android:id="@+id/texktpasien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsans_regular"
+                android:text="Pasien"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/pasienimage"
+                app:layout_constraintStart_toStartOf="@+id/pasienimage"
+                app:layout_constraintTop_toBottomOf="@+id/pasienimage" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

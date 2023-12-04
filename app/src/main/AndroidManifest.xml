@@ -13,22 +13,29 @@
         android:theme="@style/Theme.Codoc"
         tools:targetApi="31">
         <activity
+            android:name=".CobaActivity"
+            android:exported="false" />
+        <activity
             android:name=".BookingActivity"
             android:exported="false" />
         <activity
             android:name=".DetailDokterActivity"
             android:exported="false" />
-
         <activity
             android:name=".HomeActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"/>
-
+            android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".RegisterDokterActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".LoginDokterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterPasienActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginPasienActivity"
             android:exported="false" />
         <activity
             android:name=".FirstActivity"

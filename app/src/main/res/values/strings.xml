@@ -1,18 +1,13 @@
 <resources>
 
+    <string-array name="specialis_array">
+        <item>Option 1</item>
+        <item>Option 2</item>
+        <item>Option 3</item>
+        <!-- Add more items as needed -->
+    </string-array>
+
     <string name="username">Joko</string>
-
-
-
-
-
-
-
-
-
-
-
-
     <string name="app_name">Codoc</string>
     <string name="doctor_s_name_email_or_phone">Nama dokter, Email atau No.Hp</string>
     <string name="condition_severe_pain">Severe Pain</string>
