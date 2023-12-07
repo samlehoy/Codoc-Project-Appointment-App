@@ -15,23 +15,18 @@ class LoginPasienActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-        //instance
+        //button
         val btnMasuk: Button = findViewById(R.id.buttonMasuk)
         val btnDaftar: TextView = findViewById(R.id.textViewDaftar)
+        //instance text
         val txtEmailLayout: TextInputLayout = findViewById(R.id.inputEmail)
         val txtPasswordLayout: TextInputLayout = findViewById(R.id.inputPassword)
 
         //event button Masuk/login
         btnMasuk.setOnClickListener {
-            val dbHelper = DatabaseHelper(this)
 
-            //check data
-            val data: String = dbHelper.checkData("stevi.ema@amikom.ac.id")
-            Toast.makeText(this@LoginPasienActivity, "Result : " + data, Toast.LENGTH_SHORT).show()
-            if (data == "") {
-                //insert data
-                dbHelper.addAccount("stevi.ema@amikom.ac.id", "Stevi Ema W", "Cashier", "12345")
-            }
+            //instance
+            val dbHelper = DatabaseHelper(this)
 
             // Access the underlying EditText from TextInputLayout
             val email = txtEmailLayout.editText?.text.toString().trim()

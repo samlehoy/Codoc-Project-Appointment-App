@@ -19,12 +19,12 @@
             android:id="@+id/nameDisplay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:text="Settings"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/dmsans_medium"
+            android:text="Settings"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,7 +33,7 @@
             android:id="@+id/linearLayoutMain"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/shape_home"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -89,10 +89,10 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_marginTop="16dp"
                     android:id="@+id/linearLayout2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
                     android:gravity="center_vertical|start"
                     android:orientation="horizontal">
 
@@ -118,10 +118,10 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_marginTop="16dp"
                     android:id="@+id/linearLayout3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
                     android:gravity="center_vertical|start"
                     android:orientation="horizontal">
 
@@ -147,10 +147,10 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_marginTop="16dp"
                     android:id="@+id/linearLayout4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
                     android:gravity="center_vertical|start"
                     android:orientation="horizontal">
 
@@ -176,10 +176,10 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_marginTop="16dp"
                     android:id="@+id/linearLayout5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
                     android:gravity="center_vertical|start"
                     android:orientation="horizontal">
 

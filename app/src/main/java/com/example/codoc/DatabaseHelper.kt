@@ -9,21 +9,25 @@ import android.widget.Toast
 
 class DatabaseHelper(var context: Context): SQLiteOpenHelper(
     context,DATABASE_NAME,null,DATABASE_VERSION){
-    companion object{
-        private val DATABASE_NAME = "pizza"
+    companion object {
+        private val DATABASE_NAME = "Codoc"
         private val DATABASE_VERSION = 1
         //table name
-        private val TABLE_ACCOUNT = "account"
+        private val TABLE_ACCOUNT = "akunpasien"
         //column account table
         private val COLUMN_EMAIL = "email"
         private val COLUMN_NAME = "name"
-        private val COLUMN_LEVEL = "level"
+        private val COLUMN_DATEOFBIRTH = "date_of_birth"
+        private val COLUMN_NOHP = "nohp"
         private val COLUMN_PASSWORD = "password"
     }
     //create table account sql query
     private val CREATE_ACCOUNT_TABLE = ("CREATE TABLE " + TABLE_ACCOUNT + "("
-            + COLUMN_EMAIL + " TEXT PRIMARY KEY, "+ COLUMN_NAME +" TEXT, "
-            + COLUMN_LEVEL + " TEXT, "+ COLUMN_PASSWORD +" TEXT)")
+            + COLUMN_EMAIL + " TEXT PRIMARY KEY, "
+            + COLUMN_NAME + " TEXT, "
+            + COLUMN_DATEOFBIRTH + " TEXT, "  // Add the new column
+            + COLUMN_NOHP + " TEXT, "
+            + COLUMN_PASSWORD + " TEXT)")
 
     //drop table account sql query
     private val DROP_ACCOUNT_TABLE = "DROP TABLE IF EXISTS $TABLE_ACCOUNT"
@@ -68,28 +72,27 @@ class DatabaseHelper(var context: Context): SQLiteOpenHelper(
         }
     }
 
-    fun addAccount(email: String, name:String, level:String, password:String){
-        val db = this.readableDatabase
+    fun addAccount(email: String, name: String, dateOfBirth: String, noHp: String, password: String) {
+        val db = this.writableDatabase
 
         val values = ContentValues()
         values.put(COLUMN_EMAIL, email)
         values.put(COLUMN_NAME, name)
-        values.put(COLUMN_LEVEL, level)
+        values.put(COLUMN_DATEOFBIRTH, dateOfBirth)
+        values.put(COLUMN_NOHP, noHp)
         values.put(COLUMN_PASSWORD, password)
 
         val result = db.insert(TABLE_ACCOUNT, null, values)
-        //show message
-        if (result==(0).toLong()){
-            Toast.makeText(context,"Register failed", Toast.LENGTH_SHORT).show()
-        }
-        else{
-            Toast.makeText(context,"Register success," +
+
+        if (result == -1L) {
+            Toast.makeText(context, "Register failed", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(context, "Register success, " +
                     "Please login using your new account", Toast.LENGTH_SHORT).show()
         }
 
         db.close()
     }
-
     //FIXED REGISTER!!!
     @SuppressLint("Range")
     fun checkData(email:String):String{

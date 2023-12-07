@@ -1,0 +1,8 @@
+<!-- res/drawable/edittext_border_focused.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <stroke
+        android:width="2dp"
+        android:color="@color/green_shade_dark_1" /> <!-- Focused border color (green) -->
+    <corners android:radius="8dp" />
+</shape>
