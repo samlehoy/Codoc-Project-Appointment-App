@@ -9,7 +9,21 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f5d20a9-1d78-42af-a651-02e6dcfea6bb" name="Changes" comment="UPDATE: 8 Desember 2023&#10;1. Update EditProfile&#10;2. Update Menampilkan data profile pada ProfileActivity.kt menggunakan Shared Preference&#10;&#10;&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. Edit Profile (Get from database)&#10;3. Database tersendiri untuk dokter (database input manual/no register)&#10;4. Dokter bisa membuat/mengubah jadwal nya&#10;5. pada fragment_home.xml Hi &quot;User&quot; mengambil dari database&#10;6. Fungsi Search&#10;7. activity_myjanji&#10;8. get COLUMN_SPECIALIS pada horizontalScrollView fragment_home" />
+    <list default="true" id="8f5d20a9-1d78-42af-a651-02e6dcfea6bb" name="Changes" comment="UPDATE: 8 Desember 2023&#10;1. Update ProfileActivity Selesai&#10;2. Update Menampilkan data profile pada ProfileActivity.kt menggunakan Shared Preference&#10;3. Update EditProfileActivity selesai&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. Database tersendiri untuk dokter (database input manual/no register)&#10;3. Dokter bisa membuat/mengubah jadwal nya&#10;4. pada fragment_home.xml Hi &quot;User&quot; mengambil dari database&#10;5. Fungsi Search&#10;6. activity_myjanji&#10;7. get COLUMN_SPECIALIS pada horizontalScrollView fragment_home">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/cardview_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/EditProfileActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/EditProfileActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/ProfileActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/ProfileActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/edittext_grey.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/edittext_grey.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login_dokter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login_dokter.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login_pasien.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login_pasien.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register_dokter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register_dokter.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register_pasien.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register_pasien.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,9 +105,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "android-custom-viewD:/Things/Android/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.5.0/8d3b87c7463f55053836b805e014cb238f64757a/material-1.5.0-sources.jar!/com/google/android/material/textfield/TextInputLayout.java_SELECTED": "TextInputLayout",
     "cidr.known.project.marker": "true",
     "last_directory_selection": "E:/Dekstop/School & Life/AMIKOM/SEMESTER 3/BP II/AAA-FINAL PROJECT/CodocProject/app/src/main/res/drawable",
-    "last_opened_file_path": "E:/Dekstop/School & Life/AMIKOM/SEMESTER 3/BP II/AAA-FINAL PROJECT/CodocProject/app/src/main/java/com/example/codoc/activity",
+    "last_opened_file_path": "F:/",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
@@ -114,9 +129,9 @@
       <recent name="com.example.codoc" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\AAA-FINAL PROJECT\CodocProject\app\src\main\res\drawable" />
       <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\AAA-FINAL PROJECT\CodocProject\app\src\main\java\com\example\codoc\activity" />
       <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\AAA-FINAL PROJECT\CodocProject\app\src\main\res\layout" />
-      <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\AAA-FINAL PROJECT\CodocProject\app\src\main\res\drawable" />
       <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\CodocProject Damar 27\11\app\src\main\res\font" />
       <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\CodocProject Damar 27\11\app\src\main\res\drawable" />
     </key>
@@ -413,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702025552946</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="UPDATE: 8 Desember 2023&#10;1. Update ProfileActivity Selesai&#10;2. Update Menampilkan data profile pada ProfileActivity.kt menggunakan Shared Preference&#10;3. Update EditProfileActivity selesai&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. Database tersendiri untuk dokter (database input manual/no register)&#10;3. Dokter bisa membuat/mengubah jadwal nya&#10;4. pada fragment_home.xml Hi &quot;User&quot; mengambil dari database&#10;5. Fungsi Search&#10;6. activity_myjanji&#10;7. get COLUMN_SPECIALIS pada horizontalScrollView fragment_home">
+      <created>1702025963702</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1702025963702</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -448,6 +470,7 @@
     <MESSAGE value="UPDATE: 4 Desember 2023&#10;1. Misah register, login dokter dan pasien&#10;&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)" />
     <MESSAGE value="UPDATE: 7 Desember 2023&#10;1. Fix toast when log-in&#10;2. Fix tetap bisa login ketika data input null&#10;3. Penambahan COLUMN_NOHP, COLUMN_DATEOFBIRTH&#10;4. Penambahan activity_profile.xml, activity_edit_profile.xml&#10;&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. Edit Profile (Get from database)&#10;3. Database tersendiri untuk dokter (database input manual/no register)&#10;4. Dokter bisa membuat/mengubah jadwal nya&#10;5. pada fragment_home.xml Hi &quot;User&quot; mengambil dari database&#10;6. Fungsi Search&#10;7. activity_myjanji&#10;8. get COLUMN_SPECIALIS pada horizontalScrollView fragment_home" />
     <MESSAGE value="UPDATE: 8 Desember 2023&#10;1. Update EditProfile&#10;2. Update Menampilkan data profile pada ProfileActivity.kt menggunakan Shared Preference&#10;&#10;&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. Edit Profile (Get from database)&#10;3. Database tersendiri untuk dokter (database input manual/no register)&#10;4. Dokter bisa membuat/mengubah jadwal nya&#10;5. pada fragment_home.xml Hi &quot;User&quot; mengambil dari database&#10;6. Fungsi Search&#10;7. activity_myjanji&#10;8. get COLUMN_SPECIALIS pada horizontalScrollView fragment_home" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: 8 Desember 2023&#10;1. Update EditProfile&#10;2. Update Menampilkan data profile pada ProfileActivity.kt menggunakan Shared Preference&#10;&#10;&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. Edit Profile (Get from database)&#10;3. Database tersendiri untuk dokter (database input manual/no register)&#10;4. Dokter bisa membuat/mengubah jadwal nya&#10;5. pada fragment_home.xml Hi &quot;User&quot; mengambil dari database&#10;6. Fungsi Search&#10;7. activity_myjanji&#10;8. get COLUMN_SPECIALIS pada horizontalScrollView fragment_home" />
+    <MESSAGE value="UPDATE: 8 Desember 2023&#10;1. Update ProfileActivity Selesai&#10;2. Update Menampilkan data profile pada ProfileActivity.kt menggunakan Shared Preference&#10;3. Update EditProfileActivity selesai&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. Database tersendiri untuk dokter (database input manual/no register)&#10;3. Dokter bisa membuat/mengubah jadwal nya&#10;4. pada fragment_home.xml Hi &quot;User&quot; mengambil dari database&#10;5. Fungsi Search&#10;6. activity_myjanji&#10;7. get COLUMN_SPECIALIS pada horizontalScrollView fragment_home" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: 8 Desember 2023&#10;1. Update ProfileActivity Selesai&#10;2. Update Menampilkan data profile pada ProfileActivity.kt menggunakan Shared Preference&#10;3. Update EditProfileActivity selesai&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. Database tersendiri untuk dokter (database input manual/no register)&#10;3. Dokter bisa membuat/mengubah jadwal nya&#10;4. pada fragment_home.xml Hi &quot;User&quot; mengambil dari database&#10;5. Fungsi Search&#10;6. activity_myjanji&#10;7. get COLUMN_SPECIALIS pada horizontalScrollView fragment_home" />
   </component>
 </project>

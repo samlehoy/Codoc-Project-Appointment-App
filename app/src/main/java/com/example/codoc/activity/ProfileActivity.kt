@@ -38,9 +38,6 @@ class ProfileActivity : AppCompatActivity() {
         binding.buttonEdit.setOnClickListener {
             val intent = Intent(baseContext, EditProfileActivity::class.java)
             intent.putExtra("EMAIL", userEmail)
-            intent.putExtra("NAME", binding.textView2.text.toString())
-            intent.putExtra("DATE_OF_BIRTH", binding.textView3.text.toString())
-            intent.putExtra("NO_HP", binding.textView5.text.toString())
             startActivity(intent)
         }
     }
@@ -76,10 +73,10 @@ class ProfileActivity : AppCompatActivity() {
                 val email = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_EMAIL))
                 val phone = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_NOHP))
 
-                binding.textView2.text = "Name : $name"
-                binding.textView3.text = "Date of Birth : $dateOfBirth"
-                binding.textView4.text = "Email : $email"
-                binding.textView5.text = "Phone Number : $phone"
+                binding.namauser.text = "$name"
+                binding.tanggaluser.text = "$dateOfBirth"
+                binding.emailuser.text = "$email"
+                binding.noTelpUser.text = "$phone"
             } else {
                 Log.e("ProfileActivity", "No data found for user with email: $userEmail")
             }

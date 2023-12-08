@@ -26,6 +26,8 @@
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/shape_home"
+        android:backgroundTint="@color/white"
+        android:elevation="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -40,7 +42,9 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="100dp"
             android:layout_marginEnd="32dp"
-            android:background="@drawable/profile"
+            android:background="@drawable/cardview_background"
+            android:backgroundTint="@color/white"
+            android:elevation="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -54,67 +58,133 @@
                 android:text="Update Profile"
                 android:textColor="@color/green_shade_dark_1"
                 android:textSize="25sp"
+                android:backgroundTint="@color/white"
+                android:elevation="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <EditText
-                android:id="@+id/editEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/edittext_border"
-                android:ems="12"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editEmailOut"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:startIconDrawable="@drawable/ic_email"
                 android:hint="Email"
-                android:paddingStart="10dp"
-                android:inputType="text"
+                android:textColorHint="@android:color/darker_gray"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:endIconMode="clear_text"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
 
-            <EditText
-                android:id="@+id/editnama"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editemail"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/dm_sans"
+                    android:inputType="text"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editnamaout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:background="@drawable/edittext_border"
-                android:ems="12"
-                android:hint="Nama"
-                android:inputType="text"
-                android:paddingStart="10dp"
+                android:layout_marginEnd="16dp"
+                app:startIconDrawable="@drawable/ic_person"
+                android:hint="Nama Lengkap"
+                android:textColorHint="@android:color/darker_gray"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:endIconMode="clear_text"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+                app:layout_constraintTop_toBottomOf="@+id/editEmailOut">
 
-            <EditText
-                android:id="@+id/editTglLahir"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editnama"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/dm_sans"
+                    android:inputType="text"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editTglLahirOut"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:background="@drawable/edittext_border"
-                android:ems="12"
+                android:layout_marginEnd="16dp"
                 android:hint="Tanggal Lahir"
-                android:paddingStart="10dp"
-                android:inputType="text"
+                android:textColorHint="@android:color/darker_gray"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:endIconMode="clear_text"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editnama" />
+                app:layout_constraintTop_toBottomOf="@+id/editnamaout">
 
-            <EditText
-                android:id="@+id/editnomor"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                <EditText
+                    android:id="@+id/editTglLahir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/date"
+                    android:fontFamily="@font/dm_sans"
+                    android:inputType="date"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editnomorout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                android:background="@drawable/edittext_border"
-                android:ems="12"
-                android:hint="Nomor Telepon"
-                android:paddingStart="10dp"
-                android:inputType="text"
+                android:hint="Nomor Telepone"
+                android:textColorHint="@android:color/darker_gray"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:endIconMode="clear_text"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTglLahir" />
+                app:layout_constraintTop_toBottomOf="@+id/editTglLahirOut"
+                app:prefixText="+62"
+                app:startIconDrawable="@drawable/ic_phone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editnomor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789+"
+                    android:fontFamily="@font/dm_sans"
+                    android:inputType="phone"
+                    android:maxLength="12" />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
