@@ -38,8 +38,10 @@
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nameDisplay">
+            app:layout_constraintTop_toBottomOf="@+id/nameDisplay"
+            app:layout_constraintVertical_bias="0.0">
 
             <LinearLayout
                 android:id="@+id/settingsItemLayout"
@@ -160,7 +162,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:padding="10dp"
-                        android:src="@drawable/feedback" />
+                        android:src="@drawable/send_hor" />
 
                     <TextView
                         android:id="@+id/feedbackText"

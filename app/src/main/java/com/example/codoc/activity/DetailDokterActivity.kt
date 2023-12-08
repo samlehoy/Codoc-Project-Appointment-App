@@ -1,4 +1,4 @@
-package com.example.codoc
+package com.example.codoc.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
+import com.example.codoc.R
+import com.example.codoc.model.DokterModel
 
 class DetailDokterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

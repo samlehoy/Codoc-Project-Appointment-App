@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_gradient_start_color"
-    tools:context=".ProfileActivity">
+    tools:context=".activity.EditProfileActivity">
 
 
     <TextView
@@ -59,13 +59,13 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editnama"
+                android:id="@+id/editEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/edittext_border"
                 android:ems="12"
-                android:hint="Name"
+                android:hint="Email"
                 android:paddingStart="10dp"
                 android:inputType="text"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -73,13 +73,27 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
             <EditText
-                android:id="@+id/editumur"
+                android:id="@+id/editnama"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/edittext_border"
                 android:ems="12"
-                android:hint="Umur"
+                android:hint="Nama"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+
+            <EditText
+                android:id="@+id/editTglLahir"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_border"
+                android:ems="12"
+                android:hint="Tanggal Lahir"
                 android:paddingStart="10dp"
                 android:inputType="text"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -94,13 +108,13 @@
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/edittext_border"
                 android:ems="12"
-                android:hint="Nomor Telepone"
+                android:hint="Nomor Telepon"
                 android:paddingStart="10dp"
                 android:inputType="text"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editumur" />
+                app:layout_constraintTop_toBottomOf="@+id/editTglLahir" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

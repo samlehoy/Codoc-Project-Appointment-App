@@ -1,4 +1,4 @@
-package com.example.codoc
+package com.example.codoc.activity
 
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.telephony.PhoneNumberFormattingTextWatcher
 import android.widget.Button
 import android.widget.Toast
+import com.example.codoc.DatabaseHelper
+import com.example.codoc.R
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import java.text.SimpleDateFormat

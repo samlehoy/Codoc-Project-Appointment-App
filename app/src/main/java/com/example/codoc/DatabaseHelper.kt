@@ -6,20 +6,23 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.widget.Toast
+import com.example.codoc.model.ProfileModel
+
 
 class DatabaseHelper(var context: Context): SQLiteOpenHelper(
     context,DATABASE_NAME,null,DATABASE_VERSION){
     companion object {
-        private val DATABASE_NAME = "Codoc"
-        private val DATABASE_VERSION = 1
+
+        const  val DATABASE_NAME = "Codoc"
+        const  val DATABASE_VERSION = 1
         //table name
-        private val TABLE_ACCOUNT = "akunpasien"
+        const  val TABLE_ACCOUNT = "akunpasien"
         //column account table
-        private val COLUMN_EMAIL = "email"
-        private val COLUMN_NAME = "name"
-        private val COLUMN_DATEOFBIRTH = "date_of_birth"
-        private val COLUMN_NOHP = "nohp"
-        private val COLUMN_PASSWORD = "password"
+        const  val COLUMN_EMAIL = "email"
+        const  val COLUMN_NAME = "name"
+        const  val COLUMN_DATEOFBIRTH = "date_of_birth"
+        const  val COLUMN_NOHP = "nohp"
+        const  val COLUMN_PASSWORD = "password"
     }
     //create table account sql query
     private val CREATE_ACCOUNT_TABLE = ("CREATE TABLE " + TABLE_ACCOUNT + "("
@@ -49,6 +52,8 @@ class DatabaseHelper(var context: Context): SQLiteOpenHelper(
             val db = this.readableDatabase
             val selection = "$COLUMN_EMAIL = ? AND $COLUMN_PASSWORD = ?"
             val selectionArgs = arrayOf(email.trim(), password.trim())
+
+
 
             val cursor = db.query(
                 TABLE_ACCOUNT,
@@ -111,5 +116,25 @@ class DatabaseHelper(var context: Context): SQLiteOpenHelper(
         cursor.close()
         db.close()
         return name
+    }
+
+    fun editProfile(menu:ProfileModel){
+        val db = this.writableDatabase
+
+        val values = ContentValues()
+        values.put(COLUMN_EMAIL, menu.email)
+        values.put(COLUMN_NAME, menu.name)
+        values.put(COLUMN_DATEOFBIRTH, menu.dateOfBirth)
+        values.put(COLUMN_NOHP, menu.noHp)
+
+        val result = db.update(TABLE_ACCOUNT, values , COLUMN_EMAIL + " = ? ", arrayOf(menu.email.toString())).toLong()
+        //show message
+        if(result==(0).toLong()){
+            Toast.makeText(context, "Edit Failed", Toast.LENGTH_SHORT).show()
+        }
+        else{
+            Toast.makeText(context, "Edit Success", Toast.LENGTH_SHORT).show()
+        }
+        db.close()
     }
 }

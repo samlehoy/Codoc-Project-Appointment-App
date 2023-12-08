@@ -1,13 +1,12 @@
-package com.example.codoc
+package com.example.codoc.activity
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.example.codoc.FragmentHome
+import com.example.codoc.FragmentMyJanji
+import com.example.codoc.FragmentSettings
+import com.example.codoc.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
@@ -23,9 +22,9 @@ class HomeActivity : AppCompatActivity() {
         val bottomNav:BottomNavigationView = findViewById(R.id.bottomNav);
 
         //set fragment
-        val homeFragment=FragmentHome()
-        val settingsFragment=FragmentSettings()
-        val myJanjiFragment=FragmentMyJanji()
+        val homeFragment= FragmentHome()
+        val settingsFragment= FragmentSettings()
+        val myJanjiFragment= FragmentMyJanji()
 
         //default fragment
         supportFragmentManager.beginTransaction().apply {

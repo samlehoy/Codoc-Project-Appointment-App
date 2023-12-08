@@ -1,4 +1,4 @@
-package com.example.codoc
+package com.example.codoc.model
 
 class LoginModel {
     var username = ""

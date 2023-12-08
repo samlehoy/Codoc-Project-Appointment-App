@@ -27,7 +27,7 @@
             android:layout_marginTop="8dp"
             android:fontFamily="@font/dmsans_regular"
             android:text="Dr. Ahmad Aldi"
-            android:textSize="22dp"
+            android:textSize="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,11 +36,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="6dp"
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/dmsans_regular"
             android:text="Dokter Umum"
-            android:textSize="13sp"
+            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textNama" />
@@ -49,25 +49,47 @@
             android:id="@+id/jamtext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="11-10 PM"
             android:fontFamily="@font/dmsans_regular"
+            android:text="11-10 PM"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tanggaltext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="6dp"
             android:fontFamily="@font/dmsans_regular"
             android:text="05-11-2023"
             android:textSize="15dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/jamtext"
+            app:layout_constraintStart_toStartOf="@+id/jamtext"
             app:layout_constraintTop_toBottomOf="@+id/jamtext" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/editfield"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/edit" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/editfield"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/trash" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

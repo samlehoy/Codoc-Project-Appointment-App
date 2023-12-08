@@ -1,4 +1,4 @@
-package com.example.codoc
+package com.example.codoc.adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -8,6 +8,9 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.codoc.activity.DetailDokterActivity
+import com.example.codoc.R
+import com.example.codoc.model.DokterModel
 
 class AdapterDokter(var listDokter: List<DokterModel>) : RecyclerView.Adapter<AdapterDokter.ViewHolder>() {
     // Existing code...
@@ -26,13 +29,13 @@ class AdapterDokter(var listDokter: List<DokterModel>) : RecyclerView.Adapter<Ad
         val butt: Button = itemView.findViewById(R.id.book_button)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterDokter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(
             R.layout.doctor_card_layout,parent, false)
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: AdapterDokter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val modelDokter = listDokter[position]
 
         holder.image.setImageResource(modelDokter.image)

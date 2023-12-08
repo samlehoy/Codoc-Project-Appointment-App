@@ -1,13 +1,13 @@
-package com.example.codoc
+package com.example.codoc.activity
 
 import android.app.DatePickerDialog
 import android.os.Bundle
-import android.widget.DatePicker
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 import java.text.SimpleDateFormat
 import java.util.*
 import android.widget.Toast
+import com.example.codoc.R
 
 
 class BookingActivity : AppCompatActivity() {
