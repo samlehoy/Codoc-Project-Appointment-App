@@ -21,11 +21,10 @@ class AdapterDokter(var listDokter: List<DokterModel>) : RecyclerView.Adapter<Ad
         notifyDataSetChanged()
     }
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView){
-        val image: ImageView = itemView.findViewById(R.id.imageDokter)
         val nama: TextView = itemView.findViewById(R.id.textNama)
         val spesialis: TextView = itemView.findViewById(R.id.Spesialis)
-        val kerja: TextView = itemView.findViewById(R.id.textkerja)
-        val like: TextView = itemView.findViewById(R.id.textsuka)
+        val rumahsakit: TextView = itemView.findViewById(R.id.rumahSakit)
+        val jadwal: TextView = itemView.findViewById(R.id.rumahSakit)
         val butt: Button = itemView.findViewById(R.id.book_button)
     }
 
@@ -38,11 +37,10 @@ class AdapterDokter(var listDokter: List<DokterModel>) : RecyclerView.Adapter<Ad
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val modelDokter = listDokter[position]
 
-        holder.image.setImageResource(modelDokter.image)
         holder.nama.text = modelDokter.nama
         holder.spesialis.text = modelDokter.spesialis
-        holder.kerja.text = modelDokter.kerja
-        holder.like.text = modelDokter.like
+        holder.rumahsakit.text = modelDokter.rumahSakit
+        holder.jadwal.text = modelDokter.jadwal
         holder.butt.text = "Book"
         holder.butt.setOnClickListener {
             // Membuat Intent untuk membuka activity baru

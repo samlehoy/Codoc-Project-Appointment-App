@@ -44,7 +44,7 @@ class LoginPasienActivity : AppCompatActivity() {
             val password = txtPasswordLayout.editText?.text.toString().trim()
 
             //check login
-            val result: Boolean = dbHelper.checkLogin(email, password)
+            val result: Boolean = dbHelper.checkLoginPasien(email, password)
             if (result) {
                 // Store the user's email in shared preferences upon successful login
                 val editor = sharedPreferences.edit()

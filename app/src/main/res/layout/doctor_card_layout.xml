@@ -74,31 +74,18 @@
                 app:srcCompat="@drawable/baseline_work_24" />
 
             <TextView
-                android:id="@+id/textkerja"
+                android:id="@+id/rumahSakit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="6dp"
                 android:fontFamily="@font/dmsans_regular"
-                android:text="10 Tahun"
+                android:text="RS Medika"
                 android:textSize="11sp" />
 
-            <ImageView
-                android:id="@+id/like"
-                android:layout_width="17dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                app:srcCompat="@drawable/baseline_thumb_up_24" />
 
-            <TextView
-                android:id="@+id/textsuka"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="6dp"
-                android:fontFamily="@font/dmsans_regular"
-                android:text="98%"
-                android:textSize="11sp" />
+
+
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton

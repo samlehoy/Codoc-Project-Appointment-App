@@ -9,13 +9,13 @@ import android.widget.EditText
 import android.widget.Toast
 import com.example.codoc.DatabaseHelper
 import com.example.codoc.R
-import com.example.codoc.model.ProfileModel
+import com.example.codoc.model.ProfilePasienModel
 import com.google.android.material.textfield.TextInputEditText
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
 
-class EditProfileActivity : AppCompatActivity() {
+class EditProfilePasienActivity : AppCompatActivity() {
 
     private lateinit var editTglLahirEditText: EditText
     private val calendar = Calendar.getInstance()
@@ -69,8 +69,8 @@ class EditProfileActivity : AppCompatActivity() {
             val dateOfBirth: String = textLahir.text.toString().trim()
             val noHp: String = textNoHp.text.toString().trim()
 
-            val profileModel = ProfileModel(email, name, dateOfBirth, noHp)
-            databaseHelper.editProfile(profileModel)
+            val profilePasienModel = ProfilePasienModel(email, name, dateOfBirth, noHp)
+            databaseHelper.editProfilePasien(profilePasienModel)
 
             // intent main activity
             val intent = Intent(this, HomeActivity::class.java)

@@ -119,7 +119,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="40dp"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/kotak_radius"
                 android:backgroundTint="#55B9A1"
                 android:fontFamily="@font/dmsans_bold"
@@ -127,10 +127,36 @@
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/tidak"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tidak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginStart="90dp"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/dmsans_regular"
+                android:text="Tidak memiliki akun?"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewDaftar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/dmsans_regular"
+                android:text="Daftar"
+                android:textColor="@color/green_shade_dark_1"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tidak" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

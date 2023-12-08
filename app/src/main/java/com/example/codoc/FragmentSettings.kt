@@ -7,8 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
-import com.example.codoc.activity.EditProfileActivity
-import com.example.codoc.activity.ProfileActivity
+import com.example.codoc.activity.ProfilePasienActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -43,7 +42,7 @@ class FragmentSettings : Fragment() {
 
         // Set click listener for the LinearLayout
         editProfile.setOnClickListener {
-            val intentSettingActivity = Intent(requireContext(), ProfileActivity::class.java)
+            val intentSettingActivity = Intent(requireContext(), ProfilePasienActivity::class.java)
             startActivity(intentSettingActivity)
         }
 

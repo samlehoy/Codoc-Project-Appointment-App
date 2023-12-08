@@ -32,7 +32,7 @@ class RegisterPasienActivity : AppCompatActivity() {
 
         // Input form
         val txtFullname: TextInputLayout = findViewById(R.id.fullnameInput)
-        val txtDateOfBirth: TextInputLayout = findViewById(R.id.birthInput)
+        val txtDateOfBirth: TextInputLayout = findViewById(R.id.jadwalInput)
         val txtEmail: TextInputLayout = findViewById(R.id.emailInput)
         val txtNoHp: TextInputLayout = findViewById(R.id.nomorInput)
         val txtPassword: TextInputLayout = findViewById(R.id.inputPassword)
@@ -56,11 +56,11 @@ class RegisterPasienActivity : AppCompatActivity() {
 
 
             // Check data -> email sudah terdaftar atau belum
-            val data: String = databaseHelper.checkData(email)
+            val data: String = databaseHelper.checkDataPasien(email)
             // Jika belum terdaftar
             if (data == "") {
                 // Insert data
-                databaseHelper.addAccount(email, name, dateOfBirth, noHp, password)
+                databaseHelper.addAccountPasien(email, name, dateOfBirth, noHp, password)
 
                 // Show LoginActivity
                 val intentLogin = Intent(this@RegisterPasienActivity, LoginPasienActivity::class.java)

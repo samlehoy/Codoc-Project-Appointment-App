@@ -48,9 +48,9 @@ class FragmentHome : Fragment() {
 
         // Original list of doctors
         val dokterList = listOf(
-            DokterModel(R.drawable.cowok, "Dr. Ahmad", "Umum", "5 Years", "1200"),
-            DokterModel(R.drawable.cewek, "Dr. Erna", "Cardiology", "10 Years", "500"),
-            DokterModel(R.drawable.cewek, "Dr. Rachel", "Dermatology", "7 Years", "800"),
+            DokterModel( "Dr. Ahmad", "Umum", "RS Medika", "09AM-05PM"),
+            DokterModel( "Dr. Erna", "Cardiology", "RSCM", "09AM-05PM"),
+            DokterModel( "Dr. Rachel", "Dermatology", "Tot", "09AM-05PM"),
             // Add more doctors as needed
         )
 

@@ -9,7 +9,7 @@ import android.util.Log
 import com.example.codoc.DatabaseHelper
 import com.example.codoc.databinding.ActivityProfileBinding
 
-class ProfileActivity : AppCompatActivity() {
+class ProfilePasienActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityProfileBinding
     private lateinit var dbHelper: DatabaseHelper
@@ -36,7 +36,7 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         binding.buttonEdit.setOnClickListener {
-            val intent = Intent(baseContext, EditProfileActivity::class.java)
+            val intent = Intent(baseContext, EditProfilePasienActivity::class.java)
             intent.putExtra("EMAIL", userEmail)
             startActivity(intent)
         }
@@ -47,17 +47,17 @@ class ProfileActivity : AppCompatActivity() {
         val db = dbHelper.readableDatabase
 
         val projection = arrayOf(
-            DatabaseHelper.COLUMN_NAME,
-            DatabaseHelper.COLUMN_DATEOFBIRTH,
-            DatabaseHelper.COLUMN_EMAIL,
-            DatabaseHelper.COLUMN_NOHP
+            DatabaseHelper.COLUMN_NAME_PASIEN,
+            DatabaseHelper.COLUMN_DATEOFBIRTH_PASIEN,
+            DatabaseHelper.COLUMN_EMAIL_PASIEN,
+            DatabaseHelper.COLUMN_NOHP_PASIEN
         )
 
-        val selection = "${DatabaseHelper.COLUMN_EMAIL} = ?"
+        val selection = "${DatabaseHelper.COLUMN_EMAIL_PASIEN} = ?"
         val selectionArgs = arrayOf(userEmail)
 
         val cursor = db.query(
-            DatabaseHelper.TABLE_ACCOUNT,
+            DatabaseHelper.TABLE_AKUNPASIEN,
             projection,
             selection,
             selectionArgs,
@@ -68,10 +68,10 @@ class ProfileActivity : AppCompatActivity() {
 
         cursor.use {
             if (it.moveToFirst()) {
-                val name = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_NAME))
-                val dateOfBirth = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_DATEOFBIRTH))
-                val email = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_EMAIL))
-                val phone = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_NOHP))
+                val name = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_NAME_PASIEN))
+                val dateOfBirth = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_DATEOFBIRTH_PASIEN))
+                val email = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_EMAIL_PASIEN))
+                val phone = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_NOHP_PASIEN))
 
                 binding.namauser.text = "$name"
                 binding.tanggaluser.text = "$dateOfBirth"

@@ -13,13 +13,10 @@
         android:theme="@style/Theme.Codoc"
         tools:targetApi="31">
         <activity
-            android:name=".activity.EditProfileActivity"
+            android:name=".activity.EditProfilePasienActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.ProfileActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.CobaActivity"
+            android:name=".activity.ProfilePasienActivity"
             android:exported="false" />
         <activity
             android:name=".activity.BookingActivity"
