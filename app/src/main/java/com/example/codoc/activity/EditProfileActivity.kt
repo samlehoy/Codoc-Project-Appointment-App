@@ -24,6 +24,12 @@ class EditProfileActivity : AppCompatActivity() {
         //hide title bar
         getSupportActionBar()?.hide()
 
+        // Retrieve data from extras
+        val intent = intent
+        val emailExtra = intent.getStringExtra("EMAIL")
+        val nameExtra = intent.getStringExtra("NAME")
+        val dateOfBirthExtra = intent.getStringExtra("DATE_OF_BIRTH")
+        val noHpExtra = intent.getStringExtra("NO_HP")
         //instance
         val textEmail : EditText = findViewById(R.id.editEmail)
         val textFullname : EditText = findViewById(R.id.editnama)
@@ -31,11 +37,17 @@ class EditProfileActivity : AppCompatActivity() {
         val textNoHp : EditText = findViewById(R.id.editnomor)
         val btnUpdate : Button = findViewById(R.id.buttonUpdate)
 
+        // Set data to EditText fields
+        textEmail.setText(emailExtra)
+        textFullname.setText(nameExtra)
+        textLahir.setText(dateOfBirthExtra)
+        textNoHp.setText(noHpExtra)
         //set data
         textEmail.setText(email)
         textFullname.setText(name)
         textLahir.setText(dateOfBirth)
         textNoHp.setText(noHp)
+
 
         btnUpdate.setOnClickListener{
             //object class databaseHelper

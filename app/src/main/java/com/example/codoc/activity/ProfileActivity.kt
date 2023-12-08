@@ -36,7 +36,12 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         binding.buttonEdit.setOnClickListener {
-            startActivity(Intent(baseContext, EditProfileActivity::class.java))
+            val intent = Intent(baseContext, EditProfileActivity::class.java)
+            intent.putExtra("EMAIL", userEmail)
+            intent.putExtra("NAME", binding.textView2.text.toString())
+            intent.putExtra("DATE_OF_BIRTH", binding.textView3.text.toString())
+            intent.putExtra("NO_HP", binding.textView5.text.toString())
+            startActivity(intent)
         }
     }
 
