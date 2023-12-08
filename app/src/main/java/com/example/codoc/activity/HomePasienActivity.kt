@@ -1,5 +1,6 @@
 package com.example.codoc.activity
 
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,11 +10,11 @@ import com.example.codoc.FragmentSettings
 import com.example.codoc.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class HomeActivity : AppCompatActivity() {
+class HomePasienActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.activity_home_pasien)
 
         //hide title bar
         getSupportActionBar()?.hide()
@@ -51,8 +52,6 @@ class HomeActivity : AppCompatActivity() {
                 else -> false
             }
         }
-
-
     }
 
     private fun currentFragment(fragment: Fragment) =

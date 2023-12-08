@@ -50,7 +50,7 @@ class LoginDokterActivity : AppCompatActivity() {
                 editor.putString("user_email", email)
                 editor.apply()
 
-                val intentLogin = Intent(this@LoginDokterActivity, HomeActivity::class.java)
+                val intentLogin = Intent(this@LoginDokterActivity, HomePasienActivity::class.java)
                 startActivity(intentLogin)
             } else {
                 Toast.makeText(this, "Login Failed. Try Again", Toast.LENGTH_SHORT).show()

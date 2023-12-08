@@ -73,7 +73,7 @@ class EditProfilePasienActivity : AppCompatActivity() {
             databaseHelper.editProfilePasien(profilePasienModel)
 
             // intent main activity
-            val intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(this, HomePasienActivity::class.java)
             startActivity(intent)
         }
     }
