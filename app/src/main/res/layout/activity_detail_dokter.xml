@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    tools:context=".activity.DetailDokterActivity">
+    tools:context=".activity.dokter.DetailDokterActivity">
 
     <ImageView
         android:id="@+id/back"
@@ -48,7 +48,7 @@
 
 
         <TextView
-            android:id="@+id/namadokter"
+            android:id="@+id/namapasien"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -70,10 +70,10 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="@+id/namadokter"
+            app:layout_constraintEnd_toEndOf="@+id/namapasien"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/namadokter"
-            app:layout_constraintTop_toBottomOf="@+id/namadokter"
+            app:layout_constraintStart_toStartOf="@+id/namapasien"
+            app:layout_constraintTop_toBottomOf="@+id/namapasien"
             android:text="Dokter Umum" />
 
         <ImageView

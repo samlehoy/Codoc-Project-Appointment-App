@@ -1,21 +1,16 @@
-package com.example.codoc.activity
+package com.example.codoc.activity.dokter
 
-import android.app.DatePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
 import com.example.codoc.DatabaseHelper
 import com.example.codoc.R
-import com.google.android.material.textfield.TextInputEditText
+import com.example.codoc.activity.dokter.LoginDokterActivity
 import com.google.android.material.textfield.TextInputLayout
-import java.text.SimpleDateFormat
-import java.util.Calendar
-import java.util.Locale
 
 class RegisterDokterActivity : AppCompatActivity() {
 
@@ -61,7 +56,7 @@ class RegisterDokterActivity : AppCompatActivity() {
                 databaseHelper.addAccountDokter(email, name, specialis, password)
 
                 // Show LoginActivity
-                val intentLogin = Intent(this@RegisterDokterActivity, LoginPasienActivity::class.java)
+                val intentLogin = Intent(this@RegisterDokterActivity, LoginDokterActivity::class.java)
                 startActivity(intentLogin)
             } else {
                 // Jika email telah terdaftar

@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/home"
-        android:name="com.example.codoc.FragmentHome"
+        android:name="com.example.codoc.FragmentPasienHome"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_pasien_home" >
         <action
             android:id="@+id/action_home_to_doctorDetailsFragment"
             app:popUpTo="@id/home"/>

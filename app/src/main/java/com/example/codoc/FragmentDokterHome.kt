@@ -1,6 +1,5 @@
 package com.example.codoc
 
-import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
@@ -9,13 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.codoc.adapter.AdapterDokter
-import com.example.codoc.databinding.ActivityProfileBinding
-import com.example.codoc.databinding.FragmentHomeBinding
+import com.example.codoc.databinding.FragmentDokterHomeBinding
 import com.example.codoc.model.DokterModel
 import com.google.android.material.chip.Chip
 
@@ -26,12 +23,12 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [FragmentHome.newInstance] factory method to
+ * Use the [FragmentDokterHome.newInstance] factory method to
  * create an instance of this fragment.
  */
-class FragmentHome : Fragment() {
+class FragmentDokterHome : Fragment() {
 
-    private lateinit var binding: FragmentHomeBinding
+    private lateinit var binding: FragmentDokterHomeBinding
     private lateinit var dbHelper: DatabaseHelper
     //to retrieve data on ProfileActivity
     private lateinit var sharedPreferences: SharedPreferences
@@ -54,7 +51,7 @@ class FragmentHome : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        binding = FragmentDokterHomeBinding.inflate(inflater, container, false)
         val view = binding.root
 
         // Sample list of specialties
@@ -103,7 +100,6 @@ class FragmentHome : Fragment() {
         } else {
             fetchDoctorName(userEmail)
         }
-
         return view
     }
 
@@ -112,15 +108,15 @@ class FragmentHome : Fragment() {
         val db = dbHelper.readableDatabase
 
         val projection = arrayOf(
-            DatabaseHelper.COLUMN_NAME_PASIEN,
-            DatabaseHelper.COLUMN_EMAIL_PASIEN
+            DatabaseHelper.COLUMN_NAME_DOKTER,
+            DatabaseHelper.COLUMN_EMAIL_DOKTER
         )
 
-        val selection = "${DatabaseHelper.COLUMN_EMAIL_PASIEN} = ?"
+        val selection = "${DatabaseHelper.COLUMN_EMAIL_DOKTER} = ?"
         val selectionArgs = arrayOf(userEmail)
 
         val cursor = db.query(
-            DatabaseHelper.TABLE_AKUNPASIEN,
+            DatabaseHelper.TABLE_AKUNDOKTER,
             projection,
             selection,
             selectionArgs,
@@ -131,7 +127,7 @@ class FragmentHome : Fragment() {
 
         cursor.use {
             if (it.moveToFirst()) {
-                val name = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_NAME_PASIEN))
+                val name = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_NAME_DOKTER))
                 binding.namadokter.text = "$name"
             } else {
                 Log.e("FragmentHome", "No data found for user with email: $userEmail")
@@ -152,7 +148,7 @@ class FragmentHome : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            FragmentHome().apply {
+            FragmentDokterHome().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

@@ -5,10 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.codoc.activity.DetailDokterActivity
+import com.example.codoc.activity.dokter.DetailDokterActivity
 import com.example.codoc.R
 import com.example.codoc.model.DokterModel
 

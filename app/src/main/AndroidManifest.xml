@@ -13,32 +13,35 @@
         android:theme="@style/Theme.Codoc"
         tools:targetApi="31">
         <activity
-            android:name=".activity.EditProfilePasienActivity"
+            android:name=".activity.dokter.HomeDokterActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.ProfilePasienActivity"
+            android:name=".activity.pasien.EditProfilePasienActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.pasien.ProfilePasienActivity"
             android:exported="false" />
         <activity
             android:name=".activity.BookingActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.DetailDokterActivity"
+            android:name=".activity.dokter.DetailDokterActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.HomePasienActivity"
+            android:name=".activity.pasien.HomePasienActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".activity.RegisterDokterActivity"
+            android:name=".activity.dokter.RegisterDokterActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.LoginDokterActivity"
+            android:name=".activity.dokter.LoginDokterActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.RegisterPasienActivity"
+            android:name=".activity.pasien.RegisterPasienActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.LoginPasienActivity"
+            android:name=".activity.pasien.LoginPasienActivity"
             android:exported="false" />
         <activity
             android:name=".activity.FirstActivity"

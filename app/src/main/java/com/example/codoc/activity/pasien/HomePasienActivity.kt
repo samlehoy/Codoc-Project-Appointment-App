@@ -1,12 +1,11 @@
-package com.example.codoc.activity
+package com.example.codoc.activity.pasien
 
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.codoc.FragmentHome
-import com.example.codoc.FragmentMyJanji
-import com.example.codoc.FragmentSettings
+import com.example.codoc.FragmentPasienHome
+import com.example.codoc.FragmentPasienMyJanji
+import com.example.codoc.FragmentPasienSettings
 import com.example.codoc.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -23,9 +22,9 @@ class HomePasienActivity : AppCompatActivity() {
         val bottomNav:BottomNavigationView = findViewById(R.id.bottomNav);
 
         //set fragment
-        val homeFragment= FragmentHome()
-        val settingsFragment= FragmentSettings()
-        val myJanjiFragment= FragmentMyJanji()
+        val homeFragment= FragmentPasienHome()
+        val settingsFragment= FragmentPasienSettings()
+        val myJanjiFragment= FragmentPasienMyJanji()
 
         //default fragment
         supportFragmentManager.beginTransaction().apply {

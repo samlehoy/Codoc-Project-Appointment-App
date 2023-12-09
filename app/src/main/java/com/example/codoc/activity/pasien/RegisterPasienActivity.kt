@@ -1,4 +1,4 @@
-package com.example.codoc.activity
+package com.example.codoc.activity.pasien
 
 import android.app.DatePickerDialog
 import android.content.Intent

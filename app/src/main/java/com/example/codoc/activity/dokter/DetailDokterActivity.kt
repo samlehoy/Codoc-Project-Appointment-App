@@ -1,4 +1,4 @@
-package com.example.codoc.activity
+package com.example.codoc.activity.dokter
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import com.example.codoc.R
+import com.example.codoc.activity.BookingActivity
+import com.example.codoc.activity.pasien.HomePasienActivity
 import com.example.codoc.model.DokterModel
 
 class DetailDokterActivity : AppCompatActivity() {
@@ -32,7 +34,7 @@ class DetailDokterActivity : AppCompatActivity() {
 
         val user = intent.getParcelableExtra<DokterModel>("DokterModel")
         //semua
-        val nams = findViewById<TextView>(R.id.namadokter)
+        val nams = findViewById<TextView>(R.id.namapasien)
         val spes = findViewById<TextView>(R.id.spesialis)
         nams.text = user?.nama
         spes.text = user?.spesialis

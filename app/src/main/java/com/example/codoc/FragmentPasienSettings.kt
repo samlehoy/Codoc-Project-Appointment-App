@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
-import com.example.codoc.activity.ProfilePasienActivity
+import com.example.codoc.activity.pasien.ProfilePasienActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -16,10 +16,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [FragmentHome.newInstance] factory method to
+ * Use the [FragmentPasienHome.newInstance] factory method to
  * create an instance of this fragment.
  */
-class FragmentSettings : Fragment() {
+class FragmentPasienSettings : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
@@ -35,7 +35,7 @@ class FragmentSettings : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_settings, container, false)
+        val view = inflater.inflate(R.layout.fragment_pasien_settings, container, false)
 
         // Find the LinearLayout using the inflated view
         val editProfile: LinearLayout = view.findViewById(R.id.linearLayout1)
@@ -52,7 +52,7 @@ class FragmentSettings : Fragment() {
     companion object {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            FragmentSettings().apply {
+            FragmentPasienSettings().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
