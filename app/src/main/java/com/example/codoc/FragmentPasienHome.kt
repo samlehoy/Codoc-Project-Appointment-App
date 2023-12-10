@@ -39,14 +39,11 @@ class FragmentPasienHome : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-
     }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -67,16 +64,25 @@ class FragmentPasienHome : Fragment() {
         // Sort the list of doctors by specialties
         val chipContainer: LinearLayout = view.findViewById(R.id.chipContainer)
 
-        // Dynamically add chips to the chipContainer
+// Dynamically add chips to the chipContainer with margins
         for (specialty in listOfSpecialties) {
             val chip = Chip(context)
             chip.text = specialty
+            // Set margin programmatically
+            val params = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            )
+            params.setMargins(8, 8, 8, 8) // You can adjust the margins as needed
+            chip.layoutParams = params
+
             chip.setOnClickListener {
                 // Fetch the list of doctors from the database based on the selected specialty
                 val doctorsListFromDB = dbHelper.getDoctorsBySpecialty(specialty)
                 // Update the RecyclerView adapter with the filtered list
                 adapterDokter.updateData(doctorsListFromDB)
             }
+
             // Set other chip properties if needed
             chipContainer.addView(chip)
         }
@@ -85,7 +91,16 @@ class FragmentPasienHome : Fragment() {
         val doctorsListFromDB = dbHelper.getAllDoctors()
         adapterDokter.updateData(doctorsListFromDB)
 
-        // ...
+        //to retrieve data on ProfileActivity
+        sharedPreferences = requireContext().getSharedPreferences("user_prefs", AppCompatActivity.MODE_PRIVATE)
+        val userEmail = sharedPreferences.getString("user_email", "")
+        Log.d("ProfileActivity", "User Email from SharedPreferences: $userEmail")
+        if (userEmail.isNullOrBlank()) {
+            // Handle the case where user email is not available (user not logged in)
+            Log.e("ProfileActivity", "User email not found.")
+        } else {
+            fetchDoctorName(userEmail)
+        }
 
         return view
     }

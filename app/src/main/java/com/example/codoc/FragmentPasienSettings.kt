@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import com.example.codoc.activity.FirstActivity
 import com.example.codoc.activity.pasien.ProfilePasienActivity
 
 // TODO: Rename parameter arguments, choose names that match
@@ -39,10 +40,14 @@ class FragmentPasienSettings : Fragment() {
 
         // Find the LinearLayout using the inflated view
         val editProfile: LinearLayout = view.findViewById(R.id.linearLayout1)
-
-        // Set click listener for the LinearLayout
         editProfile.setOnClickListener {
             val intentSettingActivity = Intent(requireContext(), ProfilePasienActivity::class.java)
+            startActivity(intentSettingActivity)
+        }
+        // Find the LinearLayout using the inflated view
+        val logOut: LinearLayout = view.findViewById(R.id.linearLayout5)
+        logOut.setOnClickListener {
+            val intentSettingActivity = Intent(requireContext(), FirstActivity::class.java)
             startActivity(intentSettingActivity)
         }
 

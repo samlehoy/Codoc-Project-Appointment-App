@@ -9,32 +9,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f5d20a9-1d78-42af-a651-02e6dcfea6bb" name="Changes" comment="UPDATE: 8 Desember 2023&#10;1. Update ProfileActivity Selesai&#10;2. Update Menampilkan data profile pada ProfileActivity.kt menggunakan Shared Preference&#10;3. Update EditProfileActivity selesai&#10;4. Database tersendiri untuk dokter (database input manual/no register)&#10;5. pada fragment_home.xml Hi &quot;User&quot; mengambil dari database&#10;&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. Dokter bisa membuat/mengubah jadwal nya&#10;3. Fungsi Search&#10;4. activity_myjanji&#10;5. get COLUMN_SPECIALIS pada horizontalScrollView fragment_home&#10;6. activity &amp; fragment tersendiri untuk dokter">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentDokterSettings.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/dokter/ProfileDokterActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile_dokter.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_dokter_settings.xml" afterDir="false" />
+    <list default="true" id="8f5d20a9-1d78-42af-a651-02e6dcfea6bb" name="Changes" comment="UPDATE: 10 Desember 2023&#10;1. Update sinkronisasi listOfSpecialities dengan Database Dokter/COLUMN_SPECIALIS_DOKTER (Horizontal Scroll Specialis pada FragmentHomePasien)&#10;2. Update DatabaseDokter (alamat etc)&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. FragmentPasienHome.kt -&gt; (Fungsi Search)&#10;3. activity_myjanji&#10;4. DetailDokterActivity.kt -&gt; (1. Explicit Intent (Email dan NoHp) 2. Sinkron Alamat pada database dokter)&#10;5. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback, 4.Logout)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/DatabaseHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/DatabaseHelper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentDokterHome.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentDokterHome.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentDokterSettings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentDokterSettings.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentPasienHome.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentPasienHome.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/BookingActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/BookingActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/dokter/DetailDokterActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/dokter/DetailDokterActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/dokter/HomeDokterActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/dokter/HomeDokterActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/dokter/RegisterDokterActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/dokter/RegisterDokterActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/pasien/ProfilePasienActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/pasien/ProfilePasienActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/adapter/AdapterDokter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/adapter/AdapterDokter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/model/DokterModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/model/DokterCardModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/model/ProfileDokterModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/model/ProfileDokterModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_booking.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_booking.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_profile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile_pasien.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register_dokter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register_dokter.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register_pasien.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register_pasien.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/doctor_card_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/doctor_card_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentPasienSettings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentPasienSettings.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile_dokter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile_dokter.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_dokter_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_dokter_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_pasien_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_pasien_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -478,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702084769921</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="UPDATE: 10 Desember 2023&#10;1. Update sinkronisasi listOfSpecialities dengan Database Dokter/COLUMN_SPECIALIS_DOKTER (Horizontal Scroll Specialis pada FragmentHomePasien)&#10;2. Update DatabaseDokter (alamat etc)&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. FragmentPasienHome.kt -&gt; (Fungsi Search)&#10;3. activity_myjanji&#10;4. DetailDokterActivity.kt -&gt; (1. Explicit Intent (Email dan NoHp) 2. Sinkron Alamat pada database dokter)&#10;5. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback, 4.Logout)">
+      <created>1702175156475</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1702175156475</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -517,6 +506,7 @@
     <MESSAGE value="UPDATE: 8 Desember 2023&#10;1. Update ProfileActivity Selesai&#10;2. Update Menampilkan data profile pada ProfileActivity.kt menggunakan Shared Preference&#10;3. Update EditProfileActivity selesai&#10;4. Database tersendiri untuk dokter (database input manual/no register)&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. Dokter bisa membuat/mengubah jadwal nya&#10;3. pada fragment_home.xml Hi &quot;User&quot; mengambil dari database&#10;4. Fungsi Search&#10;5. activity_myjanji&#10;6. get COLUMN_SPECIALIS pada horizontalScrollView fragment_home" />
     <MESSAGE value="UPDATE: 8 Desember 2023&#10;1. Update ProfileActivity Selesai&#10;2. Update Menampilkan data profile pada ProfileActivity.kt menggunakan Shared Preference&#10;3. Update EditProfileActivity selesai&#10;4. Database tersendiri untuk dokter (database input manual/no register)&#10;5. pada fragment_home.xml Hi &quot;User&quot; mengambil dari database&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. Dokter bisa membuat/mengubah jadwal nya&#10;3. Fungsi Search&#10;4. activity_myjanji&#10;5. get COLUMN_SPECIALIS pada horizontalScrollView fragment_home" />
     <MESSAGE value="UPDATE: 8 Desember 2023&#10;1. Update ProfileActivity Selesai&#10;2. Update Menampilkan data profile pada ProfileActivity.kt menggunakan Shared Preference&#10;3. Update EditProfileActivity selesai&#10;4. Database tersendiri untuk dokter (database input manual/no register)&#10;5. pada fragment_home.xml Hi &quot;User&quot; mengambil dari database&#10;&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. Dokter bisa membuat/mengubah jadwal nya&#10;3. Fungsi Search&#10;4. activity_myjanji&#10;5. get COLUMN_SPECIALIS pada horizontalScrollView fragment_home&#10;6. activity &amp; fragment tersendiri untuk dokter" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: 8 Desember 2023&#10;1. Update ProfileActivity Selesai&#10;2. Update Menampilkan data profile pada ProfileActivity.kt menggunakan Shared Preference&#10;3. Update EditProfileActivity selesai&#10;4. Database tersendiri untuk dokter (database input manual/no register)&#10;5. pada fragment_home.xml Hi &quot;User&quot; mengambil dari database&#10;&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. Dokter bisa membuat/mengubah jadwal nya&#10;3. Fungsi Search&#10;4. activity_myjanji&#10;5. get COLUMN_SPECIALIS pada horizontalScrollView fragment_home&#10;6. activity &amp; fragment tersendiri untuk dokter" />
+    <MESSAGE value="UPDATE: 10 Desember 2023&#10;1. Update sinkronisasi listOfSpecialities dengan Database Dokter/COLUMN_SPECIALIS_DOKTER (Horizontal Scroll Specialis pada FragmentHomePasien)&#10;2. Update DatabaseDokter (alamat etc)&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. FragmentPasienHome.kt -&gt; (Fungsi Search)&#10;3. activity_myjanji&#10;4. DetailDokterActivity.kt -&gt; (1. Explicit Intent (Email dan NoHp) 2. Sinkron Alamat pada database dokter)&#10;5. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback, 4.Logout)" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: 10 Desember 2023&#10;1. Update sinkronisasi listOfSpecialities dengan Database Dokter/COLUMN_SPECIALIS_DOKTER (Horizontal Scroll Specialis pada FragmentHomePasien)&#10;2. Update DatabaseDokter (alamat etc)&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. FragmentPasienHome.kt -&gt; (Fungsi Search)&#10;3. activity_myjanji&#10;4. DetailDokterActivity.kt -&gt; (1. Explicit Intent (Email dan NoHp) 2. Sinkron Alamat pada database dokter)&#10;5. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback, 4.Logout)" />
   </component>
 </project>
