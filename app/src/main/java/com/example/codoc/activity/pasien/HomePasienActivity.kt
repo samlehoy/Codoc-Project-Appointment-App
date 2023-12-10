@@ -3,6 +3,7 @@ package com.example.codoc.activity.pasien
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.codoc.FragmentBerita
 import com.example.codoc.FragmentPasienHome
 import com.example.codoc.FragmentPasienMyJanji
 import com.example.codoc.FragmentPasienSettings
@@ -22,6 +23,7 @@ class HomePasienActivity : AppCompatActivity() {
         val homeFragment= FragmentPasienHome()
         val settingsFragment= FragmentPasienSettings()
         val myJanjiFragment= FragmentPasienMyJanji()
+        val beritaFragment= FragmentBerita()
 
         //default fragment
         supportFragmentManager.beginTransaction().apply {
@@ -43,6 +45,10 @@ class HomePasienActivity : AppCompatActivity() {
                 }
                 R.id.settings -> {
                     currentFragment(settingsFragment)
+                    true
+                }
+                R.id.stats ->{
+                    currentFragment(beritaFragment)
                     true
                 }
                 else -> false

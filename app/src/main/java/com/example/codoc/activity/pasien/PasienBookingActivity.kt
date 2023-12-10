@@ -33,15 +33,15 @@ class PasienBookingActivity : AppCompatActivity() {
         }
 
     //DROPDOWN JAM
-        val penyakitDropdown = findViewById<AutoCompleteTextView>(R.id.penyakit_dropdown)
+        //val penyakitDropdown = findViewById<AutoCompleteTextView>(R.id.penyakit_dropdown)
         val penyakitOptions = arrayOf("09:00 - 11:00", "11:00 - 13:00", "13:00 - 15:00", "15:00 - 17:00") // Gantilah dengan opsi yang sesuai
         val adapterPenyakit = ArrayAdapter(this, R.layout.dropdown_item, penyakitOptions)
-        penyakitDropdown.setAdapter(adapterPenyakit)
+       // penyakitDropdown.setAdapter(adapterPenyakit)
         // Opsional: Tambahkan listener untuk menangani pemilihan opsi
-        penyakitDropdown.setOnItemClickListener { _, _, position, _ ->
-            val selectedOption = adapterPenyakit.getItem(position).toString()
+        //penyakitDropdown.setOnItemClickListener { _, _, position, _ ->
+         //   val selectedOption = adapterPenyakit.getItem(position).toString()
             // Lakukan sesuatu dengan opsi yang dipilih
-        }
+       // }
 
     //TANGGAL
         selectDateEditText = findViewById(R.id.select_date)
