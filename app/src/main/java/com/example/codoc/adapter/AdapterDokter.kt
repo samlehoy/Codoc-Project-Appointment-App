@@ -9,13 +9,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.codoc.activity.dokter.DetailDokterActivity
 import com.example.codoc.R
-import com.example.codoc.model.DokterModel
+import com.example.codoc.model.DokterCardModel
 
-class AdapterDokter(var listDokter: List<DokterModel>) : RecyclerView.Adapter<AdapterDokter.ViewHolder>() {
+class AdapterDokter(var listDokter: List<DokterCardModel>) : RecyclerView.Adapter<AdapterDokter.ViewHolder>() {
     // Existing code...
 
     // Add this method to update the data in the adapter
-    fun updateData(newList: List<DokterModel>) {
+    fun updateData(newList: List<DokterCardModel>) {
         listDokter = newList
         notifyDataSetChanged()
     }
@@ -23,7 +23,6 @@ class AdapterDokter(var listDokter: List<DokterModel>) : RecyclerView.Adapter<Ad
         val nama: TextView = itemView.findViewById(R.id.textNama)
         val spesialis: TextView = itemView.findViewById(R.id.Spesialis)
         val rumahsakit: TextView = itemView.findViewById(R.id.rumahSakit)
-        val jadwal: TextView = itemView.findViewById(R.id.rumahSakit)
         val butt: Button = itemView.findViewById(R.id.book_button)
     }
 
@@ -39,7 +38,6 @@ class AdapterDokter(var listDokter: List<DokterModel>) : RecyclerView.Adapter<Ad
         holder.nama.text = modelDokter.nama
         holder.spesialis.text = modelDokter.spesialis
         holder.rumahsakit.text = modelDokter.rumahSakit
-        holder.jadwal.text = modelDokter.jadwal
         holder.butt.text = "Book"
         holder.butt.setOnClickListener {
             // Membuat Intent untuk membuka activity baru
@@ -50,6 +48,7 @@ class AdapterDokter(var listDokter: List<DokterModel>) : RecyclerView.Adapter<Ad
             holder.itemView.context.startActivity(intent)
         }
     }
+
 
     override fun getItemCount(): Int {
         return listDokter.size

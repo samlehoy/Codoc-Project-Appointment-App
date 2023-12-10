@@ -9,7 +9,7 @@ import androidx.appcompat.widget.AppCompatButton
 import com.example.codoc.R
 import com.example.codoc.activity.BookingActivity
 import com.example.codoc.activity.pasien.HomePasienActivity
-import com.example.codoc.model.DokterModel
+import com.example.codoc.model.DokterCardModel
 
 class DetailDokterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +32,7 @@ class DetailDokterActivity : AppCompatActivity() {
         // Mengambil data yang dikirim dari activity sebelumnya
         val dokterId = intent.getIntExtra("dokterId", 0)
 
-        val user = intent.getParcelableExtra<DokterModel>("DokterModel")
+        val user = intent.getParcelableExtra<DokterCardModel>("DokterModel")
         //semua
         val nams = findViewById<TextView>(R.id.namapasien)
         val spes = findViewById<TextView>(R.id.spesialis)

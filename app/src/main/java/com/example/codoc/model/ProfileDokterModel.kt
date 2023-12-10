@@ -5,11 +5,11 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class ProfileDokterModel (
-    var email:String,
     var nama:String,
     var spesialis:String,
-    var rumahSakit:String,
-    var jadwal:String,
+    var alamat:String,
+    var email:String,
+    var noHp:String,
 ) : Parcelable {
 
 }

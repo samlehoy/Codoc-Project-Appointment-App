@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.codoc.adapter.AdapterDokter
 import com.example.codoc.databinding.FragmentDokterHomeBinding
-import com.example.codoc.model.DokterModel
+import com.example.codoc.model.DokterCardModel
 import com.google.android.material.chip.Chip
 
 // TODO: Rename parameter arguments, choose names that match
@@ -59,9 +59,9 @@ class FragmentDokterHome : Fragment() {
 
         // Original list of doctors
         val dokterList = listOf(
-            DokterModel( "Dr. Ahmad", "Umum", "RS Medika", "09AM-05PM"),
-            DokterModel( "Dr. Erna", "Cardiology", "RSCM", "09AM-05PM"),
-            DokterModel( "Dr. Rachel", "Dermatology", "Tot", "09AM-05PM"),
+            DokterCardModel( "Dr. Ahmad", "Umum", "RS Medika", "09AM-05PM"),
+            DokterCardModel( "Dr. Erna", "Cardiology", "RSCM", "09AM-05PM"),
+            DokterCardModel( "Dr. Rachel", "Dermatology", "Tot", "09AM-05PM"),
             // Add more doctors as needed
         )
 

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.codoc.FragmentDokterHome
+import com.example.codoc.FragmentDokterSettings
 import com.example.codoc.FragmentPasienMyJanji
 import com.example.codoc.FragmentPasienSettings
 import com.example.codoc.R
@@ -22,7 +23,7 @@ class HomeDokterActivity : AppCompatActivity() {
 
         //set fragment
         val homeFragment= FragmentDokterHome()
-        val settingsFragment= FragmentPasienSettings()
+        val settingsFragment= FragmentDokterSettings()
         val myJanjiFragment= FragmentPasienMyJanji()
 
         //default fragment

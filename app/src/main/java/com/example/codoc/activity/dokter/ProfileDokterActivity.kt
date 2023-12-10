@@ -1,17 +1,16 @@
-package com.example.codoc.activity.pasien
+package com.example.codoc.activity.dokter
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.example.codoc.DatabaseHelper
-import com.example.codoc.databinding.ActivityProfilePasienBinding
+import com.example.codoc.databinding.ActivityProfileDokterBinding
 
-class ProfilePasienActivity : AppCompatActivity() {
+class ProfileDokterActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityProfilePasienBinding
+    private lateinit var binding: ActivityProfileDokterBinding
     private lateinit var dbHelper: DatabaseHelper
 
     //to retrieve data on ProfileActivity
@@ -19,7 +18,7 @@ class ProfilePasienActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityProfilePasienBinding.inflate(layoutInflater)
+        binding = ActivityProfileDokterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         dbHelper = DatabaseHelper(this)
@@ -35,11 +34,6 @@ class ProfilePasienActivity : AppCompatActivity() {
             getUserData(userEmail)
         }
 
-        binding.buttonEdit.setOnClickListener {
-            val intent = Intent(baseContext, EditProfilePasienActivity::class.java)
-            intent.putExtra("EMAIL", userEmail)
-            startActivity(intent)
-        }
     }
 
     @SuppressLint("SetTextI18n")
@@ -47,17 +41,18 @@ class ProfilePasienActivity : AppCompatActivity() {
         val db = dbHelper.readableDatabase
 
         val projection = arrayOf(
-            DatabaseHelper.COLUMN_NAME_PASIEN,
-            DatabaseHelper.COLUMN_DATEOFBIRTH_PASIEN,
-            DatabaseHelper.COLUMN_EMAIL_PASIEN,
-            DatabaseHelper.COLUMN_NOHP_PASIEN
+            DatabaseHelper.COLUMN_NAME_DOKTER,
+            DatabaseHelper.COLUMN_SPECIALIS_DOKTER,
+            DatabaseHelper.COLUMN_ALAMAT_DOKTER,
+            DatabaseHelper.COLUMN_EMAIL_DOKTER,
+            DatabaseHelper.COLUMN_NOHP_DOKTER
         )
 
-        val selection = "${DatabaseHelper.COLUMN_EMAIL_PASIEN} = ?"
+        val selection = "${DatabaseHelper.COLUMN_EMAIL_DOKTER} = ?"
         val selectionArgs = arrayOf(userEmail)
 
         val cursor = db.query(
-            DatabaseHelper.TABLE_AKUNPASIEN,
+            DatabaseHelper.TABLE_AKUNDOKTER,
             projection,
             selection,
             selectionArgs,
@@ -68,15 +63,17 @@ class ProfilePasienActivity : AppCompatActivity() {
 
         cursor.use {
             if (it.moveToFirst()) {
-                val name = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_NAME_PASIEN))
-                val dateOfBirth = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_DATEOFBIRTH_PASIEN))
-                val email = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_EMAIL_PASIEN))
-                val phone = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_NOHP_PASIEN))
+                val name = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_NAME_DOKTER))
+                val spesialis = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_SPECIALIS_DOKTER))
+                val alamat = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_ALAMAT_DOKTER))
+                val email = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_EMAIL_DOKTER))
+                val noHp = it.getString(it.getColumnIndexOrThrow(DatabaseHelper.COLUMN_NOHP_DOKTER))
 
                 binding.namauser.text = "$name"
-                binding.tanggaluser.text = "$dateOfBirth"
-                binding.emailuser.text = "$email"
-                binding.noTelpUser.text = "$phone"
+                binding.spesialisDokter.text = "$spesialis"
+                binding.rumahsakit.text = "$alamat"
+                binding.emailDokter.text = "$email"
+                binding.noHpDokter.text = "$noHp"
             } else {
                 Log.e("ProfileActivity", "No data found for user with email: $userEmail")
             }

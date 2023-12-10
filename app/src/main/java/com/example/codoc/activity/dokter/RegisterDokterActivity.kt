@@ -9,7 +9,6 @@ import android.widget.Button
 import android.widget.Toast
 import com.example.codoc.DatabaseHelper
 import com.example.codoc.R
-import com.example.codoc.activity.dokter.LoginDokterActivity
 import com.google.android.material.textfield.TextInputLayout
 
 class RegisterDokterActivity : AppCompatActivity() {
@@ -19,7 +18,7 @@ class RegisterDokterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register_dokter)
 
         val spesialDropdown = findViewById<AutoCompleteTextView>(R.id.spesial_dropdown)
-        val spesialOptions = arrayOf("Umum", "Mata", "THT", "Kulit", "Gigi", "Kandungan", "Penyakit Dalam") // Gantilah dengan opsi yang sesuai
+        val spesialOptions = arrayOf("Umum", "THT", "Kulit", "Gigi", "Penyakit Dalam", "Kandungan", "Saraf") // Gantilah dengan opsi yang sesuai
         val adapter = ArrayAdapter(this, R.layout.dropdown_item, spesialOptions)
         spesialDropdown.setAdapter(adapter)
 
@@ -33,6 +32,8 @@ class RegisterDokterActivity : AppCompatActivity() {
         val txtEmail: TextInputLayout = findViewById(R.id.emailInput)
         val txtFullname: TextInputLayout = findViewById(R.id.fullnameInput)
         val txtSpecialis: TextInputLayout = findViewById(R.id.menu_spesial)
+        val txtAlamat: TextInputLayout = findViewById(R.id.alamatInput)
+        val txtNoHp: TextInputLayout = findViewById(R.id.nomorInput)
         val txtPassword: TextInputLayout = findViewById(R.id.inputPassword)
 
         // Instance button daftar
@@ -45,6 +46,8 @@ class RegisterDokterActivity : AppCompatActivity() {
             val email: String = txtEmail.editText?.text.toString().trim()
             val name: String = txtFullname.editText?.text.toString().trim()
             val specialis: String = txtSpecialis.editText?.text.toString().trim()
+            val alamat: String = txtAlamat.editText?.text.toString().trim()
+            val noHp: String = txtNoHp.editText?.text.toString().trim()
             val password: String = txtPassword.editText?.text.toString().trim()
 
 
@@ -53,11 +56,11 @@ class RegisterDokterActivity : AppCompatActivity() {
             // Jika belum terdaftar
             if (data == "") {
                 // Insert data
-                databaseHelper.addAccountDokter(email, name, specialis, password)
-
+                databaseHelper.addAccountDokter(email, name, specialis, alamat, noHp ,password)
                 // Show LoginActivity
                 val intentLogin = Intent(this@RegisterDokterActivity, LoginDokterActivity::class.java)
                 startActivity(intentLogin)
+
             } else {
                 // Jika email telah terdaftar
                 Toast.makeText(

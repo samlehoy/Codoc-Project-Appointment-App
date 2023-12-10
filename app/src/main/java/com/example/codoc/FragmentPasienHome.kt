@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.codoc.adapter.AdapterDokter
 import com.example.codoc.databinding.FragmentPasienHomeBinding
-import com.example.codoc.model.DokterModel
+import com.example.codoc.model.DokterCardModel
 import com.google.android.material.chip.Chip
 
 // TODO: Rename parameter arguments, choose names that match
@@ -53,22 +53,15 @@ class FragmentPasienHome : Fragment() {
     ): View? {
         binding = FragmentPasienHomeBinding.inflate(inflater, container, false)
         val view = binding.root
+        dbHelper = DatabaseHelper(requireContext())  // Initialize dbHelper first
 
         // Sample list of specialties
-        val listOfSpecialties = listOf("Umum", "Cardiology", "Dermatology", "Orthopedics", "Neurology", "Dentist")
-
-        // Original list of doctors
-        val dokterList = listOf(
-            DokterModel( "Dr. Ahmad", "Umum", "RS Medika", "09AM-05PM"),
-            DokterModel( "Dr. Erna", "Cardiology", "RSCM", "09AM-05PM"),
-            DokterModel( "Dr. Rachel", "Dermatology", "Tot", "09AM-05PM"),
-            // Add more doctors as needed
-        )
+        val listOfSpecialties = listOf("Umum", "THT", "Kulit", "Gigi", "Penyakit Dalam", "Kandungan", "Saraf")
 
         // Set up RecyclerView with the original list of doctors
         val rvmenu: RecyclerView = view.findViewById(R.id.recyclerViewDoctor)
         rvmenu.layoutManager = LinearLayoutManager(activity)
-        var adapterDokter = AdapterDokter(dokterList)
+        var adapterDokter = AdapterDokter(emptyList())  // Initialize with an empty list
         rvmenu.adapter = adapterDokter
 
         // Sort the list of doctors by specialties
@@ -79,27 +72,20 @@ class FragmentPasienHome : Fragment() {
             val chip = Chip(context)
             chip.text = specialty
             chip.setOnClickListener {
-                // Filter the list based on the selected specialty
-                val filteredDokterList = dokterList.filter { it.spesialis == specialty }
+                // Fetch the list of doctors from the database based on the selected specialty
+                val doctorsListFromDB = dbHelper.getDoctorsBySpecialty(specialty)
                 // Update the RecyclerView adapter with the filtered list
-                adapterDokter.updateData(filteredDokterList)
+                adapterDokter.updateData(doctorsListFromDB)
             }
             // Set other chip properties if needed
             chipContainer.addView(chip)
         }
 
-        dbHelper = DatabaseHelper(requireContext())
+        // Fetch data from the database and update the RecyclerView adapter
+        val doctorsListFromDB = dbHelper.getAllDoctors()
+        adapterDokter.updateData(doctorsListFromDB)
 
-        //to retrieve data on ProfileActivity
-        sharedPreferences = requireContext().getSharedPreferences("user_prefs", AppCompatActivity.MODE_PRIVATE)
-        val userEmail = sharedPreferences.getString("user_email", "")
-        Log.d("ProfileActivity", "User Email from SharedPreferences: $userEmail")
-        if (userEmail.isNullOrBlank()) {
-            // Handle the case where user email is not available (user not logged in)
-            Log.e("ProfileActivity", "User email not found.")
-        } else {
-            fetchDoctorName(userEmail)
-        }
+        // ...
 
         return view
     }

@@ -2,6 +2,8 @@ package com.example.codoc.activity
 
 import android.app.DatePickerDialog
 import android.os.Bundle
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 import java.text.SimpleDateFormat
@@ -19,8 +21,30 @@ class BookingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_booking)
 
-        selectDateEditText = findViewById(R.id.select_date)
+    //DROPDOWN JAM
+        val jamDropdown = findViewById<AutoCompleteTextView>(R.id.jam_dropdown)
+        val jamOptions = arrayOf("09:00 - 11:00", "11:00 - 13:00", "13:00 - 15:00", "15:00 - 17:00") // Gantilah dengan opsi yang sesuai
+        val adapterJam = ArrayAdapter(this, R.layout.dropdown_item, jamOptions)
+        jamDropdown.setAdapter(adapterJam)
+        // Opsional: Tambahkan listener untuk menangani pemilihan opsi
+        jamDropdown.setOnItemClickListener { _, _, position, _ ->
+            val selectedOption = adapterJam.getItem(position).toString()
+            // Lakukan sesuatu dengan opsi yang dipilih
+        }
 
+    //DROPDOWN JAM
+        val penyakitDropdown = findViewById<AutoCompleteTextView>(R.id.penyakit_dropdown)
+        val penyakitOptions = arrayOf("09:00 - 11:00", "11:00 - 13:00", "13:00 - 15:00", "15:00 - 17:00") // Gantilah dengan opsi yang sesuai
+        val adapterPenyakit = ArrayAdapter(this, R.layout.dropdown_item, penyakitOptions)
+        penyakitDropdown.setAdapter(adapterPenyakit)
+        // Opsional: Tambahkan listener untuk menangani pemilihan opsi
+        penyakitDropdown.setOnItemClickListener { _, _, position, _ ->
+            val selectedOption = adapterPenyakit.getItem(position).toString()
+            // Lakukan sesuatu dengan opsi yang dipilih
+        }
+
+    //TANGGAL
+        selectDateEditText = findViewById(R.id.select_date)
         // Set a click listener to show the DatePickerDialog when the EditText is clicked
         selectDateEditText.setOnClickListener {
             showDatePickerDialog()
