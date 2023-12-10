@@ -14,13 +14,10 @@ class HomePasienActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_pasien)
-
         //hide title bar
         getSupportActionBar()?.hide()
-
         //instance
         val bottomNav:BottomNavigationView = findViewById(R.id.bottomNav);
-
         //set fragment
         val homeFragment= FragmentPasienHome()
         val settingsFragment= FragmentPasienSettings()
@@ -58,8 +55,6 @@ class HomePasienActivity : AppCompatActivity() {
             replace(R.id.fragment_container,fragment)
             commit()
         }
-
-
 }
 
 

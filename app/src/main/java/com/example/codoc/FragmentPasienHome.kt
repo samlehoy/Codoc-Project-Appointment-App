@@ -2,6 +2,8 @@ package com.example.codoc
 
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,19 +15,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.codoc.adapter.AdapterDokter
 import com.example.codoc.databinding.FragmentPasienHomeBinding
-import com.example.codoc.model.DokterCardModel
 import com.google.android.material.chip.Chip
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [FragmentPasienHome.newInstance] factory method to
- * create an instance of this fragment.
- */
 class FragmentPasienHome : Fragment() {
 
     private lateinit var binding: FragmentPasienHomeBinding
@@ -33,9 +27,9 @@ class FragmentPasienHome : Fragment() {
     //to retrieve data on ProfileActivity
     private lateinit var sharedPreferences: SharedPreferences
 
-    // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,10 +55,29 @@ class FragmentPasienHome : Fragment() {
         var adapterDokter = AdapterDokter(emptyList())  // Initialize with an empty list
         rvmenu.adapter = adapterDokter
 
+        //FUNGSI SEARCH
+        val doctorDataEditText = binding.doctorData
+        doctorDataEditText.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                // Do nothing
+            }
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                val query = s.toString().trim()
+                // Call the search method with the entered query
+                val searchResults = dbHelper.searchDoctors(query)
+                // Update the RecyclerView adapter with the search results
+                adapterDokter.updateData(searchResults)
+            }
+            override fun afterTextChanged(s: Editable?) {
+                // Do nothing
+            }
+        })
+
+
         // Sort the list of doctors by specialties
         val chipContainer: LinearLayout = view.findViewById(R.id.chipContainer)
 
-// Dynamically add chips to the chipContainer with margins
+        // Dynamically add chips to the chipContainer with margins
         for (specialty in listOfSpecialties) {
             val chip = Chip(context)
             chip.text = specialty
@@ -101,7 +114,6 @@ class FragmentPasienHome : Fragment() {
         } else {
             fetchDoctorName(userEmail)
         }
-
         return view
     }
 

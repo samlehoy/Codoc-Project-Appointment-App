@@ -33,7 +33,6 @@ class ProfileDokterActivity : AppCompatActivity() {
         } else {
             getUserData(userEmail)
         }
-
     }
 
     @SuppressLint("SetTextI18n")

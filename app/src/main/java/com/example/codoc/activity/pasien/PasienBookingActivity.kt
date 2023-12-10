@@ -1,4 +1,4 @@
-package com.example.codoc.activity
+package com.example.codoc.activity.pasien
 
 import android.app.DatePickerDialog
 import android.os.Bundle
@@ -12,7 +12,7 @@ import android.widget.Toast
 import com.example.codoc.R
 
 
-class BookingActivity : AppCompatActivity() {
+class PasienBookingActivity : AppCompatActivity() {
 
     private lateinit var selectDateEditText: TextInputEditText
     private val calendar = Calendar.getInstance()
@@ -51,7 +51,7 @@ class BookingActivity : AppCompatActivity() {
         }
     }
 
-    //
+    //untuk calender
     private fun showDatePickerDialog() {
         val datePickerDialog = DatePickerDialog(
             this,
@@ -80,6 +80,7 @@ class BookingActivity : AppCompatActivity() {
         datePickerDialog.show()
     }
 
+    //untuk calender
     private fun updateDateInView(calendar: Calendar) {
         val myFormat = "dd/MM/yyyy" // specify your format here
         val sdf = SimpleDateFormat(myFormat, Locale.getDefault())

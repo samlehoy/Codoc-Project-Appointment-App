@@ -12,13 +12,14 @@ import com.example.codoc.R
 import com.example.codoc.model.DokterCardModel
 
 class AdapterDokter(var listDokter: List<DokterCardModel>) : RecyclerView.Adapter<AdapterDokter.ViewHolder>() {
-    // Existing code...
 
-    // Add this method to update the data in the adapter
+    // Update data untuk setiap yg menggunakan adapter
     fun updateData(newList: List<DokterCardModel>) {
         listDokter = newList
         notifyDataSetChanged()
     }
+
+    //untuk menampung doctor_card_layout
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView){
         val nama: TextView = itemView.findViewById(R.id.textNama)
         val spesialis: TextView = itemView.findViewById(R.id.Spesialis)

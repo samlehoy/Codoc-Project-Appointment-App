@@ -17,12 +17,13 @@ class RegisterDokterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register_dokter)
 
+        //untuk dropdown spesialis
         val spesialDropdown = findViewById<AutoCompleteTextView>(R.id.spesial_dropdown)
-        val spesialOptions = arrayOf("Umum", "THT", "Kulit", "Gigi", "Penyakit Dalam", "Kandungan", "Saraf") // Gantilah dengan opsi yang sesuai
+        val spesialOptions = arrayOf("Umum", "THT", "Kulit", "Gigi", "Penyakit Dalam", "Kandungan", "Saraf")
         val adapter = ArrayAdapter(this, R.layout.dropdown_item, spesialOptions)
         spesialDropdown.setAdapter(adapter)
 
-        // Opsional: Tambahkan listener untuk menangani pemilihan opsi
+        //Opsional: Tambahkan listener untuk menangani pemilihan opsi
         spesialDropdown.setOnItemClickListener { _, _, position, _ ->
             val selectedOption = adapter.getItem(position).toString()
             // Lakukan sesuatu dengan opsi yang dipilih

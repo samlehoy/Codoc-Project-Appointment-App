@@ -104,7 +104,7 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
         onCreate(db)
     }
 
-    //login check
+    //CHECK LOGIN PASIEN
     fun checkLoginPasien(email: String, password: String): Boolean {
         println("Email: $email, Password: $password")
         try {
@@ -134,6 +134,8 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
             return false
         }
     }
+
+    //CHECK LOGIN DOKTER
     fun checkLoginDokter(email: String, password: String): Boolean {
         println("Email: $email, Password: $password")
         try {
@@ -164,6 +166,7 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
         }
     }
 
+    //ADD ACCOUNT UNTUK REGISTER PASIEN
     fun addAccountPasien(email: String, name: String, dateOfBirth: String, noHp: String, password: String) {
         val db = this.writableDatabase
 
@@ -185,6 +188,7 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
         db.close()
     }
 
+    //ADD ACCOUNT UNTUK REGISTER DOKTER
     fun addAccountDokter(email: String, name: String, specialis: String, alamat: String, noHp: String, password: String) {
         val db = this.writableDatabase
 
@@ -207,7 +211,7 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
         db.close()
     }
 
-    //FIXED REGISTER!!!
+    //DATA CHECK UNTUK REGISTER APAKAH EMAIL SUDAH ADA ATAU BLUM
     @SuppressLint("Range")
     fun checkDataPasien(email:String):String{
         val colums = arrayOf(COLUMN_NAME_PASIEN)
@@ -226,6 +230,8 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
         db.close()
         return name
     }
+
+    //DATA CHECK UNTUK REGISTER APAKAH EMAIL SUDAH ADA ATAU BLUM
     @SuppressLint("Range")
     fun checkDataDokter(email:String):String{
         val colums = arrayOf(COLUMN_NAME_DOKTER)
@@ -245,6 +251,7 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
         return name
     }
 
+    //FUNGSI UNTUK UPDATE DATA PASIEN PADA ProfilePasienActivity
     fun editProfilePasien(menu:ProfilePasienModel){
         val db = this.writableDatabase
         val values = ContentValues()
@@ -265,6 +272,7 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
         db.close()
     }
 
+    //FUNGSI UNTUK MERETRIEVE DATA DOKTER DARI DATABASE LALU DILETAKKAN PADA FragmentPasienHome
     fun getAllDoctors(): List<DokterCardModel> {
         val doctorsList = mutableListOf<DokterCardModel>()
         val db = this.readableDatabase
@@ -302,6 +310,7 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
         return doctorsList
     }
 
+    //FUNGSI SORTING BY HORIZONTALSCROLL VIEW PADA FragmentPasienHome
     fun getDoctorsBySpecialty(specialty: String): List<DokterCardModel> {
         val doctorsList = mutableListOf<DokterCardModel>()
         val db = this.readableDatabase
@@ -342,5 +351,44 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
         return doctorsList
     }
 
+    //FUNGSI SEARCH PADA FragmentPasienHome
+    fun searchDoctors(query: String): List<DokterCardModel> {
+        val doctorsList = mutableListOf<DokterCardModel>()
+        val db = this.readableDatabase
+
+        val columns = arrayOf(
+            COLUMN_NAME_DOKTER,
+            COLUMN_SPECIALIS_DOKTER,
+            COLUMN_ALAMAT_DOKTER,
+            COLUMN_NOHP_DOKTER
+        )
+
+        val selection = "$COLUMN_NAME_DOKTER LIKE ? OR $COLUMN_SPECIALIS_DOKTER LIKE ? OR $COLUMN_NOHP_DOKTER LIKE ?"
+        val selectionArgs = arrayOf("%$query%", "%$query%", "%$query%")
+
+        val cursor = db.query(
+            TABLE_AKUNDOKTER,
+            columns,
+            selection,
+            selectionArgs,
+            null,
+            null,
+            null
+        )
+
+        cursor.use {
+            while (it.moveToNext()) {
+                val name = it.getString(it.getColumnIndexOrThrow(COLUMN_NAME_DOKTER))
+                val specialty = it.getString(it.getColumnIndexOrThrow(COLUMN_SPECIALIS_DOKTER))
+                val address = it.getString(it.getColumnIndexOrThrow(COLUMN_ALAMAT_DOKTER))
+                val phoneNumber = it.getString(it.getColumnIndexOrThrow(COLUMN_NOHP_DOKTER))
+
+                val doctor = DokterCardModel(name, specialty, address, phoneNumber)
+                doctorsList.add(doctor)
+            }
+        }
+        db.close()
+        return doctorsList
+    }
 
 }

@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import com.example.codoc.R
-import com.example.codoc.activity.BookingActivity
+import com.example.codoc.activity.pasien.PasienBookingActivity
 import com.example.codoc.activity.pasien.HomePasienActivity
 import com.example.codoc.model.DokterCardModel
 
@@ -24,7 +24,7 @@ class DetailDokterActivity : AppCompatActivity() {
 
         val book_appointment: AppCompatButton = findViewById(R.id.book_appointment)
         book_appointment.setOnClickListener {
-            val intent = Intent (this, BookingActivity::class.java)
+            val intent = Intent (this, PasienBookingActivity::class.java)
             startActivity(intent)
         }
 

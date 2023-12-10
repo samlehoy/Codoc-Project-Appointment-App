@@ -21,7 +21,6 @@ class ProfilePasienActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityProfilePasienBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         dbHelper = DatabaseHelper(this)
 
         //to retrieve data on ProfileActivity
@@ -35,6 +34,7 @@ class ProfilePasienActivity : AppCompatActivity() {
             getUserData(userEmail)
         }
 
+        //default email langsung terisi
         binding.buttonEdit.setOnClickListener {
             val intent = Intent(baseContext, EditProfilePasienActivity::class.java)
             intent.putExtra("EMAIL", userEmail)
@@ -42,6 +42,7 @@ class ProfilePasienActivity : AppCompatActivity() {
         }
     }
 
+    //untuk meretrieve data current user dan meletakan pada ProfilePasienActivity
     @SuppressLint("SetTextI18n")
     private fun getUserData(userEmail: String) {
         val db = dbHelper.readableDatabase

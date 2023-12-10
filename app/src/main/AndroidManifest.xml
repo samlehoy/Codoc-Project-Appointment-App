@@ -25,7 +25,7 @@
             android:name=".activity.pasien.ProfilePasienActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.BookingActivity"
+            android:name=".activity.pasien.PasienBookingActivity"
             android:exported="false" />
         <activity
             android:name=".activity.dokter.DetailDokterActivity"

@@ -44,6 +44,7 @@ class RegisterPasienActivity : AppCompatActivity() {
         val inputNomorEdit: TextInputEditText = findViewById(R.id.InputNomorEdit)
         inputNomorEdit.addTextChangedListener(PhoneNumberFormattingTextWatcher())
 
+        //aksi btnReg
         btnRegister.setOnClickListener {
             // Object class DatabaseHelper
             val databaseHelper = DatabaseHelper(this)
