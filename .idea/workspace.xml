@@ -10,16 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f5d20a9-1d78-42af-a651-02e6dcfea6bb" name="Changes" comment="UPDATE: 10 Desember 2023&#10;1. Update sinkronisasi listOfSpecialities dengan Database Dokter/COLUMN_SPECIALIS_DOKTER (Horizontal Scroll Specialis pada FragmentHomePasien)&#10;2. Update DatabaseDokter (alamat etc)&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. FragmentPasienHome.kt -&gt; (Fungsi Search)&#10;3. activity_myjanji&#10;4. DetailDokterActivity.kt -&gt; (1. Explicit Intent (Email dan NoHp) 2. Sinkron Alamat pada database dokter)&#10;5. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback)">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentBerita.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/artikel_sakit_gigi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/berita_card_layout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_berita.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/pasien/HomePasienActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/pasien/HomePasienActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/pasien/PasienBookingActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/pasien/PasienBookingActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_booking.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_booking.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/DatabaseHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/DatabaseHelper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentBerita.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentBerita.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentDokterHome.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentDokterHome.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentPasienHome.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentPasienHome.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/dokter/ProfileDokterActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/dokter/ProfileDokterActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/pasien/EditProfilePasienActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/pasien/EditProfilePasienActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/pasien/ProfilePasienActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/pasien/ProfilePasienActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile_dokter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile_dokter.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +26,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\damar\.android\avd\Pixel_6_API_27.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[D:\Things\Android\.android\avd\Pixel_6_API_29.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -105,9 +104,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "android-custom-viewD:/Things/Android/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.5.0/8d3b87c7463f55053836b805e014cb238f64757a/material-1.5.0-sources.jar!/com/google/android/material/textfield/TextInputLayout.java_SELECTED": "TextInputLayout",
     "cidr.known.project.marker": "true",
-    "com.android.tools.idea.devicemanager.tab": "Physical",
-    "last_directory_selection": "D:/AndroidStudioProjects/Codoc-Project-Appointment-App/app/src/main/res/drawable",
-    "last_opened_file_path": "D:/AndroidStudioProjects/Codoc-Project-Appointment-App/app/src/main/res/drawable",
+    "last_directory_selection": "E:/Dekstop/School & Life/AMIKOM/SEMESTER 3/BP II/AAA-FINAL PROJECT/CodocProject/app/src/main/res/drawable",
+    "last_opened_file_path": "E:/Dekstop/School & Life/AMIKOM/SEMESTER 3/BP II/AAA-FINAL PROJECT/CodocProject",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
@@ -128,11 +126,11 @@
       <recent name="com.example.codoc" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\AndroidStudioProjects\Codoc-Project-Appointment-App\app\src\main\res\drawable" />
-      <recent name="D:\AndroidStudioProjects\Codoc-Project-Appointment-App\app\src\main\res\layout" />
       <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\AAA-FINAL PROJECT\CodocProject\app\src\main\res\menu" />
       <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\AAA-FINAL PROJECT\CodocProject\app\src\main\res\drawable" />
       <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\AAA-FINAL PROJECT\CodocProject\app\src\main\java\com\example\codoc\activity" />
+      <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\AAA-FINAL PROJECT\CodocProject\app\src\main\res\layout" />
+      <recent name="E:\Dekstop\School &amp; Life\AMIKOM\SEMESTER 3\BP II\CodocProject Damar 27\11\app\src\main\res\font" />
     </key>
     <key name="android.template.168696400">
       <recent name="com.example.codoc" />

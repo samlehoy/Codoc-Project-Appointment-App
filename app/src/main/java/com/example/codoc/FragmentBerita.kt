@@ -48,11 +48,11 @@ class FragmentBerita : Fragment() {
         return inflater.inflate(R.layout.fragment_berita, container, false)
 
 
-        // Set up RecyclerView with the original list of doctors
-        val rvmenu: RecyclerView = view.findViewById(R.id.recyclerViewDoctor)
-        rvmenu.layoutManager = LinearLayoutManager(activity)
-        var adapterberita = AdapterDokter(dokterList)
-        rvmenu.adapter = adapterDokter
+//        // Set up RecyclerView with the original list of doctors
+//        val rvmenu: RecyclerView = view.findViewById(R.id.recyclerViewDoctor)
+//        rvmenu.layoutManager = LinearLayoutManager(activity)
+//        var adapterberita = AdapterDokter(dokterList)
+//        rvmenu.adapter = adapterDokter
 
         // Original list of doctors
         val dokterList = listOf(

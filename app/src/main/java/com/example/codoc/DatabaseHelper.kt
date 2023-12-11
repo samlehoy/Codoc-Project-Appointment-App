@@ -6,6 +6,8 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.widget.Toast
+import com.example.codoc.activity.dokter.ProfileDokterActivity
+import com.example.codoc.activity.pasien.ProfilePasienActivity
 import com.example.codoc.model.DokterCardModel
 import com.example.codoc.model.ProfilePasienModel
 
@@ -105,10 +107,11 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
     }
 
     //CHECK LOGIN PASIEN
+    @SuppressLint("Range")
     fun checkLoginPasien(email: String, password: String): Boolean {
         println("Email: $email, Password: $password")
         try {
-            val columns = arrayOf(COLUMN_NAME_PASIEN)
+            val columns = arrayOf(COLUMN_NAME_PASIEN, COLUMN_EMAIL_PASIEN, COLUMN_DATEOFBIRTH_PASIEN, COLUMN_NOHP_PASIEN,  COLUMN_PASSWORD_PASIEN)
             val db = this.readableDatabase
             val selection = "$COLUMN_EMAIL_PASIEN = ? AND $COLUMN_PASSWORD_PASIEN = ?"
             val selectionArgs = arrayOf(email.trim(), password.trim())
@@ -124,8 +127,26 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
             )
 
             val cursorCount = cursor.count
+            val result : Boolean
+            //check data available or not
+            if(cursorCount > 0){
+                result = true
+                //set data
+                if(cursor.moveToFirst()){
+                    FragmentPasienHome.name = cursor.getString(cursor.getColumnIndex(COLUMN_NAME_PASIEN))
+
+                    ProfilePasienActivity.name = cursor.getString(cursor.getColumnIndex(COLUMN_NAME_PASIEN))
+                    ProfilePasienActivity.ttl = cursor.getString(cursor.getColumnIndex(COLUMN_DATEOFBIRTH_PASIEN))
+                    ProfilePasienActivity.email = cursor.getString(cursor.getColumnIndex(COLUMN_EMAIL_PASIEN))
+                    ProfilePasienActivity.nohp = cursor.getString(cursor.getColumnIndex(COLUMN_NOHP_PASIEN))
+                }
+            }
+            else {
+                result = false
+            }
             cursor.close()
             db.close()
+            return result
 
             return cursorCount > 0
         } catch (e: Exception) {
@@ -136,10 +157,11 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
     }
 
     //CHECK LOGIN DOKTER
+    @SuppressLint("Range")
     fun checkLoginDokter(email: String, password: String): Boolean {
         println("Email: $email, Password: $password")
         try {
-            val columns = arrayOf(COLUMN_NAME_DOKTER)
+            val columns = arrayOf(COLUMN_NAME_DOKTER, COLUMN_EMAIL_DOKTER, COLUMN_SPECIALIS_DOKTER, COLUMN_ALAMAT_DOKTER, COLUMN_NOHP_DOKTER, COLUMN_PASSWORD_DOKTER)
             val db = this.readableDatabase
             val selection = "$COLUMN_EMAIL_DOKTER = ? AND $COLUMN_PASSWORD_DOKTER = ?"
             val selectionArgs = arrayOf(email.trim(), password.trim())
@@ -155,8 +177,28 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
             )
 
             val cursorCount = cursor.count
+            val result : Boolean
+            //check data available or not
+            if(cursorCount > 0){
+                result = true
+                //set data
+                if(cursor.moveToFirst()){
+                    FragmentDokterHome.name = cursor.getString(cursor.getColumnIndex(COLUMN_NAME_DOKTER))
+
+                    ProfileDokterActivity.name = cursor.getString(cursor.getColumnIndex(COLUMN_NAME_DOKTER))
+                    ProfileDokterActivity.spesialis = cursor.getString(cursor.getColumnIndex(COLUMN_SPECIALIS_DOKTER))
+                    ProfileDokterActivity.alamatRs = cursor.getString(cursor.getColumnIndex(COLUMN_ALAMAT_DOKTER))
+                    ProfileDokterActivity.email = cursor.getString(cursor.getColumnIndex(COLUMN_EMAIL_DOKTER))
+                    ProfileDokterActivity.nohp = cursor.getString(cursor.getColumnIndex(COLUMN_NOHP_DOKTER))
+                }
+            }
+            else {
+                result = false
+            }
+
             cursor.close()
             db.close()
+            return result
 
             return cursorCount > 0
         } catch (e: Exception) {
