@@ -2,7 +2,6 @@ package com.example.codoc.activity.pasien
 
 import android.content.Intent
 //dependencies to retrieve data on ProfileActivity
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -14,8 +13,7 @@ import com.google.android.material.textfield.TextInputLayout
 
 class LoginPasienActivity : AppCompatActivity() {
 
-    //to retrieve data on ProfileActivity
-    private lateinit var sharedPreferences: SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_pasien)
@@ -30,8 +28,6 @@ class LoginPasienActivity : AppCompatActivity() {
         val txtEmailLayout: TextInputLayout = findViewById(R.id.inputEmail)
         val txtPasswordLayout: TextInputLayout = findViewById(R.id.inputPassword)
 
-        //to retrieve data on ProfileActivity
-        sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
 
         //event button Masuk/login
         btnMasuk.setOnClickListener {
@@ -46,10 +42,6 @@ class LoginPasienActivity : AppCompatActivity() {
             //check login
             val result: Boolean = dbHelper.checkLoginPasien(email, password)
             if (result) {
-                // Store the user's email in shared preferences upon successful login
-                val editor = sharedPreferences.edit()
-                editor.putString("user_email", email)
-                editor.apply()
 
                 val intentLogin = Intent(this@LoginPasienActivity, HomePasienActivity::class.java)
                 startActivity(intentLogin)
