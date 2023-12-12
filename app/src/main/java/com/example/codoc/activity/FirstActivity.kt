@@ -14,8 +14,8 @@ class FirstActivity : AppCompatActivity() {
         setContentView(R.layout.activity_first)
 
         //instance
-        val btnMasukpasien: ImageView = findViewById(R.id.pasienimage)
-        val btnMasukdokter: ImageView = findViewById(R.id.dokterimage)
+        val btnMasukpasien: ImageView = findViewById(R.id.pasienImage)
+        val btnMasukdokter: ImageView = findViewById(R.id.dokterImage)
 
         //action button
         btnMasukpasien.setOnClickListener {

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,88 +8,7 @@
     android:background="@drawable/gradient_background"
     tools:context=".activity.FirstActivity">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@drawable/shape_home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TextView
-                android:id="@+id/selamat"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/dmsans_bold"
-                android:text="Selamat Datang di Codoc"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/dokterimage"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
-                app:layout_constraintEnd_toStartOf="@+id/pasienimage"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/selamat"
-                app:srcCompat="@drawable/dokter" />
-
-            <ImageView
-                android:id="@+id/pasienimage"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/selamat"
-                app:srcCompat="@drawable/pasien" />
-
-            <TextView
-                android:id="@+id/textdoter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/dmsans_regular"
-                android:text="Dokter"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/dokterimage"
-                app:layout_constraintStart_toStartOf="@+id/dokterimage"
-                app:layout_constraintTop_toBottomOf="@+id/dokterimage" />
-
-            <TextView
-                android:id="@+id/texktpasien"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/dmsans_regular"
-                android:text="Pasien"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/pasienimage"
-                app:layout_constraintStart_toStartOf="@+id/pasienimage"
-                app:layout_constraintTop_toBottomOf="@+id/pasienimage" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+    <!-- Background Image -->
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="400dp"
@@ -98,5 +18,89 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/first" />
 
+    <!-- Main Container -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/innerConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+        <!-- Content Container -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Greeting Text -->
+            <TextView
+                android:id="@+id/tvSelamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/dmsans_medium"
+                android:text="Login Sebagai : "
+                android:textColor="@color/green_shade_dark_1"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Doctor Image -->
+            <ImageView
+                android:id="@+id/dokterImage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSelamat"
+                app:srcCompat="@drawable/dokter" />
+
+            <!-- Patient Image -->
+            <ImageView
+                android:id="@+id/pasienImage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSelamat"
+                app:srcCompat="@drawable/pasien" />
+
+            <!-- Doctor Text -->
+            <TextView
+                android:id="@+id/tvDokter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsans_regular"
+                android:text="Dokter"
+                android:textColor="@color/green_shade_dark_1"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/dokterImage"
+                app:layout_constraintStart_toStartOf="@+id/dokterImage"
+                app:layout_constraintTop_toBottomOf="@+id/dokterImage" />
+
+            <!-- Patient Text -->
+            <TextView
+                android:id="@+id/tvPasien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsans_regular"
+                android:text="Pasien"
+                android:textColor="@color/green_shade_dark_1"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/pasienImage"
+                app:layout_constraintStart_toStartOf="@+id/pasienImage"
+                app:layout_constraintTop_toBottomOf="@+id/pasienImage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

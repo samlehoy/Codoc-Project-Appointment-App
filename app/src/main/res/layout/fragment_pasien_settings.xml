@@ -23,8 +23,8 @@
             android:layout_marginTop="16dp"
             android:fontFamily="@font/dmsans_medium"
             android:text="Settings"
-            android:textColor="@color/white"
-            android:textSize="30sp"
+            android:textColor="@color/green_shade_light_2"
+            android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,7 +33,7 @@
             android:id="@+id/linearLayoutMain"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="28dp"
             android:background="@drawable/shape_home"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"

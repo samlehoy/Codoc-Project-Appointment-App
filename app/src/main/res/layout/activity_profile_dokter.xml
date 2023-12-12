@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_gradient_start_color"
+    android:background="@drawable/gradient_background"
     tools:context=".activity.dokter.ProfileDokterActivity">
 
 
@@ -16,15 +16,15 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/dmsans_medium"
         android:text="Profile"
-        android:textColor="@color/white"
-        android:textSize="30dp"
+        android:textColor="@color/green_shade_light_2"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/shape_home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -186,7 +186,6 @@
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

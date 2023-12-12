@@ -25,7 +25,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/artikel_sakit_gigi" />
+            app:srcCompat="@drawable/artike_sakit_gigi" />
 
         <TextView
             android:id="@+id/judulberita"
@@ -34,7 +34,7 @@
             android:layout_marginStart="8dp"
             android:fontFamily="@font/dm_sans_medium"
             android:text="7 Bahan Alami Obat Sakit Gigi"
-            android:textSize="20sp"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/fotoberita"
             app:layout_constraintTop_toTopOf="parent" />

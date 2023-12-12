@@ -8,8 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.codoc.adapter.AdapterBerita
 import com.example.codoc.adapter.AdapterDokter
+import com.example.codoc.databinding.FragmentBeritaBinding
 import com.example.codoc.databinding.FragmentDokterHomeBinding
+import com.example.codoc.model.BeritaModel
 import com.example.codoc.model.DokterCardModel
 
 
@@ -24,8 +27,9 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class FragmentBerita : Fragment() {
-    private lateinit var binding: FragmentBerita
+    private lateinit var binding: FragmentBeritaBinding
     private lateinit var dbHelper: DatabaseHelper
+
     //to retrieve data on ProfileActivity
     private lateinit var sharedPreferences: SharedPreferences
     // TODO: Rename and change types of parameters
@@ -45,22 +49,23 @@ class FragmentBerita : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_berita, container, false)
+        val view = inflater.inflate(R.layout.fragment_berita, container, false)
 
+        // Set up RecyclerView with the original list of doctors
+        val rvmenu: RecyclerView = view.findViewById(R.id.recyclerViewBerita)
+        rvmenu.layoutManager = LinearLayoutManager(activity)
 
-//        // Set up RecyclerView with the original list of doctors
-//        val rvmenu: RecyclerView = view.findViewById(R.id.recyclerViewDoctor)
-//        rvmenu.layoutManager = LinearLayoutManager(activity)
-//        var adapterberita = AdapterDokter(dokterList)
-//        rvmenu.adapter = adapterDokter
-
-        // Original list of doctors
-        val dokterList = listOf(
-            DokterCardModel( "Dr. Ahmad", "Umum", "RS Medika", "09AM-05PM"),
-            DokterCardModel( "Dr. Erna", "Cardiology", "RSCM", "09AM-05PM"),
-            DokterCardModel( "Dr. Rachel", "Dermatology", "Tot", "09AM-05PM"),
-            // Add more doctors as needed
+        // Original list of berita
+        val beritaList = listOf(
+            BeritaModel(R.drawable.cewek, "7 Bahan Alami Obat Sakit Perut"),
+            BeritaModel(R.drawable.cowok, "7 Bahan Alami Obat Sakit Pinggang"),
+            BeritaModel(R.drawable.cewek, "7 Bahan Alami Obat Sakit Gigi"),
         )
+
+        val adapterBerita = AdapterBerita(beritaList)
+        rvmenu.adapter = adapterBerita
+
+        return view
     }
 
     companion object {

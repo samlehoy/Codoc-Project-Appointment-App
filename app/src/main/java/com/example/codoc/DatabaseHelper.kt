@@ -17,7 +17,7 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
 ) {
     companion object {
         const val DATABASE_NAME = "Codoc"
-        const val DATABASE_VERSION = 2 // Incremented the version number
+        const val DATABASE_VERSION = 3 // Incremented the version number
 
         // Table names
         const val TABLE_AKUNPASIEN = "akunpasien"
@@ -111,7 +111,7 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
     fun checkLoginPasien(email: String, password: String): Boolean {
         println("Email: $email, Password: $password")
         try {
-            val columns = arrayOf(COLUMN_NAME_PASIEN, COLUMN_EMAIL_PASIEN, COLUMN_DATEOFBIRTH_PASIEN, COLUMN_NOHP_PASIEN,  COLUMN_PASSWORD_PASIEN)
+            val columns = arrayOf(COLUMN_EMAIL_PASIEN, COLUMN_NAME_PASIEN, COLUMN_DATEOFBIRTH_PASIEN, COLUMN_NOHP_PASIEN,  COLUMN_PASSWORD_PASIEN)
             val db = this.readableDatabase
             val selection = "$COLUMN_EMAIL_PASIEN = ? AND $COLUMN_PASSWORD_PASIEN = ?"
             val selectionArgs = arrayOf(email.trim(), password.trim())
@@ -135,9 +135,9 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
                 if(cursor.moveToFirst()){
                     FragmentPasienHome.name = cursor.getString(cursor.getColumnIndex(COLUMN_NAME_PASIEN))
 
+                    ProfilePasienActivity.email = cursor.getString(cursor.getColumnIndex(COLUMN_EMAIL_PASIEN))
                     ProfilePasienActivity.name = cursor.getString(cursor.getColumnIndex(COLUMN_NAME_PASIEN))
                     ProfilePasienActivity.ttl = cursor.getString(cursor.getColumnIndex(COLUMN_DATEOFBIRTH_PASIEN))
-                    ProfilePasienActivity.email = cursor.getString(cursor.getColumnIndex(COLUMN_EMAIL_PASIEN))
                     ProfilePasienActivity.nohp = cursor.getString(cursor.getColumnIndex(COLUMN_NOHP_PASIEN))
                 }
             }
