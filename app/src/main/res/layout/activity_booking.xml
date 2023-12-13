@@ -110,9 +110,11 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
             android:background="@drawable/primary_button"
-            android:fontFamily="@font/dm_sans_bold"
+            android:textAllCaps="false"
+            android:fontFamily="@font/dmsans_regular"
+            android:textColor="@color/white"
+            android:textSize="18sp"
             android:text="Konfirmasi"
-            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

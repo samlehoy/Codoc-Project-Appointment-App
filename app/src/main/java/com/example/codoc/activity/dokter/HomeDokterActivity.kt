@@ -26,8 +26,6 @@ class HomeDokterActivity : AppCompatActivity() {
         //set fragment
         val homeFragment= FragmentDokterHome()
         val settingsFragment= FragmentDokterSettings()
-        val myJanjiFragment= FragmentDokterMyJanji()
-        val beritaFragment= FragmentBerita()
 
         //default fragment
         supportFragmentManager.beginTransaction().apply {
@@ -43,16 +41,8 @@ class HomeDokterActivity : AppCompatActivity() {
                     currentFragment(homeFragment)
                     true
                 }
-                R.id.appointment -> {
-                    currentFragment(myJanjiFragment)
-                    true
-                }
                 R.id.settings -> {
                     currentFragment(settingsFragment)
-                    true
-                }
-                R.id.stats ->{
-                    currentFragment(beritaFragment)
                     true
                 }
                 else -> false

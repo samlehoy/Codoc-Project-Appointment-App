@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    tools:context=".activity.dokter.DetailDokterActivity">
+    tools:context=".activity.pasien.DetailDokterActivity">
 
     <ImageView
         android:id="@+id/back"
@@ -46,36 +46,6 @@
             app:layout_constraintGuide_percent="0.5"
             app:layout_constraintTop_toTopOf="parent" />
 
-
-        <TextView
-            android:id="@+id/namapasien"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/dmsans_regular"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="22sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/phone_call"
-            tools:text="Dr. Joko" />
-
-        <TextView
-            android:id="@+id/spesialis"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/dmsans_regular"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="@+id/namapasien"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/namapasien"
-            app:layout_constraintTop_toBottomOf="@+id/namapasien"
-            android:text="Dokter Umum" />
-
         <ImageView
             android:id="@+id/phone_call"
             android:layout_width="40dp"
@@ -94,6 +64,84 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/namaUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone_call">
+
+            <TextView
+                android:id="@+id/dr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsans_regular"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Dr. " />
+
+            <TextView
+                android:id="@+id/namadokter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsans_regular"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dr"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Joko" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/namaspesialis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/namaUser">
+
+            <TextView
+                android:id="@+id/dokter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsans_regular"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Dokter " />
+
+            <TextView
+                android:id="@+id/spesialis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsans_regular"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dokter"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Umum" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
         <TextView
             android:id="@+id/address_text"
             android:layout_width="match_parent"
@@ -103,15 +151,15 @@
             android:text="@string/address"
             android:textColor="@color/black"
             android:textSize="22sp"
-            app:layout_constraintEnd_toEndOf="@+id/spesialis"
-            app:layout_constraintStart_toStartOf="@+id/spesialis"
-            app:layout_constraintTop_toBottomOf="@+id/spesialis" />
+            app:layout_constraintEnd_toEndOf="@+id/namaspesialis"
+            app:layout_constraintStart_toStartOf="@+id/namaspesialis"
+            app:layout_constraintTop_toBottomOf="@+id/namaspesialis" />
 
         <TextView
             android:id="@+id/doctor_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/dmsans_regular"
             android:text="@string/no_address_found"
             android:textColor="@color/black"
@@ -125,7 +173,7 @@
             android:id="@+id/working_hour_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="24dp"
             android:fontFamily="@font/dmsans_medium"
             android:text="@string/working_hours"
             android:textColor="@color/black"
@@ -137,7 +185,7 @@
             android:id="@+id/working_hour"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/dmsans_regular"
             android:text="@string/mon_fri_09_00_21_00"
             android:textColor="@color/black"
@@ -152,11 +200,11 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:background="@drawable/primary_button"
-            android:fontFamily="@font/dmsans_regular"
-            android:text="@string/book_an_appointment"
             android:textAllCaps="false"
+            android:fontFamily="@font/dmsans_regular"
             android:textColor="@color/white"
             android:textSize="18sp"
+            android:text="@string/book_an_appointment"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.491"

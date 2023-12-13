@@ -7,7 +7,7 @@ import kotlinx.parcelize.Parcelize
 data class DokterCardModel (
     var nama:String,
     var spesialis: String,
-    var rumahSakit: String,
+    var alamat: String,
     var jadwal: String,
 ) : Parcelable {
 

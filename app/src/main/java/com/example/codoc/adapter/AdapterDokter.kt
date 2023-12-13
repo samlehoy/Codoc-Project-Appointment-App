@@ -38,7 +38,7 @@ class AdapterDokter(var listDokter: List<DokterCardModel>) : RecyclerView.Adapte
 
         holder.nama.text = modelDokter.nama
         holder.spesialis.text = modelDokter.spesialis
-        holder.rumahsakit.text = modelDokter.rumahSakit
+        holder.rumahsakit.text = modelDokter.alamat
         holder.butt.text = "Book"
         holder.butt.setOnClickListener {
             // Membuat Intent untuk membuka activity baru

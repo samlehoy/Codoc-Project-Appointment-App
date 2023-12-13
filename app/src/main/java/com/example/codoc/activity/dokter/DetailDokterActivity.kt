@@ -34,10 +34,15 @@ class DetailDokterActivity : AppCompatActivity() {
 
         val user = intent.getParcelableExtra<DokterCardModel>("DokterModel")
         //semua
-        val nams = findViewById<TextView>(R.id.namapasien)
+        val nams = findViewById<TextView>(R.id.namadokter)
         val spes = findViewById<TextView>(R.id.spesialis)
+        val alamat = findViewById<TextView>(R.id.doctor_address)
         nams.text = user?.nama
         spes.text = user?.spesialis
-
+        alamat.text = user?.alamat
+    }
+    companion object {
+        // var to store "hi $name"
+        var name = "Tes nama"
     }
 }
