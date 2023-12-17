@@ -4,22 +4,34 @@ import android.app.DatePickerDialog
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 import java.text.SimpleDateFormat
 import java.util.*
 import android.widget.Toast
 import com.example.codoc.R
+import com.example.codoc.DatabaseHelper
+
 
 
 class PasienBookingActivity : AppCompatActivity() {
 
     private lateinit var selectDateEditText: TextInputEditText
     private val calendar = Calendar.getInstance()
+    private val databaseHelper = DatabaseHelper(this)
+    private lateinit var jamDropdown: AutoCompleteTextView
+    private lateinit var buttonBuatJanji: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_booking)
+
+        selectDateEditText = findViewById(R.id.select_date)
+        jamDropdown = findViewById(R.id.jam_dropdown)
+        buttonBuatJanji = findViewById(R.id.buttonbuatjanji)
+
+
 
     //DROPDOWN JAM
         val jamDropdown = findViewById<AutoCompleteTextView>(R.id.jam_dropdown)
@@ -48,7 +60,13 @@ class PasienBookingActivity : AppCompatActivity() {
         // Set a click listener to show the DatePickerDialog when the EditText is clicked
         selectDateEditText.setOnClickListener {
             showDatePickerDialog()
+
         }
+        buttonBuatJanji.setOnClickListener {
+            buatJanji()
+        }
+
+
     }
 
     //untuk calender
@@ -56,18 +74,12 @@ class PasienBookingActivity : AppCompatActivity() {
         val datePickerDialog = DatePickerDialog(
             this,
             DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
-                // Update the TextInputEditText with the selected date
                 val selectedDate = Calendar.getInstance()
                 selectedDate.set(year, monthOfYear, dayOfMonth)
 
                 if (selectedDate >= Calendar.getInstance()) {
-                    // Update the TextInputEditText with the selected current or future date
                     updateDateInView(selectedDate)
                 } else {
-                    // Show a message if the selected date is in the past
-                    // This can be customized based on your requirements
-                    // For example, you might want to show a message and not update the date
-                    // Or you can show a Toast message
                     Toast.makeText(this, "Please select a date in the future", Toast.LENGTH_SHORT).show()
                 }
             },
@@ -85,5 +97,26 @@ class PasienBookingActivity : AppCompatActivity() {
         val myFormat = "dd/MM/yyyy" // specify your format here
         val sdf = SimpleDateFormat(myFormat, Locale.getDefault())
         selectDateEditText.setText(sdf.format(calendar.time))
+    }
+    private fun buatJanji() {
+        val selectedDate = selectDateEditText.text.toString().trim()
+        val selectedJam = jamDropdown.text.toString().trim()
+
+        if (selectedDate.isEmpty() || selectedJam.isEmpty()) {
+            Toast.makeText(this, "Mohon isi semua data", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        // Dapatkan email pasien dan dokter dari sesi atau dari tempat lain sesuai kebutuhan
+        val emailPasien = "email_pasien_contoh@gmail.com"
+        val emailDokter = "email_dokter_contoh@gmail.com"
+
+        // Simpan data janji temu ke dalam database
+        if (databaseHelper.saveAppointment(emailDokter, emailPasien, selectedDate, selectedJam)) {
+            Toast.makeText(this, "Janji temu berhasil dibuat", Toast.LENGTH_SHORT).show()
+            finish()
+        } else {
+            Toast.makeText(this, "Gagal membuat janji temu", Toast.LENGTH_SHORT).show()
+        }
     }
 }

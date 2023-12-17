@@ -23,9 +23,6 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
         const val TABLE_AKUNPASIEN = "akunpasien"
         const val TABLE_AKUNDOKTER = "akundokter"
         const val TABLE_MYJANJI = "myjanji"
-        const val TABLE_SPESIALIS = "spesialis"
-        const val TABLE_PENYAKIT = "spesialis"
-
 
         // Columns for account pasien
         const val COLUMN_EMAIL_PASIEN = "email_pasien"
@@ -49,16 +46,6 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
         const val COLUMN_TANGGAL_JANJI = "tanggal"
         const val COLUMN_JAM_JANJI = "jam"
 
-        // Columns for spesialis table
-        const val COLUMN_ID_SPESIALIS = "id_spesialis"
-        const val COLUMN_NAMA_SPESIALIS = "nama_spesialis"
-        const val COLUMN_ID_JANJI_SPESIALIS = "id_janji"
-        const val COLUMN_EMAIL_DOKTER_SPESIALIS = "email_dokter"
-
-        // Columns for penyakit table
-        const val COLUMN_ID_PENYAKIT = "id_spesialis"
-        const val COLUMN_NAMA_PENYAKIT = "nama_spesialis"
-        const val COLUMN_ID_SPESIALIS_PENYAKIT = "id_spesialis"
     }
 
     // Create table account sql query
@@ -431,6 +418,27 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
         }
         db.close()
         return doctorsList
+    }
+    fun saveAppointment(emailDokter: String, emailPasien: String, tanggal: String, jam: String): Boolean {
+        try {
+            val db = this.writableDatabase
+            val values = ContentValues()
+
+            values.put(COLUMN_EMAIL_DOKTER_JANJI, emailDokter)
+            values.put(COLUMN_EMAIL_PASIEN_JANJI, emailPasien)
+            values.put(COLUMN_TANGGAL_JANJI, tanggal)
+            values.put(COLUMN_JAM_JANJI, jam)
+
+            val result = db.insert(TABLE_MYJANJI, null, values)
+
+            db.close()
+
+            return result != -1L
+        } catch (e: Exception) {
+            // Log the exception or handle it as needed
+            e.printStackTrace()
+            return false
+        }
     }
 
 }
