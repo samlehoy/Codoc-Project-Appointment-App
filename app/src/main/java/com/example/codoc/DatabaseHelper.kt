@@ -421,6 +421,12 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
     }
     fun saveAppointment(emailDokter: String, emailPasien: String, tanggal: String, jam: String): Boolean {
         try {
+            // Dapatkan email pasien dari data yang sedang digunakan (misalnya, dari sesi)
+            val emailPasien = ProfilePasienActivity.email
+
+            // Gantilah email dokter sesuai dengan data yang Anda punya (misalnya, dari data dokter yang dipilih)
+            val emailDokter = "email_dokter_contoh@gmail.com" // Gantilah dengan email dokter yang sesuai
+
             val db = this.writableDatabase
             val values = ContentValues()
 
@@ -440,5 +446,6 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
             return false
         }
     }
+
 
 }
