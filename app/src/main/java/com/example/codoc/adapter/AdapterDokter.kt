@@ -9,12 +9,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.codoc.activity.dokter.DetailDokterActivity
 import com.example.codoc.R
-import com.example.codoc.model.DokterCardModel
+import com.example.codoc.model.ProfileDokterModel
 
-class AdapterDokter(var listDokter: List<DokterCardModel>) : RecyclerView.Adapter<AdapterDokter.ViewHolder>() {
+class AdapterDokter(var listDokter: List<ProfileDokterModel>) : RecyclerView.Adapter<AdapterDokter.ViewHolder>() {
 
     // Update data untuk setiap yg menggunakan adapter
-    fun updateData(newList: List<DokterCardModel>) {
+    fun updateData(newList: List<ProfileDokterModel>) {
         listDokter = newList
         notifyDataSetChanged()
     }

@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.codoc.activity.dokter.DetailDokterActivity
 import com.example.codoc.R
 import com.example.codoc.model.BeritaModel
-import com.example.codoc.model.DokterCardModel
 
 class AdapterBerita(var listberita: List<BeritaModel>) : RecyclerView.Adapter<AdapterBerita.ViewHolder>() {
 

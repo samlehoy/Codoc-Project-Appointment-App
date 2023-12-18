@@ -13,7 +13,6 @@ import com.example.codoc.adapter.AdapterDokter
 import com.example.codoc.databinding.FragmentBeritaBinding
 import com.example.codoc.databinding.FragmentDokterHomeBinding
 import com.example.codoc.model.BeritaModel
-import com.example.codoc.model.DokterCardModel
 
 
 // TODO: Rename parameter arguments, choose names that match

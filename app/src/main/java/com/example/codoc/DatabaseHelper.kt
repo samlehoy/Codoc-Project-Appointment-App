@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper
 import android.widget.Toast
 import com.example.codoc.activity.dokter.ProfileDokterActivity
 import com.example.codoc.activity.pasien.ProfilePasienActivity
-import com.example.codoc.model.DokterCardModel
+import com.example.codoc.model.ProfileDokterModel
 import com.example.codoc.model.ProfilePasienModel
 
 
@@ -302,14 +302,15 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
     }
 
     //FUNGSI UNTUK MERETRIEVE DATA DOKTER DARI DATABASE LALU DILETAKKAN PADA FragmentPasienHome
-    fun getAllDoctors(): List<DokterCardModel> {
-        val doctorsList = mutableListOf<DokterCardModel>()
+    fun getAllDoctors(): List<ProfileDokterModel> {
+        val doctorsList = mutableListOf<ProfileDokterModel>()
         val db = this.readableDatabase
 
         val columns = arrayOf(
             COLUMN_NAME_DOKTER,
             COLUMN_SPECIALIS_DOKTER,
             COLUMN_ALAMAT_DOKTER,
+            COLUMN_EMAIL_DOKTER,
             COLUMN_NOHP_DOKTER
         )
 
@@ -328,9 +329,10 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
                 val name = it.getString(it.getColumnIndexOrThrow(COLUMN_NAME_DOKTER))
                 val specialty = it.getString(it.getColumnIndexOrThrow(COLUMN_SPECIALIS_DOKTER))
                 val address = it.getString(it.getColumnIndexOrThrow(COLUMN_ALAMAT_DOKTER))
+                val email = it.getString(it.getColumnIndexOrThrow(COLUMN_EMAIL_DOKTER))
                 val phoneNumber = it.getString(it.getColumnIndexOrThrow(COLUMN_NOHP_DOKTER))
 
-                val doctor = DokterCardModel(name, specialty, address, phoneNumber)
+                val doctor = ProfileDokterModel(name, specialty, address, email, phoneNumber)
                 doctorsList.add(doctor)
             }
         }
@@ -340,14 +342,15 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
     }
 
     //FUNGSI SORTING BY HORIZONTALSCROLL VIEW PADA FragmentPasienHome
-    fun getDoctorsBySpecialty(specialty: String): List<DokterCardModel> {
-        val doctorsList = mutableListOf<DokterCardModel>()
+    fun getDoctorsBySpecialty(specialty: String): List<ProfileDokterModel> {
+        val doctorsList = mutableListOf<ProfileDokterModel>()
         val db = this.readableDatabase
 
         val columns = arrayOf(
             COLUMN_NAME_DOKTER,
             COLUMN_SPECIALIS_DOKTER,
             COLUMN_ALAMAT_DOKTER,
+            COLUMN_EMAIL_DOKTER,
             COLUMN_NOHP_DOKTER
         )
 
@@ -369,9 +372,10 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
                 val name = it.getString(it.getColumnIndexOrThrow(COLUMN_NAME_DOKTER))
                 val doctorSpecialty = it.getString(it.getColumnIndexOrThrow(COLUMN_SPECIALIS_DOKTER))
                 val address = it.getString(it.getColumnIndexOrThrow(COLUMN_ALAMAT_DOKTER))
+                val email = it.getString(it.getColumnIndexOrThrow(COLUMN_EMAIL_DOKTER))
                 val phoneNumber = it.getString(it.getColumnIndexOrThrow(COLUMN_NOHP_DOKTER))
 
-                val doctor = DokterCardModel(name, doctorSpecialty, address, phoneNumber)
+                val doctor = ProfileDokterModel(name, doctorSpecialty, address,email , phoneNumber)
                 doctorsList.add(doctor)
             }
         }
@@ -381,14 +385,15 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
     }
 
     //FUNGSI SEARCH PADA FragmentPasienHome
-    fun searchDoctors(query: String): List<DokterCardModel> {
-        val doctorsList = mutableListOf<DokterCardModel>()
+    fun searchDoctors(query: String): List<ProfileDokterModel> {
+        val doctorsList = mutableListOf<ProfileDokterModel>()
         val db = this.readableDatabase
 
         val columns = arrayOf(
             COLUMN_NAME_DOKTER,
             COLUMN_SPECIALIS_DOKTER,
             COLUMN_ALAMAT_DOKTER,
+            COLUMN_EMAIL_DOKTER,
             COLUMN_NOHP_DOKTER
         )
 
@@ -410,9 +415,10 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
                 val name = it.getString(it.getColumnIndexOrThrow(COLUMN_NAME_DOKTER))
                 val specialty = it.getString(it.getColumnIndexOrThrow(COLUMN_SPECIALIS_DOKTER))
                 val address = it.getString(it.getColumnIndexOrThrow(COLUMN_ALAMAT_DOKTER))
+                val email = it.getString(it.getColumnIndexOrThrow(COLUMN_EMAIL_DOKTER))
                 val phoneNumber = it.getString(it.getColumnIndexOrThrow(COLUMN_NOHP_DOKTER))
 
-                val doctor = DokterCardModel(name, specialty, address, phoneNumber)
+                val doctor = ProfileDokterModel(name, specialty, address, email, phoneNumber)
                 doctorsList.add(doctor)
             }
         }
