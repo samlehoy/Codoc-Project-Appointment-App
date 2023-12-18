@@ -9,14 +9,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f5d20a9-1d78-42af-a651-02e6dcfea6bb" name="Changes" comment="UPDATE: 18 Desember 2023&#10;1. clean code PasienBookingActivity&#10;2. saveAppointment current emailPasien sudah bisa tersimpan&#10;3. AdapterJanji.kt &amp; MyJanjiModel.kt&#10;&#10;BUG:&#10;1. Dr. dan Dokter tidak tampil pada DetailDokterActivity.kt&#10;2. emailDokter belum bisa tersimpan berdasarkan apa yang di pilih&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. activity_myjanji PASIEN DAN DOKTER&#10;3. DetailDokterActivity.kt -&gt; (1. Explicit Intent (Email dan NoHp) 2. Sinkron Alamat pada database dokter)&#10;4. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback)">
+    <list default="true" id="8f5d20a9-1d78-42af-a651-02e6dcfea6bb" name="Changes" comment="UPDATE: 18 Desember 2023&#10;1. clean code PasienBookingActivity&#10;2. saveAppointment current emailPasien sudah bisa tersimpan&#10;3. AdapterJanji.kt &amp; MyJanjiModel.kt&#10;4. Remove DokterCardModel.kt replace dengan ProfileDokterModel.kt&#10;&#10;BUG:&#10;1. Dr. dan Dokter tidak tampil pada DetailDokterActivity.kt&#10;2. emailDokter belum bisa tersimpan berdasarkan apa yang di pilih&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. activity_myjanji PASIEN DAN DOKTER&#10;3. DetailDokterActivity.kt -&gt; (1. Explicit Intent (Email dan NoHp) 2. Sinkron Alamat pada database dokter)&#10;4. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/DatabaseHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/DatabaseHelper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentBerita.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/FragmentBerita.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/dokter/DetailDokterActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/dokter/DetailDokterActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/adapter/AdapterBerita.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/adapter/AdapterBerita.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/adapter/AdapterDokter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/adapter/AdapterDokter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/model/DokterCardModel.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -498,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702899173693</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="UPDATE: 18 Desember 2023&#10;1. clean code PasienBookingActivity&#10;2. saveAppointment current emailPasien sudah bisa tersimpan&#10;3. AdapterJanji.kt &amp; MyJanjiModel.kt&#10;4. Remove DokterCardModel.kt replace dengan ProfileDokterModel.kt&#10;&#10;BUG:&#10;1. Dr. dan Dokter tidak tampil pada DetailDokterActivity.kt&#10;2. emailDokter belum bisa tersimpan berdasarkan apa yang di pilih&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. activity_myjanji PASIEN DAN DOKTER&#10;3. DetailDokterActivity.kt -&gt; (1. Explicit Intent (Email dan NoHp) 2. Sinkron Alamat pada database dokter)&#10;4. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback)">
+      <created>1702900165181</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1702900165181</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -516,7 +518,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Test" />
     <MESSAGE value="update" />
     <MESSAGE value="nambah aset ilang cok" />
     <MESSAGE value="UPDATE DAMAR 8:40" />
@@ -541,6 +542,7 @@
     <MESSAGE value="UPDATE: 13 Desember 2023&#10;1. DetailDokterActivity&#10;&#10;BUG:&#10;1. Dr. dan Dokter tidak tampil pada DetailDokterActivity.kt&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. activity_myjanji PASIEN DAN DOKTER&#10;3. DetailDokterActivity.kt -&gt; (1. Explicit Intent (Email dan NoHp) 2. Sinkron Alamat pada database dokter)&#10;4. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback)" />
     <MESSAGE value="UPDATE: 18 Desember 2023&#10;1. clean code PasienBookingActivity&#10;2. saveAppointment current emailPasien sudah bisa tersimpan&#10;&#10;BUG:&#10;1. Dr. dan Dokter tidak tampil pada DetailDokterActivity.kt&#10;2. emailDokter belum bisa tersimpan berdasarkan apa yang di pilih&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. activity_myjanji PASIEN DAN DOKTER&#10;3. DetailDokterActivity.kt -&gt; (1. Explicit Intent (Email dan NoHp) 2. Sinkron Alamat pada database dokter)&#10;4. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback)" />
     <MESSAGE value="UPDATE: 18 Desember 2023&#10;1. clean code PasienBookingActivity&#10;2. saveAppointment current emailPasien sudah bisa tersimpan&#10;3. AdapterJanji.kt &amp; MyJanjiModel.kt&#10;&#10;BUG:&#10;1. Dr. dan Dokter tidak tampil pada DetailDokterActivity.kt&#10;2. emailDokter belum bisa tersimpan berdasarkan apa yang di pilih&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. activity_myjanji PASIEN DAN DOKTER&#10;3. DetailDokterActivity.kt -&gt; (1. Explicit Intent (Email dan NoHp) 2. Sinkron Alamat pada database dokter)&#10;4. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback)" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: 18 Desember 2023&#10;1. clean code PasienBookingActivity&#10;2. saveAppointment current emailPasien sudah bisa tersimpan&#10;3. AdapterJanji.kt &amp; MyJanjiModel.kt&#10;&#10;BUG:&#10;1. Dr. dan Dokter tidak tampil pada DetailDokterActivity.kt&#10;2. emailDokter belum bisa tersimpan berdasarkan apa yang di pilih&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. activity_myjanji PASIEN DAN DOKTER&#10;3. DetailDokterActivity.kt -&gt; (1. Explicit Intent (Email dan NoHp) 2. Sinkron Alamat pada database dokter)&#10;4. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback)" />
+    <MESSAGE value="UPDATE: 18 Desember 2023&#10;1. clean code PasienBookingActivity&#10;2. saveAppointment current emailPasien sudah bisa tersimpan&#10;3. AdapterJanji.kt &amp; MyJanjiModel.kt&#10;4. Remove DokterCardModel.kt replace dengan ProfileDokterModel.kt&#10;&#10;BUG:&#10;1. Dr. dan Dokter tidak tampil pada DetailDokterActivity.kt&#10;2. emailDokter belum bisa tersimpan berdasarkan apa yang di pilih&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. activity_myjanji PASIEN DAN DOKTER&#10;3. DetailDokterActivity.kt -&gt; (1. Explicit Intent (Email dan NoHp) 2. Sinkron Alamat pada database dokter)&#10;4. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback)" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: 18 Desember 2023&#10;1. clean code PasienBookingActivity&#10;2. saveAppointment current emailPasien sudah bisa tersimpan&#10;3. AdapterJanji.kt &amp; MyJanjiModel.kt&#10;4. Remove DokterCardModel.kt replace dengan ProfileDokterModel.kt&#10;&#10;BUG:&#10;1. Dr. dan Dokter tidak tampil pada DetailDokterActivity.kt&#10;2. emailDokter belum bisa tersimpan berdasarkan apa yang di pilih&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. activity_myjanji PASIEN DAN DOKTER&#10;3. DetailDokterActivity.kt -&gt; (1. Explicit Intent (Email dan NoHp) 2. Sinkron Alamat pada database dokter)&#10;4. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback)" />
   </component>
 </project>

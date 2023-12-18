@@ -1,6 +1,7 @@
 package com.example.codoc.activity.dokter
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -18,16 +19,15 @@ class DetailDokterActivity : AppCompatActivity() {
 
         val backButton: ImageView = findViewById(R.id.back)
         backButton.setOnClickListener {
-            val intent = Intent (this, HomePasienActivity::class.java)
+            val intent = Intent(this, HomePasienActivity::class.java)
             startActivity(intent)
         }
 
         val book_appointment: AppCompatButton = findViewById(R.id.book_appointment)
         book_appointment.setOnClickListener {
-            val intent = Intent (this, PasienBookingActivity::class.java)
+            val intent = Intent(this, PasienBookingActivity::class.java)
             startActivity(intent)
         }
-
 
         // Mengambil data yang dikirim dari activity sebelumnya
         val dokterId = intent.getIntExtra("dokterId", 0)
@@ -40,9 +40,31 @@ class DetailDokterActivity : AppCompatActivity() {
         nams.text = user?.nama
         spes.text = user?.spesialis
         alamat.text = user?.alamat
+
+        // Menambahkan OnClickListener untuk email
+        val emailIdView = findViewById<ImageView>(R.id.email_id)
+        emailIdView.setOnClickListener {
+            sendEmail(user?.email)
+        }
+
+        // Menambahkan OnClickListener untuk nomor telepon
+        val phoneCallView = findViewById<ImageView>(R.id.phone_call)
+        phoneCallView.setOnClickListener {
+            dialPhoneNumber(user?.noHp)
+        }
     }
-    companion object {
-        // var to store "hi $name"
-        var name = "Tes nama"
+
+    // Fungsi untuk mengirim email
+    private fun sendEmail(email: String?) {
+        val intent = Intent(Intent.ACTION_SENDTO)
+        intent.data = Uri.parse("mailto:$email")
+        startActivity(intent)
+    }
+
+    // Fungsi untuk melakukan panggilan telepon
+    private fun dialPhoneNumber(phoneNumber: String?) {
+        val intent = Intent(Intent.ACTION_DIAL)
+        intent.data = Uri.parse("tel:$phoneNumber")
+        startActivity(intent)
     }
 }
