@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper
 import android.widget.Toast
 import com.example.codoc.activity.dokter.ProfileDokterActivity
 import com.example.codoc.activity.pasien.ProfilePasienActivity
+import com.example.codoc.model.MyJanjiModel
 import com.example.codoc.model.ProfileDokterModel
 import com.example.codoc.model.ProfilePasienModel
 
@@ -451,6 +452,47 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
             e.printStackTrace()
             return false
         }
+    }
+
+    fun getDataJanjiPasien(email: String): List<MyJanjiModel> {
+        val janjiList = mutableListOf<MyJanjiModel>()
+        val db = this.readableDatabase
+        val columns = arrayOf(
+            COLUMN_ID_JANJI ,
+            COLUMN_EMAIL_DOKTER_JANJI ,
+            COLUMN_EMAIL_PASIEN_JANJI ,
+            COLUMN_TANGGAL_JANJI ,
+            COLUMN_JAM_JANJI
+        )
+
+        val selection = "$COLUMN_EMAIL_PASIEN = ?"
+        val selectionArgs = arrayOf(email)
+
+        val cursor = db.query(
+            TABLE_MYJANJI,
+            columns,
+            selection,
+            selectionArgs,
+            null,
+            null,
+            null
+        )
+
+        cursor.use {
+            while (it.moveToNext()) {
+                val id_janji = it.getString(it.getColumnIndexOrThrow(COLUMN_ID_JANJI))
+                val emailPasien = it.getString(it.getColumnIndexOrThrow(COLUMN_EMAIL_PASIEN_JANJI))
+                val emailDokter = it.getString(it.getColumnIndexOrThrow(COLUMN_EMAIL_DOKTER_JANJI))
+                val tanggalJanji = it.getString(it.getColumnIndexOrThrow(COLUMN_TANGGAL_JANJI))
+                val jamJanji = it.getString(it.getColumnIndexOrThrow(COLUMN_JAM_JANJI))
+
+                val janji = MyJanjiModel(id_janji, emailPasien, emailDokter, tanggalJanji, jamJanji)
+                janjiList.add(janji)
+            }
+        }
+
+        db.close()
+        return janjiList
     }
 
 

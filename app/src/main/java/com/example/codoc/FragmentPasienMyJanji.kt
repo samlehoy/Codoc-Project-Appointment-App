@@ -5,6 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.codoc.activity.pasien.ProfilePasienActivity
+import com.example.codoc.adapter.AdapterJanji
+import com.example.codoc.databinding.FragmentPasienMyjanjiBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +27,9 @@ class FragmentPasienMyJanji : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var binding: FragmentPasienMyjanjiBinding
+    private lateinit var dbHelper: DatabaseHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -32,20 +41,22 @@ class FragmentPasienMyJanji : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pasien_myjanji, container, false)
+        binding = FragmentPasienMyjanjiBinding.inflate(inflater, container, false)
+        val view = binding.root
+        dbHelper = DatabaseHelper(requireContext())
+
+        // Set up RecyclerView with the original list of doctors
+        val rvmenu: RecyclerView = view.findViewById(R.id.recyclerViewDoctor)
+        rvmenu.layoutManager = LinearLayoutManager(activity)
+
+        // Fetch data from the database and update the RecyclerView adapter
+        val myjanjiListFromDB = dbHelper.getDataJanjiPasien(ProfilePasienActivity.email)
+        Toast.makeText(this.requireContext(),myjanjiListFromDB.toString(), Toast.LENGTH_SHORT).show()
+        rvmenu.adapter = AdapterJanji(myjanjiListFromDB)
+        return view
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment FragmentJanji.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             FragmentPasienMyJanji().apply {
