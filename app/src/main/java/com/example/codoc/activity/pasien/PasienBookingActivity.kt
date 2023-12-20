@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.codoc.R
 import com.example.codoc.DatabaseHelper
+import com.example.codoc.activity.dokter.ProfileDokterActivity
 import com.google.android.material.textfield.TextInputEditText
 import java.text.SimpleDateFormat
 import java.util.*
@@ -96,10 +97,12 @@ class PasienBookingActivity : AppCompatActivity() {
             return
         }
 
-        val emailPasien = ProfilePasienActivity.email
-        val emailDokter = "email_dokter_contoh@gmail.com"
 
-        if (databaseHelper.saveAppointment(emailDokter, emailPasien, selectedDate, selectedJam)) {
+        val emailPasien = ProfilePasienActivity.email
+        val emailDokter = ProfileDokterActivity.email
+        val namaDokter = ProfileDokterActivity.name
+
+        if (databaseHelper.saveAppointment(namaDokter, emailDokter, emailPasien, selectedDate, selectedJam)) {
             Toast.makeText(this, "Janji temu berhasil dibuat", Toast.LENGTH_SHORT).show()
             finish()
         } else {

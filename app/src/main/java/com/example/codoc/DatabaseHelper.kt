@@ -18,7 +18,7 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
 ) {
     companion object {
         const val DATABASE_NAME = "Codoc"
-        const val DATABASE_VERSION = 3 // Incremented the version number
+        const val DATABASE_VERSION = 4 // Incremented the version number
 
         // Table names
         const val TABLE_AKUNPASIEN = "akunpasien"
@@ -42,6 +42,7 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
 
         // Columns for MYJANJI table
         const val COLUMN_ID_JANJI = "id_janji"
+        const val COLUMN_NAMA_DOKTER_JANJI = "name_dokter"
         const val COLUMN_EMAIL_DOKTER_JANJI = "email_dokter"
         const val COLUMN_EMAIL_PASIEN_JANJI = "email_pasien"
         const val COLUMN_TANGGAL_JANJI = "tanggal"
@@ -68,6 +69,7 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
     // Create table MYJANJI sql query
     private val CREATE_MYJANJI_TABLE = ("CREATE TABLE IF NOT EXISTS $TABLE_MYJANJI ("
             + "$COLUMN_ID_JANJI INTEGER PRIMARY KEY, "
+            + "$COLUMN_NAMA_DOKTER_JANJI TEXT, "
             + "$COLUMN_EMAIL_DOKTER_JANJI TEXT, "
             + "$COLUMN_EMAIL_PASIEN_JANJI TEXT, "
             + "$COLUMN_TANGGAL_JANJI TEXT, "
@@ -426,7 +428,7 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
         db.close()
         return doctorsList
     }
-    fun saveAppointment(emailDokter: String, emailPasien: String, tanggal: String, jam: String): Boolean {
+    fun saveAppointment(namaDokter:String, emailDokter: String, emailPasien: String, tanggal: String, jam: String): Boolean {
         try {
             // Dapatkan email pasien dari data yang sedang digunakan (misalnya, dari sesi)
             val emailPasien = ProfilePasienActivity.email
@@ -437,6 +439,7 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
             val db = this.writableDatabase
             val values = ContentValues()
 
+            values.put(COLUMN_NAMA_DOKTER_JANJI, namaDokter)
             values.put(COLUMN_EMAIL_DOKTER_JANJI, emailDokter)
             values.put(COLUMN_EMAIL_PASIEN_JANJI, emailPasien)
             values.put(COLUMN_TANGGAL_JANJI, tanggal)
@@ -459,6 +462,7 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
         val db = this.readableDatabase
         val columns = arrayOf(
             COLUMN_ID_JANJI ,
+            COLUMN_NAMA_DOKTER_JANJI ,
             COLUMN_EMAIL_DOKTER_JANJI ,
             COLUMN_EMAIL_PASIEN_JANJI ,
             COLUMN_TANGGAL_JANJI ,
@@ -481,12 +485,13 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
         cursor.use {
             while (it.moveToNext()) {
                 val id_janji = it.getString(it.getColumnIndexOrThrow(COLUMN_ID_JANJI))
+                val namaDokter = it.getString(it.getColumnIndexOrThrow(COLUMN_NAMA_DOKTER_JANJI))
                 val emailPasien = it.getString(it.getColumnIndexOrThrow(COLUMN_EMAIL_PASIEN_JANJI))
                 val emailDokter = it.getString(it.getColumnIndexOrThrow(COLUMN_EMAIL_DOKTER_JANJI))
                 val tanggalJanji = it.getString(it.getColumnIndexOrThrow(COLUMN_TANGGAL_JANJI))
                 val jamJanji = it.getString(it.getColumnIndexOrThrow(COLUMN_JAM_JANJI))
 
-                val janji = MyJanjiModel(id_janji, emailPasien, emailDokter, tanggalJanji, jamJanji)
+                val janji = MyJanjiModel(id_janji, namaDokter,emailPasien, emailDokter, tanggalJanji, jamJanji)
                 janjiList.add(janji)
             }
         }

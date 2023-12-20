@@ -35,7 +35,7 @@ class AdapterJanji(var listDokter: List<MyJanjiModel>) : RecyclerView.Adapter<Ad
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val modelDokter = listDokter[position]
 
-        holder.nama.text = modelDokter.emailDokter
+        holder.nama.text = modelDokter.namaDokter
         holder.spesialis.text = modelDokter.tanggalJanji
         holder.jam.text = modelDokter.jamJanji
         holder.tanggal.text = modelDokter.tanggalJanji
