@@ -428,6 +428,42 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
         db.close()
         return doctorsList
     }
+
+    fun updateJanji(janji:MyJanjiModel){
+        val db = this.writableDatabase
+        val values = ContentValues()
+        values.put(COLUMN_TANGGAL_JANJI, janji.tanggalJanji)
+        values.put(COLUMN_JAM_JANJI, janji.jamJanji)
+
+
+        val result = db.update(
+            TABLE_MYJANJI,
+            values,
+            "$COLUMN_ID_JANJI = ?",
+            arrayOf(janji.id_janji.toString())
+        )
+        //show message
+        if (result.toLong() ==(0).toLong()){
+            Toast.makeText(context, "Update menu Failed", Toast.LENGTH_SHORT).show()
+        }
+        else {
+            Toast.makeText(context, "Update menu Success",Toast.LENGTH_SHORT).show()
+        }
+        db.close()
+    }
+    fun deleteJanji(id: String){
+        val db = this.writableDatabase
+
+        val result = db.delete(TABLE_MYJANJI, COLUMN_ID_JANJI + " = ? " , arrayOf(id.toString())).toLong()
+        //show message
+        if (result==(0).toLong()){
+            Toast.makeText(context, "Delete menu Failed", Toast.LENGTH_SHORT).show()
+        }
+        else {
+            Toast.makeText(context, "Delete menu Success",Toast.LENGTH_SHORT).show()
+        }
+        db.close()
+    }
     fun saveAppointment(namaDokter:String, emailDokter: String, emailPasien: String, tanggal: String, jam: String): Boolean {
         try {
             // Dapatkan email pasien dari data yang sedang digunakan (misalnya, dari sesi)

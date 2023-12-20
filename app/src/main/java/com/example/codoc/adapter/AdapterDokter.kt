@@ -21,6 +21,7 @@ class AdapterDokter(var listDokter: List<ProfileDokterModel>) : RecyclerView.Ada
 
     //untuk menampung doctor_card_layout
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView){
+        val email: TextView = itemView.findViewById(R.id.emailDokter)
         val nama: TextView = itemView.findViewById(R.id.textNama)
         val spesialis: TextView = itemView.findViewById(R.id.Spesialis)
         val rumahsakit: TextView = itemView.findViewById(R.id.rumahSakit)
@@ -36,6 +37,7 @@ class AdapterDokter(var listDokter: List<ProfileDokterModel>) : RecyclerView.Ada
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val modelDokter = listDokter[position]
 
+        holder.email.text = modelDokter.email
         holder.nama.text = modelDokter.nama
         holder.spesialis.text = modelDokter.spesialis
         holder.rumahsakit.text = modelDokter.alamat
