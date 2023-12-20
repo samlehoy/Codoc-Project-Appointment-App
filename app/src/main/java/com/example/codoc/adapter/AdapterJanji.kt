@@ -40,7 +40,7 @@ class AdapterJanji(private var listDokter: List<MyJanjiModel>) :
             idJanji.text = modelDokter.id_janji
 
             editButton.setOnClickListener {
-                handleEditButtonClick(modelDokter.id_janji, itemView.context)
+                handleEditButtonClick(modelDokter.id_janji, modelDokter.tanggalJanji, modelDokter.jamJanji, itemView.context)
             }
 
             deleteButton.setOnClickListener {
@@ -63,10 +63,12 @@ class AdapterJanji(private var listDokter: List<MyJanjiModel>) :
         return listDokter.size
     }
 
-    private fun handleEditButtonClick(id: String, context: Context) {
+    private fun handleEditButtonClick(id: String, tanggalJanji:String, jamJanji:String, context: Context) {
         Log.d("AdapterJanji", "Edit button clicked for ID: $id")
         val intent = Intent(context, EditMyJanjiActivity::class.java)
         intent.putExtra("ID_JANJI", id)
+        intent.putExtra("TANGGAL_JANJI", tanggalJanji)
+        intent.putExtra("JAM_JANJI", jamJanji)
         context.startActivity(intent)
     }
 

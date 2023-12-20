@@ -432,6 +432,7 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
     fun updateJanji(janji:MyJanjiModel){
         val db = this.writableDatabase
         val values = ContentValues()
+        values.put(COLUMN_ID_JANJI, janji.id_janji)
         values.put(COLUMN_TANGGAL_JANJI, janji.tanggalJanji)
         values.put(COLUMN_JAM_JANJI, janji.jamJanji)
 

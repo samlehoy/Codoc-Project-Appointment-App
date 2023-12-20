@@ -227,7 +227,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editnamaout">
 
-                <EditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTanggal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -238,36 +238,33 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/editnomorout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:id="@+id/menu_time"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                android:hint="Jam "
+                android:layout_marginEnd="16dp"
+                android:hint="Pilih Jam"
                 android:textColorHint="@android:color/darker_gray"
                 app:boxCornerRadiusBottomEnd="8dp"
                 app:boxCornerRadiusBottomStart="8dp"
                 app:boxCornerRadiusTopEnd="8dp"
                 app:boxCornerRadiusTopStart="8dp"
-                app:endIconMode="clear_text"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTglLahirOut"
-                app:prefixText="+62">
+                app:layout_constraintTop_toBottomOf="@+id/editTglLahirOut">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <AutoCompleteTextView
                     android:id="@+id/editJam"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:digits="0123456789+"
                     android:fontFamily="@font/dm_sans"
-                    android:inputType="phone"
-                    android:maxLength="12" />
+                    android:inputType="none"
+                    android:textColor="@color/black" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
 
