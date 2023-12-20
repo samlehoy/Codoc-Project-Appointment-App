@@ -440,7 +440,7 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
             TABLE_MYJANJI,
             values,
             "$COLUMN_ID_JANJI = ?",
-            arrayOf(janji.id_janji.toString())
+            arrayOf(janji.id_janji)
         )
         //show message
         if (result.toLong() ==(0).toLong()){
@@ -454,7 +454,7 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
     fun deleteJanji(id: String){
         val db = this.writableDatabase
 
-        val result = db.delete(TABLE_MYJANJI, COLUMN_ID_JANJI + " = ? " , arrayOf(id.toString())).toLong()
+        val result = db.delete(TABLE_MYJANJI, COLUMN_ID_JANJI + " = ? " , arrayOf(id)).toLong()
         //show message
         if (result==(0).toLong()){
             Toast.makeText(context, "Delete menu Failed", Toast.LENGTH_SHORT).show()

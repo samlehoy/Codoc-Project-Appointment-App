@@ -14,7 +14,6 @@ import com.example.codoc.model.MyJanjiModel
 import com.google.android.material.textfield.TextInputEditText
 
 class EditMyJanjiActivity : AppCompatActivity() {
-    lateinit var image : ImageView
     companion object{
         var idJanji = 1
         var tanggalJanji = "test"

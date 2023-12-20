@@ -9,18 +9,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f5d20a9-1d78-42af-a651-02e6dcfea6bb" name="Changes" comment="UPDATE: 20 Desember 2023&#10;1. Ongoing getDataJanjiPasien &amp; saveAppointment&#10;&#10;&#10;BUG:&#10;1. Dr. dan Dokter tidak tampil pada DetailDokterActivity.kt&#10;2. emailDokter belum bisa tersimpan berdasarkan apa yang di pilih&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. activity_myjanji PASIEN DAN DOKTER&#10;3. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback)">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/pasien/EditMyJanjiActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_my_janji.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8f5d20a9-1d78-42af-a651-02e6dcfea6bb" name="Changes" comment="UPDATE: 20 Desember 2023&#10;1. Ongoing getDataJanjiPasien &amp; saveAppointment&#10;2. buttonDelete pada MyJanji&#10;&#10;BUG:&#10;1. Dr. dan Dokter tidak tampil pada DetailDokterActivity.kt&#10;2. emailDokter belum bisa tersimpan berdasarkan apa yang di pilih&#10;3. notifikasi pada MyJanji&#10;4. buttonEdit pada my janji belum bisa&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. activity_myjanji PASIEN DAN DOKTER&#10;3. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/DatabaseHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/DatabaseHelper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/adapter/AdapterDokter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/adapter/AdapterDokter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/pasien/EditMyJanjiActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/activity/pasien/EditMyJanjiActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/adapter/AdapterJanji.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/codoc/adapter/AdapterJanji.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/janji_card_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/janji_card_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -526,7 +519,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703040736444</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="UPDATE: 20 Desember 2023&#10;1. Ongoing getDataJanjiPasien &amp; saveAppointment&#10;2. buttonDelete pada MyJanji&#10;&#10;BUG:&#10;1. Dr. dan Dokter tidak tampil pada DetailDokterActivity.kt&#10;2. emailDokter belum bisa tersimpan berdasarkan apa yang di pilih&#10;3. notifikasi pada MyJanji&#10;4. buttonEdit pada my janji belum bisa&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. activity_myjanji PASIEN DAN DOKTER&#10;3. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback)">
+      <created>1703078490471</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1703078490471</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -544,7 +544,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="UPDATE DAMAR 8:40" />
     <MESSAGE value="UPDATE:&#10;1. Fix load fragment crash&#10;2. Fix warna hijau disekitar bottom nav&#10;&#10;BUG:&#10;1. RecyclerView data dokter tidak muncul" />
     <MESSAGE value="UPDATE:&#10;1.update login dan register &#10;&#10;BUG:&#10;&#10;&#10;KEKURANGAN:&#10;1.belum bisa bikin tombol untuk dokter dan pasien" />
     <MESSAGE value="UPDATE:&#10;1. Activity Settings&#10;2. pindah activity settings done&#10;&#10;BUG:&#10;&#10;KEKURANGAN:&#10;1. Fitur didalam settings (edit profile etc)&#10;2. My Appointment&#10;3. Edit Profile (Get from database)" />
@@ -569,6 +568,7 @@
     <MESSAGE value="UPDATE: 18 Desember 2023&#10;1. clean code PasienBookingActivity&#10;2. saveAppointment current emailPasien sudah bisa tersimpan&#10;3. AdapterJanji.kt &amp; MyJanjiModel.kt&#10;4. Remove DokterCardModel.kt replace dengan ProfileDokterModel.kt&#10;&#10;BUG:&#10;1. Dr. dan Dokter tidak tampil pada DetailDokterActivity.kt&#10;2. emailDokter belum bisa tersimpan berdasarkan apa yang di pilih&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. activity_myjanji PASIEN DAN DOKTER&#10;3. DetailDokterActivity.kt -&gt; (1. Explicit Intent (Email dan NoHp) 2. Sinkron Alamat pada database dokter)&#10;4. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback)" />
     <MESSAGE value="UPDATE: 18 Desember 2023&#10;1. clean code PasienBookingActivity&#10;2. saveAppointment current emailPasien sudah bisa tersimpan&#10;3. AdapterJanji.kt &amp; MyJanjiModel.kt&#10;4. Remove DokterCardModel.kt replace dengan ProfileDokterModel.kt&#10;5. Implicit Intent Email dan noHp pada DetailDokterActivity.kt&#10;&#10;BUG:&#10;1. Dr. dan Dokter tidak tampil pada DetailDokterActivity.kt&#10;2. emailDokter belum bisa tersimpan berdasarkan apa yang di pilih&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. activity_myjanji PASIEN DAN DOKTER&#10;3. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback)" />
     <MESSAGE value="UPDATE: 20 Desember 2023&#10;1. Ongoing getDataJanjiPasien &amp; saveAppointment&#10;&#10;&#10;BUG:&#10;1. Dr. dan Dokter tidak tampil pada DetailDokterActivity.kt&#10;2. emailDokter belum bisa tersimpan berdasarkan apa yang di pilih&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. activity_myjanji PASIEN DAN DOKTER&#10;3. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback)" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: 20 Desember 2023&#10;1. Ongoing getDataJanjiPasien &amp; saveAppointment&#10;&#10;&#10;BUG:&#10;1. Dr. dan Dokter tidak tampil pada DetailDokterActivity.kt&#10;2. emailDokter belum bisa tersimpan berdasarkan apa yang di pilih&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. activity_myjanji PASIEN DAN DOKTER&#10;3. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback)" />
+    <MESSAGE value="UPDATE: 20 Desember 2023&#10;1. Ongoing getDataJanjiPasien &amp; saveAppointment&#10;2. buttonDelete pada MyJanji&#10;&#10;BUG:&#10;1. Dr. dan Dokter tidak tampil pada DetailDokterActivity.kt&#10;2. emailDokter belum bisa tersimpan berdasarkan apa yang di pilih&#10;3. notifikasi pada MyJanji&#10;4. buttonEdit pada my janji belum bisa&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. activity_myjanji PASIEN DAN DOKTER&#10;3. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback)" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: 20 Desember 2023&#10;1. Ongoing getDataJanjiPasien &amp; saveAppointment&#10;2. buttonDelete pada MyJanji&#10;&#10;BUG:&#10;1. Dr. dan Dokter tidak tampil pada DetailDokterActivity.kt&#10;2. emailDokter belum bisa tersimpan berdasarkan apa yang di pilih&#10;3. notifikasi pada MyJanji&#10;4. buttonEdit pada my janji belum bisa&#10;&#10;KEKURANGAN:&#10;1. activity_booking BELUM SELESAI&#10;2. activity_myjanji PASIEN DAN DOKTER&#10;3. SettingsActivity -&gt; (1. About Us, 2.Need Help, 3.Feedback)" />
   </component>
 </project>
