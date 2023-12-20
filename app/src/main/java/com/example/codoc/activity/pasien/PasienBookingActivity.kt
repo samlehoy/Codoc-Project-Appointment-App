@@ -96,7 +96,7 @@ class PasienBookingActivity : AppCompatActivity() {
             return
         }
 
-        val emailPasien = "email_pasien_contoh@gmail.com"
+        val emailPasien = ProfilePasienActivity.email
         val emailDokter = "email_dokter_contoh@gmail.com"
 
         if (databaseHelper.saveAppointment(emailDokter, emailPasien, selectedDate, selectedJam)) {

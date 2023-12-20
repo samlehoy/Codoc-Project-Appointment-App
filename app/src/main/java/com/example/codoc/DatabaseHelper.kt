@@ -432,7 +432,7 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
             val emailPasien = ProfilePasienActivity.email
 
             // Gantilah email dokter sesuai dengan data yang Anda punya (misalnya, dari data dokter yang dipilih)
-            val emailDokter = "email_dokter_contoh@gmail.com" // Gantilah dengan email dokter yang sesuai
+            val emailDokter = emailDokter // Gantilah dengan email dokter yang sesuai
 
             val db = this.writableDatabase
             val values = ContentValues()
