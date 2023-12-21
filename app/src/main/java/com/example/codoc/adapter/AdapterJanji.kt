@@ -34,7 +34,7 @@ class AdapterJanji(private var listDokter: List<MyJanjiModel>) :
 
         fun bind(modelDokter: MyJanjiModel) {
             nama.text = modelDokter.namaDokter
-            spesialis.text = modelDokter.tanggalJanji
+            spesialis.text = modelDokter.spesialis
             jam.text = modelDokter.jamJanji
             tanggal.text = modelDokter.tanggalJanji
             idJanji.text = modelDokter.id_janji
@@ -74,6 +74,8 @@ class AdapterJanji(private var listDokter: List<MyJanjiModel>) :
 
     private fun handleDeleteButtonClick(id: String, context: Context) {
         Log.d("AdapterJanji", "Delete button clicked for ID: $id")
+        val intent = Intent(context, HomePasienActivity::class.java)
+        context.startActivity(intent)
         val dbHelper = DatabaseHelper(context)
         dbHelper.deleteJanji(id)
         Log.d("AdapterJanji", "Deleting Janji with ID: $id")

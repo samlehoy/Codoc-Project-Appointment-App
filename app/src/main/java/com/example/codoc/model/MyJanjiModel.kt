@@ -11,4 +11,5 @@ data class MyJanjiModel (
     var emailDokter: String,
     var tanggalJanji: String,
     var jamJanji: String,
+    var spesialis:String
 ) : Parcelable

@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.codoc.activity.dokter.DetailDokterActivity
 import com.example.codoc.R
+import com.example.codoc.activity.dokter.ProfileDokterActivity
 import com.example.codoc.model.ProfileDokterModel
 
 class AdapterDokter(var listDokter: List<ProfileDokterModel>) : RecyclerView.Adapter<AdapterDokter.ViewHolder>() {
@@ -49,6 +50,10 @@ class AdapterDokter(var listDokter: List<ProfileDokterModel>) : RecyclerView.Ada
             intent.putExtra("DokterModel", modelDokter)
             // Memulai activity baru
             holder.itemView.context.startActivity(intent)
+
+            ProfileDokterActivity.name = holder.nama.text.toString()
+            ProfileDokterActivity.email = holder.email.text.toString()
+            ProfileDokterActivity.spesialis = holder.spesialis.text.toString()
         }
     }
 

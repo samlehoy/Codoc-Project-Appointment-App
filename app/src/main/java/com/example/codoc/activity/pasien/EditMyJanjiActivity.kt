@@ -47,6 +47,7 @@ class EditMyJanjiActivity : AppCompatActivity() {
         val emailDokter: TextInputEditText = findViewById(R.id.emailDokter)
         val textTanggal: TextInputEditText = findViewById(R.id.editTanggal)
         val textJam: AutoCompleteTextView = findViewById(R.id.editJam)
+        val spesialisDokter:TextInputEditText = findViewById(R.id.spesialisDokter)
         btnUpdate = findViewById(R.id.buttonUpdate)
 
         // Initialize selectDateEditText
@@ -86,8 +87,9 @@ class EditMyJanjiActivity : AppCompatActivity() {
             val emailDokter: String = emailDokter.text.toString().trim()
             val tanggalJanji: String = textTanggal.text.toString().trim()
             val jamJanji: String = textJam.text.toString().trim()
+            val spesialis:String = spesialisDokter.text.toString().trim()
 
-            val janjiModel = MyJanjiModel(idJanji, namaDokter, emailPasien, emailDokter, tanggalJanji, jamJanji)
+            val janjiModel = MyJanjiModel(idJanji, namaDokter, emailPasien, emailDokter, tanggalJanji, jamJanji, spesialis)
             databaseHelper.updateJanji(janjiModel)
 
             // Intent main activity

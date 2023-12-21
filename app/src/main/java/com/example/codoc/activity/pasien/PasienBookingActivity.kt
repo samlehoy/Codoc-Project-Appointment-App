@@ -101,8 +101,9 @@ class PasienBookingActivity : AppCompatActivity() {
         val emailPasien = ProfilePasienActivity.email
         val emailDokter = ProfileDokterActivity.email
         val namaDokter = ProfileDokterActivity.name
+        val spesialisDokter = ProfileDokterActivity.spesialis
 
-        if (databaseHelper.saveAppointment(namaDokter, emailDokter, emailPasien, selectedDate, selectedJam)) {
+        if (databaseHelper.saveAppointment(namaDokter, emailDokter, emailPasien, spesialisDokter, selectedDate, selectedJam)) {
             Toast.makeText(this, "Janji temu berhasil dibuat", Toast.LENGTH_SHORT).show()
             finish()
         } else {
