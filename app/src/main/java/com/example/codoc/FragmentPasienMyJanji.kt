@@ -36,7 +36,7 @@ class FragmentPasienMyJanji : Fragment() {
         val rvMenu: RecyclerView = view.findViewById(R.id.recyclerViewDoctor)
         rvMenu.layoutManager = LinearLayoutManager(activity)
 
-        val myJanjiListFromDB = dbHelper.getDataJanjiPasien(ProfilePasienActivity.email)
+        val myJanjiListFromDB = dbHelper.getDataJanjiOnPasien(ProfilePasienActivity.email)
         rvMenu.adapter = AdapterJanji(myJanjiListFromDB)
     }
 

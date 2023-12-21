@@ -497,7 +497,7 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
         }
     }
 
-    fun getDataJanjiPasien(email: String): List<MyJanjiModel> {
+    fun getDataJanjiOnPasien(email: String): List<MyJanjiModel> {
         val janjiList = mutableListOf<MyJanjiModel>()
         val db = this.readableDatabase
         val columns = arrayOf(
@@ -541,6 +541,44 @@ class DatabaseHelper(var context: Context) : SQLiteOpenHelper(
         db.close()
         return janjiList
     }
+    fun getDataJanjiOnDokter(emailDokter: String): List<MyJanjiModel> {
+        val janjiList = mutableListOf<MyJanjiModel>()
+        val db = this.readableDatabase
 
+        val query = """
+        SELECT
+            $TABLE_MYJANJI.$COLUMN_ID_JANJI,
+            $TABLE_AKUNPASIEN.$COLUMN_NAME_PASIEN,
+            $TABLE_MYJANJI.$COLUMN_EMAIL_DOKTER_JANJI,
+            $TABLE_MYJANJI.$COLUMN_EMAIL_PASIEN_JANJI,
+            $TABLE_MYJANJI.$COLUMN_SPESIALIS_DOKTER_JANJI,
+            $TABLE_MYJANJI.$COLUMN_TANGGAL_JANJI,
+            $TABLE_MYJANJI.$COLUMN_JAM_JANJI
+        FROM $TABLE_MYJANJI
+        INNER JOIN $TABLE_AKUNPASIEN ON $TABLE_MYJANJI.$COLUMN_EMAIL_PASIEN_JANJI = $TABLE_AKUNPASIEN.$COLUMN_EMAIL_PASIEN
+        WHERE $TABLE_MYJANJI.$COLUMN_EMAIL_DOKTER_JANJI = ?
+    """
 
+        val selectionArgs = arrayOf(emailDokter)
+
+        val cursor = db.rawQuery(query, selectionArgs)
+
+        cursor.use {
+            while (it.moveToNext()) {
+                val id_janji = it.getString(it.getColumnIndexOrThrow(COLUMN_ID_JANJI))
+                val namaPasien = it.getString(it.getColumnIndexOrThrow(COLUMN_NAME_PASIEN))
+                val emailPasien = it.getString(it.getColumnIndexOrThrow(COLUMN_EMAIL_PASIEN_JANJI))
+                val emailDokter = it.getString(it.getColumnIndexOrThrow(COLUMN_EMAIL_DOKTER_JANJI))
+                val tanggalJanji = it.getString(it.getColumnIndexOrThrow(COLUMN_TANGGAL_JANJI))
+                val jamJanji = it.getString(it.getColumnIndexOrThrow(COLUMN_JAM_JANJI))
+                val spesialis = it.getString(it.getColumnIndexOrThrow(COLUMN_SPESIALIS_DOKTER_JANJI))
+
+                val janji = MyJanjiModel(id_janji, namaPasien, emailPasien, emailDokter, tanggalJanji, jamJanji, spesialis)
+                janjiList.add(janji)
+            }
+        }
+
+        db.close()
+        return janjiList
+    }
 }

@@ -41,7 +41,6 @@ class DetailDokterActivity : AppCompatActivity() {
         nams.text = user?.nama
         spes.text = user?.spesialis
         alamat.text = user?.alamat
-        Toast.makeText(this, user?.nama.toString() + " - " + user?.spesialis, Toast.LENGTH_SHORT).show()
 
         // Menambahkan OnClickListener untuk email
         val emailIdView = findViewById<ImageView>(R.id.email_id)
