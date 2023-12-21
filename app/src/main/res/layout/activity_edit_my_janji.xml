@@ -63,6 +63,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+
+
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/idJanjiOut"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -92,120 +95,70 @@
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/namaDokterOut"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/namaDokter"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:hint="nama dokter"
-                android:textColorHint="@android:color/darker_gray"
-                app:boxCornerRadiusBottomEnd="8dp"
-                app:boxCornerRadiusBottomStart="8dp"
-                app:boxCornerRadiusTopEnd="8dp"
-                app:boxCornerRadiusTopStart="8dp"
-                app:endIconMode="clear_text"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/dmsans_medium"
+                android:text="Update Janji"
+                android:visibility="invisible"
+                android:textColor="@color/green_shade_dark_1"
+                android:textSize="25sp"
+                android:backgroundTint="@color/white"
+                android:elevation="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/idJanjiOut">
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/namaDokter"
-                    android:enabled="false"
-                    android:layout_width="match_parent"
-                    android:fontFamily="@font/dm_sans"
-                    android:inputType="text"
-                    android:layout_height="wrap_content" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/editEmailPasOut"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/emailPasien"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:hint="email pasien"
-                android:textColorHint="@android:color/darker_gray"
-                app:boxCornerRadiusBottomEnd="8dp"
-                app:boxCornerRadiusBottomStart="8dp"
-                app:boxCornerRadiusTopEnd="8dp"
-                app:boxCornerRadiusTopStart="8dp"
-                app:endIconMode="clear_text"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/dmsans_medium"
+                android:text="Update Janji"
+                android:textColor="@color/green_shade_dark_1"
+                android:textSize="25sp"
+                android:visibility="invisible"
+                android:backgroundTint="@color/white"
+                android:elevation="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/namaDokterOut">
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/emailPasien"
-                    android:enabled="false"
-                    android:layout_width="match_parent"
-                    android:fontFamily="@font/dm_sans"
-                    android:inputType="text"
-                    android:layout_height="wrap_content" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/editEmailOut"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/emailDokter"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:hint="email dokter"
-                android:textColorHint="@android:color/darker_gray"
-                app:boxCornerRadiusBottomEnd="8dp"
-                app:boxCornerRadiusBottomStart="8dp"
-                app:boxCornerRadiusTopEnd="8dp"
-                app:boxCornerRadiusTopStart="8dp"
-                app:endIconMode="clear_text"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/dmsans_medium"
+                android:text="Update Janji"
+                android:visibility="invisible"
+                android:textColor="@color/green_shade_dark_1"
+                android:textSize="25sp"
+                android:backgroundTint="@color/white"
+                android:elevation="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editEmailPasOut">
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/emailDokter"
-                    android:enabled="false"
-                    android:layout_width="match_parent"
-                    android:fontFamily="@font/dm_sans"
-                    android:inputType="text"
-                    android:layout_height="wrap_content" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/editnamaout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/spesialisDokter"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:hint="Spesialis"
-                android:textColorHint="@android:color/darker_gray"
-                app:boxCornerRadiusBottomEnd="8dp"
-                app:boxCornerRadiusBottomStart="8dp"
-                app:boxCornerRadiusTopEnd="8dp"
-                app:boxCornerRadiusTopStart="8dp"
-                app:endIconMode="clear_text"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/dmsans_medium"
+                android:text="Update Janji"
+                android:visibility="invisible"
+                android:textColor="@color/green_shade_dark_1"
+                android:textSize="25sp"
+                android:backgroundTint="@color/white"
+                android:elevation="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editEmailOut">
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/spesialisDokter"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/dm_sans"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/editTglLahirOut"
@@ -225,7 +178,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editnamaout">
+                app:layout_constraintTop_toBottomOf="@+id/idJanjiOut">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTanggal"

@@ -10,6 +10,7 @@ import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import com.example.codoc.DatabaseHelper
 import com.example.codoc.FragmentDokterMyJanji
@@ -42,12 +43,12 @@ class EditMyJanjiActivity : AppCompatActivity() {
 
         // Instance
         val textId: TextInputEditText = findViewById(R.id.idJanji)
-        val namaDokter: TextInputEditText = findViewById(R.id.namaDokter)
-        val emailPasien: TextInputEditText = findViewById(R.id.emailPasien)
-        val emailDokter: TextInputEditText = findViewById(R.id.emailDokter)
+        val namaDokter: TextView = findViewById(R.id.namaDokter)
+        val emailPasien: TextView = findViewById(R.id.emailPasien)
+        val emailDokter: TextView = findViewById(R.id.emailDokter)
         val textTanggal: TextInputEditText = findViewById(R.id.editTanggal)
         val textJam: AutoCompleteTextView = findViewById(R.id.editJam)
-        val spesialisDokter:TextInputEditText = findViewById(R.id.spesialisDokter)
+        val spesialisDokter:TextView = findViewById(R.id.spesialisDokter)
         btnUpdate = findViewById(R.id.buttonUpdate)
 
         // Initialize selectDateEditText
